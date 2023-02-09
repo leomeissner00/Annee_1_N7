@@ -1,0 +1,77 @@
+with Ada.Text_IO;            use Ada.Text_IO;
+with Ada.Integer_Text_IO;    use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;  use Ada.Strings.Unbounded;
+with TH;
+
+
+
+-- Programme de la question 1.2.
+procedure th_sujet is
+        Maximum : Integer := 20;
+
+        procedure Affiche_Sda (Cle : in Unbounded_String ; Donnee : In Integer) is
+        begin
+                Put("La clé est : ");
+                Put(To_String(Cle));
+                Put(" , La donnée est : ");
+                Put(Donnee,1);
+                New_Line;
+        end Affiche_Sda;
+
+        function F_hachage ( Cle : in Unbounded_String) return Integer is
+        begin
+
+                return (Length(Cle) mod Maximum);
+        end F_hachage;
+
+
+
+        package TH_String_Integer is
+                new TH (T_Cle => Unbounded_String , T_Donnee => Integer, Borne_max => Integer);
+        use TH_String_Integer;
+
+        procedure Affichage is new Pour_Chaque(Traiter => Affiche_Sda);
+        procedure Enregistrer_new is new Enregistrer(Fonction_de_hachage => F_hachage);
+
+
+        -- Initialiser une Sda avec la cle"un" et la donnee 1 puis la cle "deux" et la donnee 2 empilés dans la Sda vide.
+        procedure Initialiser_Avec_2_element(Sda : out T_TH) is
+        begin
+                Initialiser (Sda);
+                pragma Assert (Est_Vide(Sda));
+
+                Enregistrer_new (Sda,To_Unbounded_String("un"), 1);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("un")));
+                pragma Assert (1 = La_Donnee(Sda, To_Unbounded_String("un")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("deux"), Donnee => 2);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("deux")));
+                pragma Assert (2 = La_Donnee(Sda, To_Unbounded_String("deux")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("trois"), Donnee => 3);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("trois")));
+                pragma Assert (3 = La_Donnee(Sda, To_Unbounded_String("trois")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("quatre"), Donnee => 4);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("quatre")));
+                pragma Assert (4 = La_Donnee(Sda, To_Unbounded_String("quatre")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("cinq"), Donnee => 5);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("cinq")));
+                pragma Assert (5 = La_Donnee(Sda, To_Unbounded_String("cinq")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("quatre-vingt-dix-neuf"), Donnee => 99);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("quatre-vingt-dix-neuf")));
+                pragma Assert (99 = La_Donnee(Sda, To_Unbounded_String("quatre-vingt-dix-neuf")));
+
+                Enregistrer_new (Sda    => Sda, Cle    => To_Unbounded_String("vingt-et-un"), Donnee => 21);
+                pragma Assert (Cle_Presente(Sda, To_Unbounded_String("vingt-et-un")));
+                pragma Assert (21 = La_Donnee(Sda, To_Unbounded_String("vingt-et-un")));
+        end Initialiser_Avec_2_element;
+
+        Sda : T_TH;
+begin
+        Initialiser_Avec_2_element(Sda);
+        Affichage(Sda);
+
+end th_sujet;

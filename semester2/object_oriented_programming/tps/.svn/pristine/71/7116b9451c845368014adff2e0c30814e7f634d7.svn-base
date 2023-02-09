@@ -1,0 +1,846 @@
+2,3c2,3
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Xavier, combien d'allumette ? Xavier prend 4 allumette.
+> Impossible ! Nombre invalide : 4 (> 3)
+6,7c6,7
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Xavier, combien d'allumette ? Xavier prend 5 allumette.
+> Impossible ! Nombre invalide : 5 (> 3)
+10c10
+< Xavier prend 0 allumette.
+---
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+14,15c14,15
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+18,19c18
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+21,23c20,21
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 10
+> Ordinateur prend 1 allumette.
+25,27c23,24
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 9
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+29,31c26,27
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+33,35c29,30
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 5
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+37,39c32,33
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 4
+> Ordinateur prend 3 allumette.
+41,43c35,37
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 4 allumette.
+> Impossible ! Nombre invalide : 4 (> 1)
+45,47c39,41
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+> Impossible ! Nombre invalide : 3 (> 1)
+49,63c43,45
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 2 allumette.
+> Impossible ! Nombre invalide : 2 (> 1)
+65,66c47,48
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+69,71c51,53
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+73,799c55,56
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< Xavier prend 0 allumette.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+800a58,59
+> Xavier perd !
+> Ordinateur gagne !

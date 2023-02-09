@@ -1,0 +1,111 @@
+-- with Ada.Text_IO;            use Ada.Text_IO;
+with SDA_Exceptions;         use SDA_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body LCA is
+
+        procedure Free is
+                new Ada.Unchecked_Deallocation (Object => T_Cellule, Name => T_LCA);
+
+
+        procedure Initialiser(Sda: out T_LCA) is
+        begin
+                Sda := null;	-- Initialisation d'une Sda vide qui pointe sur la masse
+        end Initialiser;
+
+
+        function Est_Vide (Sda : T_LCA) return Boolean is
+        begin
+                return Sda = null;	 -- Test si la pile est vide
+        end;
+
+
+        function Taille (Sda : in T_LCA) return Integer is
+        begin
+                if Sda /= null then	--
+                        return Taille(Sda.all.Suivant)+1;
+                else
+                        return 0;
+                end if;
+        end Taille;
+
+
+        procedure Enregistrer (Sda : in out T_LCA ; Cle : in T_Cle ; Donnee : in T_Donnee) is
+                Curseur : T_LCA;
+        begin
+                Curseur := Sda;
+                if Sda /= null then
+                        if Cle = Curseur.Cle then
+                                Curseur.Donnee := Donnee;
+                        end if;
+                else
+                        --Creer un nouvel élément (allocation puis initialisation)
+                        Initialiser(Curseur);
+                        Curseur := new T_Cellule;
+                        Curseur.all.Cle := Cle;
+                        Curseur.all.Donnee := Donnee;
+                        Curseur.all.Suivant := Sda;
+
+                        --Changer Sda (elle pointe maintenant sur le curseur)
+                        Sda := Curseur;
+                end if;
+        end Enregistrer;
+
+
+        function Cle_Presente (Sda : in T_LCA ; Cle : in T_Cle) return Boolean is
+                n : Integer;
+                Est_Present : Boolean;
+                Curseur : T_LCA;
+        begin
+                n := Taille(Sda);
+                Est_Present := False;
+                Curseur := Sda;
+                for i in 1..n loop
+                        if Cle = Curseur.Cle then
+                                Est_Present := True;
+                        end if;
+                        Curseur := Curseur.Suivant;
+                end loop;
+                return Est_Present;
+        end Cle_Presente;
+
+
+        function La_Donnee (Sda : in T_LCA ; Cle : in T_Cle) return T_Donnee is
+                Curseur : T_LCA;
+        begin
+                if not Cle_Presente(Sda, CLe) then
+                        raise Cle_Absente_Exception;
+                end if;
+                Curseur := Sda;
+                loop
+                        Curseur := Curseur.Suivant;
+                        exit when Curseur.Cle = Cle;
+                end loop;
+                return Curseur.Donnee;
+        end La_Donnee;
+
+
+        procedure Supprimer (Sda : in out T_LCA ; Cle : in T_Cle) is
+        begin
+                null;	-- TODO : à changer
+        end Supprimer;
+
+
+        procedure Vider (Sda : in out T_LCA) is
+        begin
+                if Sda /= null then	-- TODO : à changer
+                        Vider (Sda.all.Suivant);
+                        Free(Sda);
+                else
+                        null;
+                end if;
+        end Vider;
+
+
+        procedure Pour_Chaque (Sda : in T_LCA) is
+        begin
+                null;	-- TODO : à changer
+        end Pour_Chaque;
+
+
+end LCA;

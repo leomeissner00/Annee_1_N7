@@ -1,0 +1,103 @@
+package tableur;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.Serializable;
+
+import javax.swing.JFileChooser;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileSystemView;
+
+import tableur.composant.Cellule;
+public class TableurControleur implements ActionListener, Serializable {
+
+    public Tableur tableur;
+	private String pathActuel = " ";
+	private String nomActuel = " ";
+    
+    public TableurControleur(Tableur tableur) {
+        this.tableur = tableur;
+
+		(tableur.itemNouveau).addActionListener(this);
+		(tableur.itemOuvrir).addActionListener(this);
+		(tableur.itemEnregistrer).addActionListener(this);
+		(tableur.itemEnregistrerSous).addActionListener(this);
+
+		(tableur.itemAnnuler).addActionListener(this);
+		(tableur.itemRetablir).addActionListener(this);
+		(tableur.itemCopier).addActionListener(this);
+		(tableur.itemCouper).addActionListener(this);
+		(tableur.itemColler).addActionListener(this);
+		(tableur.itemRAZ).addActionListener(this);
+
+		(tableur.itemApparence).addActionListener(this);
+		(tableur.itemFormat).addActionListener(this);
+		(tableur.itemDimension).addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().getClass() == JMenuItem.class) {
+            if (e.getSource() == tableur.itemNouveau ) {
+            	TableurSwing newTab = new TableurSwing();
+            }
+            if (e.getSource() == tableur.itemRAZ ) {
+            	this.tableur.reset();
+            } 
+            if (e.getSource() == tableur.itemOuvrir ) {
+            	
+            	JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+            	j.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            	int res = j.showSaveDialog(null);
+            	if(res == JFileChooser.APPROVE_OPTION) {
+            		File fs = j.getSelectedFile();
+            		this.pathActuel = fs.getAbsolutePath();
+            		this.nomActuel = fs.getName();
+            		TableurSauvegarde save = new TableurSauvegarde(this.nomActuel);
+            		this.tableur = save.Ouvrir(this.pathActuel);	
+            	} else {System.out.print("Annulage d'ouverture de fichier tableur.");}
+            	
+            }
+
+            if (e.getSource() == tableur.itemEnregistrerSous ) {
+            	JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+            	j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            	int res = j.showSaveDialog(null);
+            	if(res == JFileChooser.APPROVE_OPTION) {
+            		File fs = j.getSelectedFile();
+            		this.pathActuel = fs.getAbsolutePath();
+            		String name = JOptionPane.showInputDialog("Entrer nom du fichier :");
+            		this.nomActuel = name;
+            		TableurSauvegarde save = new TableurSauvegarde(this.nomActuel);       		
+            		save.Enregistrer(tableur, this.pathActuel);
+            	} else {System.out.print("Annulage d'enregistrement de fichier tableur.");}
+                
+            }
+            
+            if (e.getSource() == tableur.itemEnregistrer ) {
+            	if(this.pathActuel.equals(" ")) {
+            		TableurSauvegarde save = new TableurSauvegarde(this.nomActuel);
+            		save.Enregistrer(tableur, this.pathActuel);
+            	} else {
+            		JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+                	j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                	int res = j.showSaveDialog(null);
+                	if(res == JFileChooser.APPROVE_OPTION) {
+                		File fs = j.getSelectedFile();
+                		this.pathActuel = fs.getAbsolutePath();
+                		String name = JOptionPane.showInputDialog("Entrer nom du fichier :");
+                		this.nomActuel = name;
+                		TableurSauvegarde save = new TableurSauvegarde(this.nomActuel);       		
+                		save.Enregistrer(tableur, this.pathActuel);        		
+            		} else {System.out.print("Annulage d'enregistrement de fichier tableur.");}
+            	}
+            }
+        }
+    }
+    
+    //TODO Deplacer le curseur
+
+}

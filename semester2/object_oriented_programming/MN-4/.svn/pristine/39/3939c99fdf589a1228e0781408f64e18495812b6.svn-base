@@ -1,0 +1,35 @@
+package tableur.math.calcul;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.math.*;
+
+public class CalculMoyenne implements Calcul{
+	
+	private Tableur tab;
+	
+	public CalculMoyenne(Tableur tableur) {
+		this.tab = tableur;
+	}
+	
+	public double calculer(Position pos1, Position pos2) {
+		Calcul calSomme = new CalculSomme(tab);
+		double somme = calSomme.calculer(pos1, pos2);
+		int largeur = Math.abs(pos2.x - pos1.x);
+		int hauteur = Math.abs(pos2.y - pos1.y);
+		int nbElmt = hauteur*largeur;
+		double moyenne = somme / ((double) nbElmt);
+		return moyenne;
+	}
+	
+	public double calculerMoyCarree(Position pos1, Position pos2) {
+		CalculSomme calSomme = new CalculSomme(tab);
+		double somme = calSomme.calculerSommeCarrees(pos1, pos2);
+		int largeur = Math.abs(pos2.x - pos1.x);
+		int hauteur = Math.abs(pos2.y - pos1.y);
+		int nbElmt = hauteur*largeur;
+		double moyenne = somme / ((double) nbElmt);
+		return moyenne;
+	}
+
+}

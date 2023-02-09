@@ -1,0 +1,28 @@
+14c14,17
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+> 
+> Allumettes restantes : 13
+24c27
+< Ordinateur prend 3 allumette.
+---
+> Ordinateur prend 1 allumette.
+26c29
+< Allumettes restantes : 3
+---
+> Allumettes restantes : 5
+29,30c32,33
+< Allumettes restantes : 2
+< Ordinateur prend 1 allumette.
+---
+> Allumettes restantes : 4
+> Ordinateur prend 3 allumette.
+49c52,55
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+> 
+> Allumettes restantes : 1

@@ -1,0 +1,29 @@
+package tableur.composant;
+
+import javax.swing.JTextField;
+
+import tableur.Tableur;
+import tableur.exception.NoValuableException;
+
+public class Cellule extends JTextField {
+    
+    public Cellule() {
+        super();
+    }
+    
+
+    public Cellule(String text) {
+        super(text);
+    }
+
+    public double getValeur(Tableur tab) throws NoValuableException {
+        try {
+            return Double.parseDouble(this.getText());
+        } catch (NumberFormatException e) {
+            throw new NoValuableException();
+        } catch (NullPointerException e) {
+            throw new NoValuableException();
+        }
+    }
+
+}

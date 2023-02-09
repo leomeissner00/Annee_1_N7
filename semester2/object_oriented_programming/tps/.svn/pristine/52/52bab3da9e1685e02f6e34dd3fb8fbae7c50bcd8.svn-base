@@ -1,0 +1,159 @@
+package allumettes;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ * Lance une partie des 13 allumettes en fonction des arguments fournis sur la
+ * ligne de commande.
+ * 
+ * @author Xavier Crégut
+ * @version $Revision: 1.5 $
+ */
+public class Jouer {
+
+	/**
+	 * Lancer une partie. En argument sont donnés les deux joueurs sous la forme
+	 * nom@stratégie.
+	 * 
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		Joueur j1;
+		Joueur j2;
+		try {
+			verifierNombreArguments(args);
+			verifierConfiant(args);
+			//Ensuite Vérifier si c'est juste avec le confiant.	
+			
+			// Construire les joueurs
+			String a_separer = args[0]+"@"+args[1];
+			String[] separer = a_separer.split("@");
+			if (separer.length != 4) {
+				throw new ConfigurationException("Le format des joueurs n'est pas le bon.");
+			}
+			j1 = new Joueur(separer[0], separer[1]);
+			j2 = new Joueur(separer[Jeu.PRISE_MAX-1], separer[Jeu.PRISE_MAX]);
+			
+			// Construire l'aritre
+			Arbitre arbitre_jeu = new Arbitre(j1, j2);
+			
+			// Construire le jeu
+			JeuAllumettes jeu = new JeuAllumettes(13);
+			
+			arbitre_jeu.arbitrer(jeu);
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+		
+
+	}
+
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : " + args.length);
+		}
+		if (args.length > nbJoueurs + 1) {
+			throw new ConfigurationException("Trop d'arguments : " + args.length);
+		}
+	}
+	
+	private static void verifierConfiant (String[] args) {
+		final int nbJoueurs = 2;
+		if (args[1] == "-confiant" & args.length == 3) {
+			// desactiver le proxy et tout ça
+			args[1] = args[nbJoueurs];
+			args[nbJoueurs] = args[nbJoueurs+1];
+		}
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :" + "\n\t" + "java allumettes.Jouer joueur1 joueur2" + "\n\t\t"
+				+ "joueur est de la forme nom@stratégie" + "\n\t\t"
+				+ "strategie = naif | rapide | expert | humain | tricheur" + "\n" + "\n\t" + "Exemple :" + "\n\t"
+				+ "	java allumettes.Jouer Xavier@humain " + "Ordinateur@naif" + "\n");
+	}
+
+	public static class Strategie {
+
+		/**Vérifie la validité d'une stratégie.
+		 * 
+		 * @param : le type de stratégie qu'un joueur joue
+		 * @return boolean indiquant si la strategie existe ou non
+		 */
+		public static boolean checkStrategie(String type) { 
+			switch(type) {
+			case "humain":
+			case "naif":
+			case "rapide":
+			case "expert":
+			case "tricheur":
+				return true;
+			default:
+				return false;
+			
+			}
+		}
+		
+
+		/**
+		 * Applique la stratégie de jeu prédéfinie pour chaque joueur.
+		 * 
+		 * @param nom   : le nom du joueur qui joue
+		 * @param vtype : la stratégie du joueur qui joue
+		 * @return le nombre d'allumettes qu'il veut retirer
+		 */
+		public static int choixNbRetirer(String nom, String vtype, Jeu jeu){
+			switch (vtype) {
+			case "humain":
+				System.out.print(nom + ", combien d'allumettes ? ");
+				Scanner sc = new Scanner(System.in);
+				if (sc.hasNextInt()) {
+					return sc.nextInt();
+				} else {
+					sc.reset();
+					return -1;
+				}
+			
+			case "rapide":
+				if (jeu.getNombreAllumettes() < jeu.PRISE_MAX) {
+					return jeu.getNombreAllumettes();
+				}else {
+					return jeu.PRISE_MAX;
+				}
+			case "expert":
+				if (jeu.getNombreAllumettes() == 1) {
+					return 1;
+				}
+				if (jeu.getNombreAllumettes()-Jeu.PRISE_MAX <= 1) {
+					int val = Jeu.PRISE_MAX +1;
+					do {
+						val --;
+					}while((jeu.getNombreAllumettes()-val) != 1);
+					return val;
+				}
+
+			case "naif":
+				Random generator = new Random();
+				int val = (generator.nextInt(Jeu.PRISE_MAX)+1);
+				if (val > jeu.getNombreAllumettes()){
+					return jeu.getNombreAllumettes();
+				} else {
+					return val;
+				}
+
+			case "tricheur":
+				return 1;
+			default:
+				return 0;
+			}
+		}
+	}
+
+}

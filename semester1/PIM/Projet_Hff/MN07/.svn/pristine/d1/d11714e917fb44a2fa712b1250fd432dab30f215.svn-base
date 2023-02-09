@@ -1,0 +1,189 @@
+with Ada.Text_IO;    use Ada.Text_IO;
+with Ada.Command_Line;   use Ada.Command_Line;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+
+
+procedure Decompresser is
+        
+        package SB is new Ada.Strings.Bounded.Generic_Bounded_Length (Max => 100);
+        use SB;
+        
+        Cur_Argument : SB.Bounded_String;
+        Input_File_Path : SB.Bounded_String;
+        Output_File_Path : SB.Bounded_String;
+        I : Integer := 1;
+        
+        
+        
+        type T_Octet is mod 2 ** 8;	-- sur 8 bits
+        for T_Octet'Size use 8;
+        
+        function Octet_to_binaire(Octet : in T_Octet) return Unbounded_String is  
+       	 Bit, temp : T_Octet;
+       	 Octet_str  : Unbounded_String;
+         Bit_str : String(1..2);
+         
+        begin
+                temp := Octet;
+                Bit := temp / 128;
+                Bit_str := Integer'Image(Integer(bit));
+                Octet_str := To_Unbounded_string(Bit_str(2..Bit_str'Last));
+                temp := temp * 2;
+                for N in 1..7 loop
+                        Bit := temp / 128;
+                        Bit_str := Integer'Image(Integer(bit));
+                        Octet_str := Octet_str & To_Unbounded_string(Bit_str(2..Bit_str'Last));
+                        temp := temp * 2;
+                end loop;
+                return(Octet_str);
+                
+        end Octet_to_binaire;
+                
+        function Reconstruire_arbre (Arbre_bin: in out T_Abr; suite_bits: in out Unbounded_String) return T_Abr is --pas convaincu si ça marche et fonction ou procedure?
+        begin
+                if suite_bits = To_Unbounded_String("") then
+                        return Arbre_bin;
+                end if;
+                if suite_bits(0) = 1 then     ---- C'est faux parce que c'est pas le bon type
+                        --Enlever le prmeier élément de suite_bits
+                        position_feuille := position_feuille + 1;
+                        arbre_bin.cle := position_feuille;
+                        arbre_bin.donnee := Tableau_caractere(position_feuille);
+                else 
+                        --Enlever le premier élément de suite_bits
+                        Reconstruire_arbre(Gauche(Arbre_bin), suite_bits);
+                        Reconstruire_arbre(Droite(Arbre_bin), suite_bits);
+                end if;
+        end Reconstruire_arbre;       
+        
+                       
+        
+
+        File_Name : String := "test1.txt";
+        File      : Ada.Streams.Stream_IO.File_Type;	-- car il y a aussi Ada.Text_IO.File_Type
+        S         : Stream_Access;
+        Octet     : T_Octet;
+        File_case : String;
+begin
+        --Vérifier qu'il n'y a pas d'argument en plus dans la ligne de commande
+        if Argument_Count /= 1 then
+                raise Argument_Exception;
+        end if;
+        
+        --Vérifier que le fichier est bien un .hff
+        File_Name := Argument(1);
+        File_case :=Slice(To_Unbounded_String(File_name), Length(File_Name)-3, Length(File_Name));
+        
+        if File_case /= ".hff" then
+                raise Fichier_non_hff_Exception;
+        end if;
+        
+        --------------------------------------------------------------
+        --Il y a un essai dans essai_svn mais ça ne fonctionne pas
+        --------------------------------------------------------------
+        
+        
+   
+        -- Lire le contenu du fichier
+        -- --------------------------
+        --   Ouvrir le fichier en lecture
+        Open(File, In_File, File_Name);
+        
+        --   Lire, vérifier et afficher de temps en temps le contenu
+        --   Attention, il faut lire les données dans le même ordre qu'elles ont été écrite.
+        --   Ici, le problème ne se pose pas car il n'y a que des octets.
+        S := Stream(File);
+        
+        
+        --R2 : Reconstruire l'arbre de Huffmann
+        ----------------------------------
+        
+        -- Récupérer les carctères à utiliser pour la décompression
+        Initialiser(Tableau_caractere);
+        Compteur := 1;
+        Premier_carctere := T_Octet'Input(S); 
+        Tableau_carctere(0) := Premier_caractere;
+        
+                -- Recupérer les octets correspondant à des caractères dans S
+        loop 
+                Nouveau_caractere := T_Octet'Input(S);
+                Tableau_caractere(Compteur) := Nouveau_caractere;
+                Premier_caractere := Nouveau_caractere;
+                
+                Compteur := Compteur + 1;
+                exit when Nouveau_caractere = Premier_caractere;
+        end loop;
+        
+        ---------------------------------------------------------------
+        --Remettre le caractère spéciale à sa position initiale
+        
+        
+        -----------------------------------------------------------------------------------
+        -- R3 Récupérer le parcours infixe suitebits de l'arbre de Huffmann
+        
+        Octet := T_Octet'Input(S);
+        Octet_to_binaire(Octet);
+        Octet_chaine := To_String(Octet); -- Octet Courant sur lequel on lit les bits
+        
+        
+        nbr_feuille_totale := compteur -1;
+        nbr_feuille := 0;
+        Initialiser(suite_bits);    -- Initaliser une Unbounded String
+        
+        Compteur := 0;
+        while nbr_feuille /= nbr_feuille_totale loop
+                if Compteur = 8 then
+                        Octet := T_Octet'Input(S);
+                        Octet_to_binaire(Octet);
+                        Octet_chaine := To_String(Octet);
+                end if;
+                
+                if Octet_chaine(Compteur) = 1 then
+                        nombre_feuille := nombre_feuille + 1;
+                end if;
+                Append(suite_bits, To_Unbounded_String(Octet_chaine(Compteur)));
+                Compteur := Compteur + 1;
+        end loop;
+        
+        -- Fin de ce R3
+        
+        Initialiser(Arbre_bin);
+        Position_feuille := 0;
+        
+        -- R3 Reconstruire Arbre_bin à partir du parcours infixe suite_bits
+        Reconstruire_arbre (Arbre_bin, suite_bits);
+        
+        --Fin de ce R3              
+        --Fin de ce R2
+        
+        --R2 Faire le décompressage avec l'arbre de Huffmann
+        
+        Arbre_fils := Arbre_bin;
+        --Initialiser Code
+        
+        loop
+               if Compteur = 8 then
+                        Octet := T_Octet'Input(S);
+                        Octet_to_binaire(Octet);
+                        Octet_chaine := To_String(Octet);
+                end if;
+                
+                if Octet(Compteur) = 0 then
+                        Arbre_fils := Droite(Arbre_fils);
+                else
+                        Arbre_fils := Gauche(Arbre_fils);
+                end if;
+                
+                if Est_feuille(Arbre_fils) and Tableau_caractere(Donnee(Arbre_fils)) /= Caractere_special then
+                        --Ajouter la donnee de Arbre fils aux texte décompresser 
+                        Arbre_fils := Arbre_bin;
+                end if;
+                
+                exit when Tableau_caractere(Donnee(Arbre_fils)) = Caractere_special;
+        end loop;
+        
+        -- Renvoyé en sortie de la ligne de commande le texte qu'il faut et tout 
+
+        
+        
+end Decompresser;

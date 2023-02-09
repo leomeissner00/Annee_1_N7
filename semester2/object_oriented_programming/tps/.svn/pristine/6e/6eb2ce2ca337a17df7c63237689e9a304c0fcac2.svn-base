@@ -1,0 +1,97 @@
+Date de l'évaluation : jeu. 10 mars 2022 12:22:20 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 0
+
+Erreurs checkstyle (différentes/types) : 31/10	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : NON DÉFINIE (ou pas sur SVN)
+
+Procuration sur le jeu réel : Non identifiée
+
+OperationInterditeException : JAMAIS LEVÉE
+OperationInterditeException : JAMAIS RECUPÉRÉE
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:76:         } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:30:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/Jouer.java:112:              Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok mais un seul split devrait suffir !  Code à restructurer...
+  | allumettes/Jouer.java:28:           //Et que c'est possbile de split
+  | allumettes/Jouer.java:38:       String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/Jouer.java:4:import java.util.Random;
+  | allumettes/Jouer.java:138:              Random generator = new Random();
+
+Utilisation de '3' : Ne pas utiliser de constante littérale hors -1, 0 ou 1 (peut-être PRISE_MAX ?)
+  |     allumettes/Jouer.java:40:       j2 = new Joueur(separer[2], separer[3]);
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : Tests run: 25,  Failures: 18	(voir evaluations/evaluation1/RobustesseTest.log)
+    1) testerSansStrategieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    2) testerStrategieDoubleAtSymetrieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    3) testerSansStrategie(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    4) testerStrategieInconnueSymetrieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    5) testerStrategieDoubleAtStrategieALaFinSymetrie(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    6) testerStrategieInconnue(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    7) testerStrategieDoubleAtConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    8) testerStrategieDoubleAtStrategieALaFinSymetrieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    9) testerStrategieInconnueSymetrie(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    10) testerNomNonDefiniConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    11) testerStrategieDoubleAt(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    12) testerStrategieDoubleAtStrategieALaFinConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    13) testerStrategieDoubleAtStrategieALaFin(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    14) testerSansStrategieSymetrie(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    15) testerDoubleConfiantConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    16) testerSansStrategieSymetrieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    17) testerStrategieInconnueConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+    18) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
+        allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+	Non fait car le projet n'est pas assez avancé
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

@@ -1,0 +1,277 @@
+with Ada.Text_IO;          use Ada.Text_IO;
+with Ada.Strings.Unbounded;  use Ada.Strings.Unbounded;
+with Ada.Strings;  use Ada.Strings;
+with Ada.Command_Line;     use Ada.Command_Line;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Codage_Huffmann_Exception;         use Codage_Huffmann_Exception;
+with LCA_projet;
+
+procedure decomp is
+        type T_Octet is mod 2 ** 8;	
+        for T_Octet'Size use 8;
+        
+        package LCA_decompress is
+                new LCA_projet (T_Cle => Integer, T_Donnee => Unbounded_String);
+        use LCA_decompress;
+        
+        package LCA_decompress2 is
+                new LCA_projet (T_Cle => Unbounded_String, T_Donnee => T_Octet);
+        use LCA_decompress2;
+        
+        
+        function Octet_to_binaire(Octet : in T_Octet) return Unbounded_String is  
+                Bit, temp : T_Octet;
+                Octet_str  : Unbounded_String;
+                Bit_str : String(1..2);
+                
+        begin
+                temp := Octet;
+                Bit := temp / 128;
+                Bit_str := Integer'Image(Integer(bit));
+                Octet_str := To_Unbounded_string(Bit_str(2..Bit_str'Last));
+                temp := temp * 2;
+                for N in 1..7 loop
+                        Bit := temp / 128;
+                        Bit_str := Integer'Image(Integer(bit));
+                        Octet_str := Octet_str & To_Unbounded_string(Bit_str(2..Bit_str'Last));
+                        temp := temp * 2;
+                end loop;
+                return(Octet_str);
+                
+        end Octet_to_binaire;
+        
+        function Binaire_to_octet (Octet_str: in Unbounded_String) return T_Octet  is
+                
+                Str : String(1..8);
+                somme : Integer;
+        begin
+                somme := 0;
+                Str := To_String(Octet_str);
+                for i in 1..8 loop
+                        if Str(i) = '1' then
+                                somme := somme + 2**(8-i);
+                        end if;
+                end loop;
+       
+        return T_Octet(somme) ;
+        end Binaire_to_octet;
+        
+        
+        --Nom : Création_table_huffmann
+        --Sémantique : Créer la table de codage de huffmann à partir de du tableau de caractere et du parcours infixe
+        --Paramètres : Tableau_caractere : in LCA_decompress.T_LCA      -- LCA comprenant chaque caractere utilisé dans le texte
+        --             Suite_bits : in Unbounded_String                 -- Parcours infixe de l'arbre de Huffmann
+        -- Pré condition : 
+        -- Post-condition : 
+        -- Exemple : 
+        function Creation_table_huffmann (Tableau_caractere : in LCA_decompress.T_LCA;  Suite_bits : in Unbounded_String ) return LCA_decompress2.T_LCA is
+                Code : Unbounded_String;
+                position_feuille : Integer;
+                Codage_Huffmann : LCA_decompress2.T_LCA;
+                        
+        begin
+                Code := Null_Unbounded_String;
+                position_feuille := 1;
+                
+                For i in  1..Length(Suite_bits) loop
+                        
+                        if Element(Suite_bits, i) = '0' then
+                                Append(Code, To_Unbounded_String("0"));
+                        else
+                                
+                                Enregistrer(Codage_Huffmann, Code, Binaire_to_octet(La_Donnee(Tableau_caractere, position_feuille)));
+                                position_feuille := position_feuille+1;
+                                
+                                if Length(Code) = 1 then
+                                        Code := To_Unbounded_String("1");
+                                else
+                                        if i /= length(Suite_bits) then 
+                                                while Element(Code, Length(Code)) = '1' loop
+                                                        Code := Unbounded_Slice(Code, 1, Length(Code)-1);
+                                                end loop;
+                                                if Length(Code) = 1 then
+                                                        Code := To_Unbounded_String("1");
+                                                else
+                                                        Replace_Element(Code,Length(Code),  '1');
+                                                end if;
+                                        end if;   
+                                end if;       
+                        end if;      
+                end loop;
+                
+                return Codage_Huffmann;
+                        
+        end Creation_table_huffmann;
+        
+        
+        Suite_bits : Unbounded_String;
+        
+        
+        
+        File_Name : Unbounded_String;
+        File      : Ada.Streams.Stream_IO.File_Type;	
+        S         : Stream_Access;
+        Octet     : T_Octet;
+        
+        Cle : Unbounded_String;
+        
+        Tableau_caractere : LCA_decompress.T_LCA;
+        Compteur : Integer;
+        Premier_caractere : T_Octet;
+        Nouveau_caractere : T_Octet;
+        Octet_Un_chaine : Unbounded_String;
+        Octet_chaine : String (1..8);
+        
+        nbr_feuille_totale : Integer;
+        nbr_feuille : Integer;
+
+        Codage_Huffmann : LCA_decompress2.T_LCA;
+        temp : LCA_decompress2.T_LCA;
+        
+        Code : Unbounded_String;
+        Bonne_Donnee : T_Octet;
+        
+        
+        fichier_decompresse : Ada.Streams.Stream_IO.File_Type;
+        SC : Stream_Access;
+        File_case : String(1..4);
+        
+        
+        
+begin
+        File_Name:= To_Unbounded_String(Argument(1));
+        
+        -- Verifier que le fichier est en .hff
+        if Length(File_Name) <= 4 then
+                
+                Raise Pas_hff_exception;
+                
+        else
+                
+                File_case :=Slice(File_name, Length(File_Name)-3, Length(File_Name));
+                if File_case /= ".hff" then
+                        Raise Pas_hff_exception;
+                end if;
+        end if;
+        
+        -- Lire le contenu du fichier
+        -- --------------------------
+        --   Ouvrir le fichier en lecture
+        Open(File, In_File, To_String(File_Name));
+        
+        S := Stream(File);
+
+        --R2 : Reconstruire l'arbre de Huffmann
+        ----------------------------------
+        
+        -- Récupérer les carctères à utiliser pour la décompression
+        Initialiser(Tableau_caractere);
+        Compteur := 2;
+        Premier_caractere := T_Octet'Input(S); 
+        Cle := Octet_to_binaire(Premier_caractere);
+        Enregistrer(Tableau_caractere, 1, Cle);
+        Nouveau_caractere := T_Octet'Input(S); 
+        
+        -- Recupérer les octets correspondant à des caractères dans S
+        while Nouveau_caractere /= Premier_caractere loop 
+                
+                Cle := Octet_to_binaire(Nouveau_caractere);
+                Enregistrer(Tableau_caractere, Compteur, Cle);
+                Premier_caractere := Nouveau_caractere;
+                Nouveau_caractere := T_Octet'Input(S); 
+                Compteur := Compteur + 1;
+                
+        end loop;
+        
+        -------------------------------------------------------------------
+        -- R3 Récupérer le parcours infixe suitebits de l'arbre de Huffmann
+        
+        Octet := T_Octet'Input(S);
+        Octet_Un_chaine := Octet_to_binaire(Octet);
+        Octet_chaine := To_String(Octet_Un_chaine); -- Octet Courant sur lequel on lit les bits
+        
+        
+        nbr_feuille_totale := compteur-1 ;
+        nbr_feuille := 0;
+        
+        suite_bits := Null_Unbounded_String;
+        Compteur := 1;
+        loop
+            --Changement de l'octet courant lorsque celui-ci a été lu en entier
+                if Compteur = 9 then          
+                        Octet := T_Octet'Input(S);
+                        Octet_Un_chaine := Octet_to_binaire(Octet);
+                        Octet_chaine := To_String(Octet_Un_chaine);
+                        Compteur := 1;
+                end if;
+                
+                if Octet_chaine(Compteur) = '1' then
+                        nbr_feuille := nbr_feuille + 1;
+                end if;
+                
+                Append(suite_bits, Octet_chaine(Compteur));
+                Compteur := Compteur + 1;
+                exit when nbr_feuille_totale = nbr_feuille;
+        end loop;
+     
+        -- Fin de ce R3
+        ------------------------------------------------------------------------
+        
+        
+        -- R3 Reconstruire Arbre_bin à partir du parcours infixe suite_bits
+        Initialiser(Codage_Huffmann);
+        Codage_Huffmann := Creation_table_huffmann(Tableau_caractere, Suite_bits);
+        
+        --Fin de ce R3              
+        --Fin de ce R2
+        
+        --R2 Faire le décompressage avec l'arbre de Huffmann
+        
+        --Initialiser le fichier décompresser
+        Create(fichier_decompresse, Out_File, Slice(File_name, 1, Length(File_Name)-4));
+        SC := Stream(fichier_decompresse);
+        
+        Code := Null_Unbounded_String;                                         
+        
+        loop
+               if Compteur = 9 then
+                        Octet := T_Octet'Input(S);
+                        Octet_Un_chaine := Octet_to_binaire(Octet);
+                        Octet_chaine := To_String(Octet_Un_chaine);
+                        Compteur := 1;
+                end if;
+                
+                Append(Code, Octet_chaine(Compteur));
+
+                
+                temp:= Codage_Huffmann; --Repointer la lca tempon sur le début de celle-ci
+                for i in 1..Taille(Codage_Huffmann) loop 
+
+                        if Code = La_Cle(temp) then
+
+                                Bonne_Donnee := La_Donnee(temp,La_Cle(temp));
+                                
+                                if To_String(Octet_to_binaire(La_Donnee(temp,La_Cle(temp)))) /= "11111111" then 
+                                        
+                                        T_Octet'Write(SC, Bonne_Donnee);   
+                                        Code := Null_Unbounded_String;
+                                end if;
+                        end if;
+                        
+                        temp := La_Suivante(temp);
+                        
+                end loop;
+                        
+                Compteur := Compteur + 1;
+                
+                exit when To_string(Octet_to_binaire(Bonne_Donnee)) = "11111111";
+        end loop;
+
+        
+        Close (File);
+        Close (fichier_decompresse);
+
+exception
+                when Pas_hff_Exception => Put("Le fichier n'a pas l'extension .hff, decompression impossible");
+        
+end decomp;

@@ -1,0 +1,145 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnata
+A -gnatwa
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U test_lca_projet%b	test_lca_projet.adb	0063f0d7 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+Z codage_huffmann_exception%s  codage_huffmann_exception.ads  codage_huffmann_exception.ali
+W lca_projet%s		lca_projet.adb		lca_projet.ali
+Z system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-assert.ads		20210520051127 a718b65c ada.assertions%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D codage_huffmann_exception.ads  20220108111157 ff12cf4d codage_huffmann_exception%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D lca_projet.ads	20220112090729 804cbf2d lca_projet%s
+D lca_projet.adb	20220112090729 d927f07e lca_projet%b
+D system.ads		20210520051134 a2da961d system%s
+D s-assert.ads		20210520051131 6a49a4e4 system.assertions%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210520051133 e251976f system.storage_pools.subpools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D test_lca_projet.adb	20211215161658 dba24114 test_lca_projet%b
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [test_lca_projet standard 8 11 none]
+G r i none [test_lca_projet standard 8 11 none] [lca_projet standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 50|1r6 1r34 2r6 2r34 3r6 3r34
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[17|46] 50|2w10 2r38
+X 10 a-string.ads
+16K13*Strings 35e16 50|3r10 3r38
+X 13 a-strunb.ads
+83K21*Unbounded 765e26 50|3w18 3r46
+88R9*Unbounded_String<6|43R9> 744e15 50|11r42
+104V13*To_Unbounded_String{88R9} 50|21s34 22s50 23s51 25s55 26s50 27s51 31s33
+. 32s55
+X 16 a-textio.ads
+58K13*Text_IO 725e16 50|1w10 1r38
+X 23 lca_projet.ads
+5+14 T_Cle 50|11r33
+6+14 T_Donnee 50|11r61
+8k9*LCA_projet 84e15 50|4w6 11r21
+10P14 T_LCA 50|16r56[10] 39r15[10]
+13U19 Initialiser 50|18s17[10]
+18V18 Est_Vide{boolean} 50|19s32[10] 29s36[10] 34s36[10] 43s23[10]
+22V18 Taille{integer} 50|28s36[10] 33s36[10]
+29U19 Enregistrer 50|21s17[10] 25s17[10]
+29p32 Sda{10P14[50|10]} 50|25r30[10]
+29r53 Cle{13|88R9} 50|25r45[10]
+29i70 Donnee{integer} 50|25r84[10]
+37U19 Supprimer 50|31s17[10]
+43V18 Cle_Presente{boolean} 50|22s32[10] 26s32[10] 32s37[10]
+48V18 La_Donnee{integer} 50|23s36[10] 27s36[10]
+58U19 Vider 50|42s9[10]
+X 25 system.ads
+67M9*Address
+X 33 s-memory.ads
+53V13*Alloc{25|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{25|67M9} 105i<c,__gnat_realloc>22
+X 41 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+X 50 test_lca_projet.adb
+8U11*test_lca_projet 8b11 44l5 44t20
+10K17 LCA_String_Integer[23|8] 12r13
+16U19 Initialiser_Avec_2_element 16b19 16<46 37l13 37t39 41s9
+16p46 Sda{23|10P14[10]} 18m30 19r41 21m30 22r45 23r46 25m40 26r45 27r46 28r43
+. 29r45 31m28 32r50 33r43 34r45
+39p9 Sda{23|10P14[10]} 41m36 41r36 42m15 42r15 43r32
+

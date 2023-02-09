@@ -1,0 +1,71 @@
+package tableur;
+
+import java.util.*;
+
+import tableur.action.Action;
+import tableur.composant.*;
+import tableur.math.Formule;
+import tableur.math.formule.FormuleVide;
+
+public class Tableur extends Observable {
+    
+    public final int WIDTH = 10;
+    public final int HEIGHT = 30;
+
+
+    private Historique historique;
+
+    public Map<Position, Cellule> cells;
+
+    public Tableur() {
+        cells = new HashMap<Position, Cellule>();
+        this.historique = new Historique(this);
+    }
+
+    private void verifierIndice(Position pos) {
+        if ( pos.x < 0 || pos.y < 0) {
+            throw new IndexOutOfBoundsException("La position doit etre superieur ou egal au couple (0,0)");
+        }
+    }
+
+    public Historique getHistorique() {
+        return this.historique;
+    }
+
+    public void addHistorique(Action action) {
+        this.historique.ajouterAction(action);
+    }
+
+    public void delCellule(Position pos) {
+        verifierIndice(pos);
+        cells.remove(pos);
+    }
+
+    public void setCellule(Position pos, Formule formule) {
+        verifierIndice(pos);
+        cells.put(pos, new Cellule(formule));
+    }
+
+    public double getValeur(Position pos) {
+        verifierIndice(pos);
+        return this.getCellule(pos).getValeur(this);
+    }
+
+    public Formule getFormule(Position pos) {
+        verifierIndice(pos);
+        return this.getCellule(pos).getFormule();
+    }
+
+    public Cellule getCellule(Position pos) {
+        verifierIndice(pos);
+        Cellule cell = this.cells.get(pos);
+    	if (cell != null) {
+    		return this.cells.get(pos);
+    	}
+    	else {
+    		Formule form = new FormuleVide();
+    		return new Cellule(form);
+    	}
+    	
+    }
+}

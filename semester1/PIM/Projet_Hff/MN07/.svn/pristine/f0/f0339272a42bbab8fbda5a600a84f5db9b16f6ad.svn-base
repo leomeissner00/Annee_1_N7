@@ -1,0 +1,96 @@
+with Arbre_Exceptions;         use Arbre_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body arbre_bin_projet is
+
+	procedure Free is
+		new Ada.Unchecked_Deallocation (Object => T_Noeud, Name => T_ABR);
+
+
+	procedure Initialiser(Arbre: out T_ABR) is
+	begin
+		Arbre := null;
+	end Initialiser;
+
+
+	function Est_Vide (Arbre : T_ABR) return Boolean is
+	begin
+		return Arbre = null;
+	end Est_Vide;
+
+
+
+	procedure Enregistrer_noeud (Arbre : in out T_ABR ; Valeur : in Integer ; Donnee : in T_Donnee) is
+	begin
+
+		Arbre.all.Valeur := Valeur;
+		Arbre.all.Donnee := Donnee;
+
+	end Enregistrer_noeud;
+
+
+	procedure Vider (Arbre : in out T_Abr) is
+	begin
+		if Arbre = null then
+			Free(Arbre);
+
+		else
+			Vider(Arbre.all.Sous_Arbre_Gauche);
+			Vider(Arbre.all.Sous_Arbre_Droit);
+			Free(Arbre);
+
+		end if;
+	end Vider;
+	
+
+	function Droite(Arbre : in T_Abr) return T_Abr is 
+	begin 
+		return Arbre.all.Sous_Arbre_Droit;
+		
+	end Droite;
+
+
+	function Gauche(Arbre : in T_Abr) return T_Abr is 
+	begin
+		return Arbre.all.Sous_Arbre_Gauche;
+
+	end Gauche;
+
+
+	procedure Fusionner(Arbre_g : in out T_abr; Arbre_d : in T_Abr) is
+	begin
+		Arbre_g.all.Sous_Arbre_Gauche := Arbre_g;
+		Arbre_g.all.Sous_Arbre_Droite := Arbre_d;
+	end Fusionner;
+
+
+	function Donnee (Arbre : in T_Abr) return T_Donnee is 
+	begin
+	return Arbre.all.Donnnee;
+	end Donnee;
+
+	function Valeur (Arbre : in T_Abr) return Integer is 
+	begin
+	return Arbre.all.Valeur;
+	end Valeur;
+
+	procedure Pour_Chaque (Arbre : in T_Abr) is
+	begin
+		if Arbre = null then
+			null;
+		else
+			begin
+				Traiter(Arbre.all.Valeur, Arbre.all.Donnee);
+				Pour_Chaque(Arbre.all.Sous_Arbre_Gauche);
+				Traiter(Arbre.all.Valeur, Arbre.all.Donnee);
+				Pour_Chaque(Arbre.all.Sous_Arbre_Droit);
+			exception
+				when others => 
+					Pour_Chaque(Arbre.all.Sous_Arbre_Gauche);
+					Pour_Chaque(Arbre.all.Sous_Arbre_Droit);
+			end;
+		end if;
+	end Pour_Chaque;
+
+
+end arbre_bin_projet;

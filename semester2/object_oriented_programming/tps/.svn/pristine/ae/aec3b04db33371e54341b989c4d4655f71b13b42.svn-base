@@ -1,0 +1,30 @@
+File allumettes/Arbitre.java: 280 tokens, 91 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/Joueur.java: 137 tokens, 46 lines
+File allumettes/OperationInterditeException.java: 21 tokens, 10 lines
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File allumettes/Jouer.java: 482 tokens, 140 lines
+File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/JeuAllumettes.java: 126 tokens, 44 lines
+Total input: 8 files (8 new, 0 old), 1158 tokens
+
+allumettes/Jouer.java: line 117-124 [32]
+allumettes/Jouer.java: line 125-132
+< 				Strat = new StrategieHumaine();
+< 				return Strat.getPrise(jeu);
+< 			
+< 			case "rapide":
+< 				Strat = new StrategieRapide();
+< 				return Strat.getPrise(jeu);
+< 				
+< 			case "expert":
+---
+> 				Strat = new StrategieExpert();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "naif":
+> 				Strat = new StrategieNaive();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "tricheur":
+

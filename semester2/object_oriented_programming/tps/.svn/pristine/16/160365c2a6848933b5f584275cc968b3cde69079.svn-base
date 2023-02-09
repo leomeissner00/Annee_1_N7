@@ -1,0 +1,82 @@
+package allumettes;
+
+/**
+ * Lance une partie des 13 allumettes en fonction des arguments fournis sur la
+ * ligne de commande.
+ * 
+ * @author Xavier Crégut
+ * @version $Revision: 1.5 $
+ */
+public class Jouer {
+
+	/**
+	 * Lancer une partie. En argument sont donnés les deux joueurs sous la forme
+	 * nom@stratégie.
+	 * 
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		Joueur j1;
+		Joueur j2;
+		boolean confiant;
+		try {
+			verifierNombreArguments(args);
+			confiant = verifierConfiant(args);
+			
+			// Construire les joueurs
+			String a_separer = args[0]+"@"+args[1];
+			String[] separer = a_separer.split("@");
+			if (separer.length != 4) {
+				throw new ConfigurationException("Le format des joueurs n'est pas le bon.");
+			}
+			j1 = new Joueur(separer[0], separer[1]);
+			j2 = new Joueur(separer[Jeu.PRISE_MAX-1], separer[Jeu.PRISE_MAX]);
+			
+			// Construire l'aritre
+			Arbitre arbitre_jeu = new Arbitre(j1, j2);
+			arbitre_jeu.setConfiant(confiant);
+			
+			// Construire le jeu
+			JeuAllumettes jeu = new JeuAllumettes(13);
+			
+			arbitre_jeu.arbitrer(jeu);
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+		
+
+	}
+
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : " + args.length);
+		}
+		if (args.length > nbJoueurs + 1) {
+			throw new ConfigurationException("Trop d'arguments : " + args.length);
+		}
+	}
+	
+	private static boolean verifierConfiant (String[] args) {
+		final int nbJoueurs = 2;
+		if (args[0].toString().equals("-confiant")  & args.length == nbJoueurs+1) {
+			args[0] = args[1];
+			args[1] = args[nbJoueurs];
+			return true;
+		}
+		return false;
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :" + "\n\t" + "java allumettes.Jouer joueur1 joueur2" + "\n\t\t"
+				+ "joueur est de la forme nom@stratégie" + "\n\t\t"
+				+ "strategie = naif | rapide | expert | humain | tricheur" + "\n" + "\n\t" + "Exemple :" + "\n\t"
+				+ "	java allumettes.Jouer Xavier@humain " + "Ordinateur@naif" + "\n");
+	}
+
+}

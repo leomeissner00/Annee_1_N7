@@ -1,0 +1,6 @@
+exemple_vecteurs_creux.adb:2:09: warning: no entities of "Ada.Float_Text_IO" are referenced [-gnatwu]
+exemple_vecteurs_creux.adb:2:25: warning: use clause for package "Float_Text_IO" has no effect [-gnatwu]
+exemple_vecteurs_creux.adb:10:09: warning: variable "b" is assigned but never read [-gnatwm]
+exemple_vecteurs_creux.adb:11:09: warning: constant "Epsilon" is not referenced [-gnatwu]
+exemple_vecteurs_creux.adb:33:09: warning: useless assignment to "b", value overwritten at line 34 [-gnatwm]
+exemple_vecteurs_creux.adb:34:09: warning: possibly useless assignment to "b", value might not be referenced [-gnatwm]

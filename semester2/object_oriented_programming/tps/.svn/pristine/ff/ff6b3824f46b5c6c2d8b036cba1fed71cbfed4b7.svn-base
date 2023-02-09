@@ -1,0 +1,24 @@
+21c21
+< Ordinateur prend 2 allumette.
+---
+> Ordinateur prend 1 allumette.
+23c23
+< Allumettes restantes : 8
+---
+> Allumettes restantes : 9
+26,27c26,27
+< Allumettes restantes : 5
+< Ordinateur prend 2 allumette.
+---
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+29c29
+< Allumettes restantes : 3
+---
+> Allumettes restantes : 5
+32,33c32,33
+< Allumettes restantes : 2
+< Ordinateur prend 1 allumette.
+---
+> Allumettes restantes : 4
+> Ordinateur prend 3 allumette.

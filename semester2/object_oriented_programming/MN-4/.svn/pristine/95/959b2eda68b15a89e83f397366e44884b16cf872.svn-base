@@ -1,0 +1,27 @@
+package tableur.math.formule;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class FormuleParenthese implements Formule {
+
+    private Formule formule1;
+
+    public FormuleParenthese(Formule f) {
+        this.formule1 = f;
+    }
+
+    public FormuleParenthese(double c) {
+        this.formule1 = new FormuleConstante(c);
+    }
+
+    @Override
+    public double evaluer(Tableur tableur) {
+        return this.formule1.evaluer(tableur);
+    }
+    
+
+    public String toString() {
+        return "(" + this.formule1.toString() + ")";
+    }
+}

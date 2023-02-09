@@ -1,0 +1,95 @@
+R0 : L'ordinateur compresse le texte
+
+
+R1 : Comment "L'ordinateur compresse le texte" ?
+
+    #Lire le fichier texte en binaire                                           text : Out
+    Faire le compressage par codage de Huffman                                  text : In
+    #Create(text, Out_file, File_name&".hff")                                   text : Out   
+    Si option b
+        Afficher l'arbre de Huffman
+        Afficher la table de Huffman
+    FinSi
+
+R2 : Comment "Faire le compressage par codage de Huffman" ?
+    
+    Compter la fréquence de chaque octet dans tableau_frequence                 text : In Out , table_frequence : Out , caractere_special: In
+    Créer l'arbre de Huffman arbre_binaire                                      tableau_frequence : In Out , arbre_binaire : Out        
+    #Initialiser(table_Huffman)
+    #Initialiser(code)
+    #Initialiser(suite_bits)
+    Parcourir de manière infixe l'arbre arbre_binaire                           arbre_binaire : In , suite_bits : In , table_Huffman : Out 
+    Compresser text                                                             arbre_binaire : In , table_Huffman : In , text : In Out
+    
+    
+
+R2 : Comment "Afficher l'arbre de Huffman" ?
+
+R2 : Comment "Afficher table de Huffman" ?
+
+R3 : Comment "Compter la fréquence de chaque octet dans tableau_frequence" 
+
+    Séparer text en octet dans Array_text                                       text : In , Array_text : Out 
+    #Initialiser (tableau_frequence)
+    #Intégrer caractere_special de fréquence nul dans tableau_frequence         tableau_frequence : In Out , caractere_special: In
+    Pour i allant de 1 à taille(Array_text)
+        Si Cle_Presente (tableau_frequence, Array_text(i))
+            #Enregistrer (tableau_frequence, Array_text(i), (La_Donnee (tableau_frequence , Array_text(i)) + 1))
+        Sinon
+            Initialiser un abre_text de clé : Array_text(i) et frequence 1
+            #Enregistrer (tableau_frequence , nouveau_arbre, 1)
+        Fin Si
+    Fin Pour         
+      
+      
+R3 : Comment "Intégrer caractere_special de fréquence nul dans tableau_frequence"
+
+    Initialiser un abre élementaire de clé : caractere_special et frequence nulle
+    #Enregistrer (tableau_frequence , nouveau_arbre)
+    
+
+R3 : Comment "Créer l'arbre de Huffman arbre_binaire"
+
+    TantQue Taille(tableau_frequence) >= 2
+        
+        arbre_1 = min_frequence (tableau_frequence)                                
+        #Supprimer (tableau_frequence, arbr_1)
+        arbre_2 = min_frequence (tableau_frequence)
+        #Supprimer (tableau_frequence, arbr_2)
+        Fusionner (arbre_1, arbre_2)
+        #Enregistrer (tableau_frequence , arbre_1)
+     
+     FinTQ   
+     arbre_binaire = tableau_frequence(1)           
+
+
+R3 : Comment "Parcourir de manière infixe l'arbre arbre_binaire avec code"
+    
+    Si arbre_binaire est une feuille
+        #Enregistrer (tableau_Huffman, arbre_binaire.Cle, code)
+   
+    Sinon
+        #Empiler (code, 0)
+        Parcourir de manière infixe l'arbre arbre_binaire_gauche avec code
+        #Depiler (code)
+        #Emplier (code, 1)
+        Parcourir de manière infixe l'arbre arbre_binaire_droite avec code
+        
+    
+R3 : Comment "Stocker le codage de Huffman dans text"
+
+    Faire le parcours infixe de arbre_binaire                                   arbre_binaire : In  suite_bits : Out
+    
+    
+    
+R3 : Comment "Compresser text"    
+
+R4 : Comment "Faire le parcours infixe de arbre_binaire avec suite_bits"
+   
+    Si arbre_binaire n'est pas une feuille
+        #Empiler (suite_bits, 0)
+        Faire le parcours infixe de arbre_binair_gauche avec suite_bits
+        #Empiler (suite_bits, 1)
+        Faire le parcours infixe de arbre_binair_droite avec suite_bits
+    FinSi
+

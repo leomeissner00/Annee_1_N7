@@ -1,0 +1,20 @@
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' sont évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
++ C16 : Tests unitaires de la stratégie rapide : 1 pt.
+	+ L'utilisation des tests Junit a pour but de ne pas laisser le programmeur vérifier le résultat lui-même. Or le programmeur doit le faire lui-même dans ton test.
+		Il faut utiliser des assert pour automatiser ces tests.
+
++ L3 : Fichier LISEZ-MOI.txt : 1 pt.
+    + Question 1 : Ca n'empêche, elle pourrait être propagée en étant vérifiée.
+    + Question 2 : ok
+    + Question 3 : ok
+
++ Autres remarques :
+    - ...
+
+
++ Total pénalités : 2 pts.
++ Correction sur les pénalités automatiques : 0
+

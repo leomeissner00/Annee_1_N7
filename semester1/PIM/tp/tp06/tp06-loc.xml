@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_file>
+    <file_marker column=" 13" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/dates.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 51" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/dates.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/exemple_dates_erreurs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/exemple_dates.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 107" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/stocks_materiel.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/stocks_materiel.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/stocks_materiel.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/scenario_stock.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

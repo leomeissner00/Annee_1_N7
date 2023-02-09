@@ -1,0 +1,26 @@
+Dans ce fichier `reponses1.txt`, 
+
+
+[Question 1.1] Indiquer 
+- comment obtenir le ou les exécutables par compilation séparée.
+  Il faut entrer la commande "c99 -Wextre -pedantic -c *.c" pour obtenir les exécutbales par compilation séparée. Il seront crées dans le répertoire courant.
+
+- les dépendances entre les fichiers qui constituent l’application.
+  test_file.o dépend de test_file.c
+  test_file dépend de file.o et de test_file.o
+  exemple_file.o dépend de exemple_file.c
+  exemple_file dépend de file.o et de exemple_file.o
+  file.o dépend de file.c et file.h
+  
+- le rôle de la règle `.PHONY` dans Makefile.
+  La règle .PHONY fait en sorte que les fichiers ayant une dépendance soit recréer lorsqu'un fichier dont ils dépendent est modifier.
+
+[Question 1.5] Indiquer
+- Quel est le sous-programme non-visible des autres modules et défini dans le module File.
+    Cellule
+
+- Que se passe-t-il si on enlève le mot-clé static à la compilation ?  
+  Pas de problème en compilation
+
+- Quel est le risque de ne pas le mettre ?
+    Accès libre indépendament du module

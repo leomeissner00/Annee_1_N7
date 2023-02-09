@@ -1,0 +1,174 @@
+import java.awt.Color;
+
+/** Cercle modélise un cercle géométrique dans un plan équipé d'un
+ * repère cartésien.  Un Cercle peut être affiché et translaté.
+ * Il est possible de déterminer si un point se trouve à l'intérieur 
+ * du cercle ou non.
+ *
+ * @author  Léo Meissner <leo.meissner@etu.toulouse-inp.fr>
+ */
+public class Cercle implements Mesurable2D {
+	
+	
+	private double rayon;		// rayon du cercle
+	private Point centre;		// centre du cercle
+	private Color couleur;	// couleur du cercle
+	
+	public static final double PI = Math.PI; //Constante PI 
+
+	/** Construire un cercle bleu à partir de son centre et de son rayon.
+	 * @param vrayon rayon du nouveau cercle
+	 * @param vcentre centre du nouveau cercle
+	 * @throws AssertionError if centre = null 
+	 * 						  or rayon <= 0
+	 */
+	public Cercle(Point vcentre, double vrayon) {
+		assert(vcentre != null  & vrayon > 0);
+		this.rayon = vrayon;
+		this.centre = new Point(vcentre.getX(), vcentre.getY());
+		this.couleur = Color.blue;
+		this.centre.setCouleur(Color.blue);
+	}
+	
+	/** Construire un cercle bleu à partir de 2 point
+	 *  diamétralement opposés
+	 * @param p1 point numéro 1
+	 * @param p2 point numéro 2
+	 * @throws AssertionError if p1 = null or p2 = null
+	 * 							or p1 = p2
+	 */
+	public Cercle(Point p1, Point p2) {
+		assert (p1 != null  & p2 != null);
+		assert (p1.distance(p2) != 0);
+		this.rayon = p1.distance(p2)/2.0;
+		Point vcentre = new Point((p1.getX()+p2.getX())/2.0 , (p1.getY()+p2.getY())/2.0);
+		this.centre = vcentre;
+		this.couleur = Color.blue;
+		this.centre.setCouleur(Color.blue);
+	}
+	
+	/** Construire un cercle à partir de 2 point
+	 *  diamétralement opposés et de sa couleur
+	 * @param p1 point numéro 1
+	 * @param p2 point numéro 2
+	 * @param couleur Couleur du cercle
+	 */
+	public Cercle(Point p1, Point p2, Color couleur) {
+		this(p1,p2);
+		this.couleur = couleur;
+		this.centre.setCouleur(couleur);
+	}
+
+	/** Obtenir le rayon du cercle.
+	 * @return rayon du cercle
+	 */
+	public double getRayon() {
+		return this.rayon;
+	}
+
+	/** Obtenir le centre du cercle.
+	 * @return centre du cercle
+	 */
+	public Point getCentre() {
+		return new Point(this.centre.getX(), this.centre.getY());
+	}
+	
+	/** Obtenir le diametre du cercle.
+	 * @return diametre du cercle
+	 */
+	public double getDiametre() {
+		return 2.0*this.rayon;
+	}
+
+	/** Changer le rayon du cercle.
+	  * @param vrayon nouveau rayon
+	  * @throws AssertionError if vrayon <= 0
+	  */
+	public void setRayon(double vrayon) {
+		assert (vrayon > 0);
+		this.rayon = vrayon;
+	}
+	
+	/** Changer le diametre du cercle.
+	  * @param vdiametre nouveau diametre
+	  * @throws AssertionError if vdiametre <= 0
+	  */
+	public void setDiametre(double vdiametre) {
+		assert (vdiametre > 0);
+		this.rayon = vdiametre/2.0;
+	}
+
+	public String toString() {
+		return "C" + this.rayon + "@" + this.centre;
+	}
+
+	/** Afficher le point. */
+	public void afficher() {
+		System.out.print(this);
+	}
+
+   /** Translater le cercle.
+	* @param dx déplacement suivant l'axe des X
+	* @param dy déplacement suivant l'axe des Y
+	*/
+	public void translater(double dx, double dy) {
+		this.centre.translater(dx, dy);
+	}
+	
+	/** Methode permettant de verifier si un point est interieur
+	* (au sens large) ou exterieur au cercle
+	* @param p Point 
+	* @throws AssertionError if p == null
+	*/
+	public boolean contient(Point p) {
+		assert (p != null);
+		return (this.centre.distance(p) <= this.rayon);
+	}
+	
+	/** Calcul du perimetre du cercle
+	 * @return le périmètre du cercle
+	*/
+	public double perimetre() {
+		return 2*PI*this.rayon;
+	}
+	
+	/** Calcul de l'aire du cercle
+	 * @return l'aire du cercle
+	*/
+	public double aire() {
+		return PI*this.rayon*this.rayon;
+	}
+	
+	/** Creer un cercle a partir de son centre et 
+	* d'un point se trouvant sur sa circonference.
+	* @param vcentre centre du cercle
+	* @param p point appartenant a la circonference du cercle
+	* @throws AssertionError if vcentre == p or vcentre = null
+	* 							or p = null
+	*/
+	public static Cercle creerCercle(Point vcentre, Point p) {
+		assert (vcentre != null & p != null);
+		assert (vcentre.distance(p) != 0);
+		return new Cercle(vcentre, vcentre.distance(p));
+	}
+
+//  Gestion de la couleur
+
+	/** Obtenir la couleur du cercle.
+	 * @return la couleur du cercle
+	 */
+	public Color getCouleur() {
+		return this.couleur;
+	}
+
+	/** Changer la couleur du cercle.
+	  * @param nouvelleCouleur nouvelle couleur
+	  * @throws AssertionError if nouvelleCouleur == null
+	  */
+	public void setCouleur(Color nouvelleCouleur) {
+		assert (nouvelleCouleur != null);
+		this.couleur = nouvelleCouleur;
+		this.centre.setCouleur(nouvelleCouleur);
+	}
+
+}

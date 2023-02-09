@@ -1,0 +1,17 @@
+File allumettes/Arbitre.java: 86 tokens, 40 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/Joueur.java: 69 tokens, 38 lines
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File allumettes/Jouer.java: 406 tokens, 94 lines
+File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/JeuAllumettes.java: 157 tokens, 70 lines
+Total input: 7 files (7 new, 0 old), 830 tokens
+
+allumettes/Jouer.java: line 29-30 [30]
+allumettes/Jouer.java: line 31-32
+< 		String[] split1 = args[0].split("@");
+< 		Joueur j1 = new Joueur(split1[0], split1[1]);
+---
+> 		String[] split2 = args[1].split("@");
+> 		Joueur j2 = new Joueur(split2[0], split2[1]);
+

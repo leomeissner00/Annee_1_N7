@@ -1,0 +1,76 @@
+package tableur.composant.cellule;
+
+import tableur.Tableur;
+import tableur.composant.Cellule;
+import tableur.composant.Position;
+import tableur.exception.NoMeasurableException;
+import tableur.math.Formule;
+
+
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+
+public class CelluleFormule extends Cellule {
+    
+    private Formule formule;
+    private Tableur tab;
+
+    private FocusListener listener;
+
+    public CelluleFormule(Position pos, Formule form, Tableur tab) {
+        super(pos);
+        this.tab = tab;
+        listener = new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e) {
+                if (e.getComponent().getClass() == CelluleFormule.class) {
+                    CelluleFormule cell = (CelluleFormule) e.getComponent();
+                    cell.setText(cell.getFormuleText());
+                }
+                
+            }
+    
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (e.getComponent().getClass() == CelluleFormule.class) {
+                    CelluleFormule cell = (CelluleFormule) e.getComponent();
+                    try {
+                        cell.setText(Double.toString(cell.getValeur()) );
+                    } catch (NoMeasurableException e1) {
+                        cell.setText("ERROR");
+                        cell.update();
+                    }
+                }
+            }
+        };
+        this.addFocusListener(listener);
+        this.formule = form;
+    }
+    
+    @Override
+    public double getValeur() throws NoMeasurableException {
+        return this.formule.evaluer(this.tab);
+    }
+
+    @Override
+    public CelluleFormule clone() {
+        return new CelluleFormule(this.pos, this.formule, this.tab);
+    }
+
+    public void update() {
+        this.tab.update();
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+
+    public String getFormuleText() {
+        return this.formule.toString();
+    }
+
+}

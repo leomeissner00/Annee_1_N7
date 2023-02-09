@@ -1,0 +1,25 @@
+Date de l'évaluation : mer. 23 févr. 2022 14:23:00 CET
+
+Compilation de Cercle.java : OK.
+
+Types d'erreurs checkstyle : 0	(voir evaluations/evaluation1/Cercle.checkstyle)
+
+Résultat de recherche de similitudes sur Cercle.java dans evaluations/evaluation1/Cercle.sim
+
+JavaDoc automatique de Cercle : ok	(voir evaluations/evaluation1/Cercle.javadoc)
+
+Test SujetCercleTest : OK (14 tests)	(voir evaluations/evaluation1/SujetCercleTest.log)
+Test RobustesseCercleTest : OK (20 tests)	(voir evaluations/evaluation1/RobustesseCercleTest.log)
+Test FormeCercleTest : OK (12 tests)	(voir evaluations/evaluation1/FormeCercleTest.log)
+Test Forme2CercleTest : OK (9 tests)	(voir evaluations/evaluation1/Forme2CercleTest.log)
+
+ComplementsCercleTest : non modifiée (ok)
+
+Compilation de CercleTest.java : OK.
+Test CercleTest : Tests run: 5,  Failures: 2	(voir evaluations/evaluation1/CercleTest.log)
+    1) testerE12_1(CercleTest)
+        AssertionError: expected:<java.awt.Color[r=0,g=0,b=255]> but was:<null>
+    2) testerE13_2(CercleTest)
+        AssertionError: expected:<java.awt.Color[r=0,g=0,b=255]> but was:<null>
+
+CercleTest échoue sur Cercle : pas de test avec les mutants

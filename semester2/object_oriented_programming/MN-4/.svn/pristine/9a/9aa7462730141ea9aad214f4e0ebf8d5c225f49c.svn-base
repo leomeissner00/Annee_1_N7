@@ -1,0 +1,64 @@
+package tableur.composant.cellule;
+
+import tableur.Tableur;
+import tableur.composant.Cellule;
+import tableur.composant.Position;
+import tableur.exception.NoMeasurableException;
+import tableur.math.Formule;
+
+
+public class CelluleFormule extends Cellule {
+    
+    private Formule formule;
+    private Tableur tab;
+    private boolean isCliked;
+
+
+    public CelluleFormule(Position pos, Formule form, Tableur tab) {
+        super(pos);
+        this.tab = tab;
+        this.formule = form;
+        this.isCliked = false;
+    }
+    
+    @Override
+    public double getValeur() throws NoMeasurableException {
+        return this.formule.evaluer(this.tab);
+    }
+
+    @Override
+    public CelluleFormule clone() {
+        return new CelluleFormule(this.pos, this.formule, this.tab);
+    }
+
+    public void update() {
+        this.tab.update();
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+
+    @Override
+    public String toString() {
+        if (isCliked) {
+            return "="+this.formule.toString();
+        } else {
+            try {
+                return Double.toString(this.getValeur());
+            } catch (NoMeasurableException e) {
+                return "VALUE ERROR";
+            }
+        }
+        
+    }
+
+    public void setIsCliked(boolean bool) {
+        this.isCliked = bool;
+    }
+
+}

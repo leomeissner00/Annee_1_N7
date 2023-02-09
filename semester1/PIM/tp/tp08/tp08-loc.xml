@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/illustrer_affectation_pile.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/exemples_memoire_dynamique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/tp/tp08/test_piles.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_file>
+    <file_marker column=" 9" line=" 124">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/exemples_memoire_dynamique.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 18">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 22">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/illustrer_affectation_pile.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/tp08.gpr</vfs_project>
+      <vfs_file >/home/lmeissne/Annee_1/Prog_Imperative/tp/tp08/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

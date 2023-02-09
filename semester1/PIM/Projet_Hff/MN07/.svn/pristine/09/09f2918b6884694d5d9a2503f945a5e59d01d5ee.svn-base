@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 32" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_arbre_bin.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 24" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 32" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_arbre_bin.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 29" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

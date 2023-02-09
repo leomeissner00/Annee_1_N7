@@ -1,0 +1,28 @@
+package tableur.composant;
+
+import javax.swing.JTextField;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class Cellule extends JTextField {
+    
+    private Formule formule;
+
+    public Cellule(Formule form) {
+        super();
+        this.formule = form;
+    }
+    
+    public double getValeur(Tableur tab) {
+        return this.formule.evaluer(tab);
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+}

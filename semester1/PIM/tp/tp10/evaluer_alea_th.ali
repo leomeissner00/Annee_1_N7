@@ -1,0 +1,187 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -gnatwa
+A -gnata
+A -g
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U evaluer_alea_th%b	evaluer_alea_th.adb	50fffd33 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.numerics.discrete_random%s
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W alea%s		alea.adb		alea.ali
+Z lca%s			lca.adb			lca.ali
+W sda_exceptions%s	sda_exceptions.ads	sda_exceptions.ali
+W system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.val_int%s	s-valint.ads		s-valint.ali
+W th%s			th.adb			th.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-assert.ads		20210520051127 a718b65c ada.assertions%s
+D a-comlin.ads		20210520051127 4aa66568 ada.command_line%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20210520051128 84bea7a3 ada.numerics%s
+D a-nudira.ads		20210520051128 5984dff3 ada.numerics.discrete_random%s
+D a-nudira.adb		20210520051128 0bfd6ec4 ada.numerics.discrete_random%b
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D alea.ads		20211115130818 9fe1c6b1 alea%s
+D alea.adb		20211115130817 ca5296b2 alea%b
+D evaluer_alea_th.adb	20211201215540 c0fc70fd evaluer_alea_th%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D lca.ads		20211124213713 c45cbbcd lca%s
+D lca.adb		20211130141932 18bb85c4 lca%b
+D sda_exceptions.ads	20211115130818 58fab764 sda_exceptions%s
+D system.ads		20210520051134 a2da961d system%s
+D s-assert.ads		20210520051131 6a49a4e4 system.assertions%s
+D s-conca3.ads		20210520051131 0b705ca5 system.concat_3%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-imageu.ads		20210520051132 525c30c6 system.image_u%s
+D s-imguns.ads		20210520051132 0e4da2ac system.img_uns%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-rannum.ads		20210520051133 c3978523 system.random_numbers%s
+D s-rannum.adb		20210520051133 2631917b system.random_numbers%b
+D s-ransee.ads		20210520051133 01a57b33 system.random_seed%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-valint.ads		20210520051133 e7fcadb7 system.val_int%s
+D s-valuns.ads		20210520051133 dac7b45d system.val_uns%s
+D s-valuei.ads		20210520051133 978dd0a6 system.value_i%s
+D s-valueu.ads		20210520051133 7b8fccf5 system.value_u%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D th.ads		20211130142204 4501c5ba th%s
+D th.adb		20211201221532 12c3d735 th%b
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [evaluer_alea_th standard 9 11 none]
+G r i none [evaluer_alea_th standard 9 11 none] [alea standard 5 9 none]
+G r i none [evaluer_alea_th standard 9 11 none] [lca standard 8 9 none]
+G r i none [evaluer_alea_th standard 9 11 none] [th standard 13 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 21|1r6 1r32 2r6 2r32 3r6 3r32
+X 3 a-comlin.ads
+36K13*Command_Line 144e21 21|3w10 3r36
+39V13*Argument_Count{natural} 21|130s12
+52V13*Argument{string} 21|134s41 135s42
+62V13*Command_Name{string} 21|16s40
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[16|46] 21|2w10 2r36
+X 9 a-nudira.adb
+53V16 Random[37|86]{integer} 38|402b13[20|7[21|85]]
+65V16 Random[37|86]{integer} 38|402b13[20|7[21|85]]
+X 15 a-textio.ads
+58K13*Text_IO 725e16 21|1w10 1r36
+262U14*New_Line 21|15s17 17s17 20s17 31s17
+463U14*Put 21|28s17 29s17
+506U14*Put_Line 21|16s17 18s17 19s17
+X 16 a-tiinio.ads
+80U14*Put 21|30s17[5|18]
+X 19 alea.ads
+5k9*Alea 13e9 21|5w6 86r29
+11U19 Get_Random_Number 21|102s25[85]
+11i38 Resultat{integer} 21|102r43[85]
+X 21 evaluer_alea_th.adb
+9U11*Evaluer_Alea_TH 9b11 154l5 154t20
+13U19 Afficher_Usage 13b19 21l13 21t27 131s17 151s17
+26U19 Afficher_Variable 26b19 26>38 26>51 26>71 32l13 32t30 138s17 139s17
+. 144s17 145s17
+26a38 Nom{string} 28r22
+26i51 Valeur{integer} 30r22
+26i71 Largeur_Valeur{integer} 30r30
+61U19 Calculer_Statistiques 61b19 62>42 63>42 64<42 64<47 122l13 122t34 141s17
+62i42 Borne{integer} 66r24 86r38 110r29
+63i42 Taille{integer} 66r38 67r45 68r41 69r54 101r29
+64i42 Min{integer} 67r30 67r38 69r25 69r41 80r40 81m33 116m17 117r24
+64i47 Max{integer} 68r26 68r34 69r32 69r47 78r37 79m33 117m17
+71V26 Identite{integer} 71b26 71>36 74l21 74t29 90r115
+71i36 Cle{integer} 73r32
+76U27 Recherche_Min_Max 76b27 76>46 76>63 83l21 83t38 93r86
+76i46 Cle{integer}
+76i63 Donnee{integer} 78r28 79r40 80r31 81r40
+85K25 Mon_Alea[19|5] 87r21
+89K25 TH_Integer_Integer[53|13] 91r21 93r44
+93U27 Recherche[53|66] 119s17
+95i17 Resultat{integer} 102m55 103r46 104r50 104r76 106r51 116r39
+96a17 Sda{53|15A14[89]} 100m29 103r41 104m45 104r45 104r71 106m46 106r46
+. 111r45 112m45 112r45 116r34 119r27 121m23 121r23
+101i21 i{integer}
+110i21 i{integer} 111r50 112r50
+126i9 Min{integer} 141m55 144r43
+126i14 Max{integer} 141m60 145r43
+127i9 Borne{integer} 134m17 138r46 141r40
+128i9 Taille{integer} 135m17 139r46 141r47
+X 22 interfac.ads
+79M9*Unsigned_32
+82M9*Unsigned_64
+X 24 lca.ads
+10P14 T_LCA
+X 26 sda_exceptions.ads
+2K9*SDA_Exceptions 21|4w6 4r32 26|6e19
+X 37 s-rannum.ads
+77V13*Random{22|79M9} 38|224i21
+78V13*Random{22|82M9} 38|224i21
+X 53 th.ads
+6+14 T_Cle 21|90r33
+7+14 T_Donnee 21|90r52
+8i9 Borne_max{integer} 21|90r73
+10V23 Fonction_de_hachage{integer} 21|90r92
+13k9*TH 21|6w6 90r29 53|81e7
+15A14 T_TH(24|10P14[74[21|89]]) 21|96r23[89]
+20U19 Initialiser 21|100s17[89]
+36U19 Enregistrer 21|104s33[89] 106s33[89] 112s33[89]
+49V18 Cle_Presente{boolean} 21|103s28[89] 111s32[89]
+54V18 La_Donnee{integer} 21|104s61[89] 116s24[89]
+58U19 Vider 21|121s17[89]
+64U32 Traiter 21|93r75[89]
+66u19 Pour_Chaque 21|93r63[89]
+

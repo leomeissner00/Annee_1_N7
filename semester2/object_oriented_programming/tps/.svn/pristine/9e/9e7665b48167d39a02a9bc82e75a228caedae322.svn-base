@@ -1,0 +1,94 @@
+package allumettes;
+
+/** Lance une partie des 13 allumettes en fonction des arguments fournis
+ * sur la ligne de commande.
+ * @author	Xavier Crégut
+ * @version	$Revision: 1.5 $
+ */
+public class Jouer {
+
+
+	/** Lancer une partie. En argument sont donnés les deux joueurs sous
+	 * la forme nom@stratégie.
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		try {
+			verifierNombreArguments(args);
+
+			System.out.println("\n\tà faire !\n");
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+		
+		//Construire les joueurs
+		String[] split1 = args[0].split("@");
+		Joueur j1 = new Joueur(split1[0], split1[1]);
+		String[] split2 = args[1].split("@");
+		Joueur j2 = new Joueur(split2[0], split2[1]);
+		
+		//Construire l'aritre
+		Arbitre arbitre_jeu = new Arbitre(j1, j2);
+		
+		//Construire le jeu
+		JeuAllumettes jeu = new JeuAllumettes(13);
+		
+		boolean jouer = true;
+		Joueur j_en_cours;
+		int a_retirer;
+		
+		do {
+			System.out.println("Allumettes restantes : "+jeu.getNombreAllumettes());;
+			j_en_cours = arbitre_jeu.auTourDe(jeu);
+			
+			a_retirer = j_en_cours.getPrise();
+			System.out.println(j_en_cours.getNom()+" prend "+a_retirer+" allumettes.");
+			try {
+				jeu.retirer(a_retirer);
+			} catch (CoupInvalideException e){
+				System.out.println(e.getProbleme());
+				jeu.dec_nbTour();
+			}
+			jouer = arbitre_jeu.arbitrer(jeu);
+			jeu.inc_nbTour();
+		}while (jouer);
+		
+		System.out.println("");
+		System.out.println(j_en_cours.getNom()+" perd !");
+		jeu.inc_nbTour();
+		System.out.println(arbitre_jeu.auTourDe(jeu).getNom()+" gagne !");
+		
+	}
+
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : "
+					+ args.length);
+		}
+		if (args.length > nbJoueurs + 1) {
+			throw new ConfigurationException("Trop d'arguments : "
+					+ args.length);
+		}
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :"
+				+ "\n\t" + "java allumettes.Jouer joueur1 joueur2"
+				+ "\n\t\t" + "joueur est de la forme nom@stratégie"
+				+ "\n\t\t" + "strategie = naif | rapide | expert | humain | tricheur"
+				+ "\n"
+				+ "\n\t" + "Exemple :"
+				+ "\n\t" + "	java allumettes.Jouer Xavier@humain "
+					   + "Ordinateur@naif"
+				+ "\n"
+				);
+	}
+	
+
+}

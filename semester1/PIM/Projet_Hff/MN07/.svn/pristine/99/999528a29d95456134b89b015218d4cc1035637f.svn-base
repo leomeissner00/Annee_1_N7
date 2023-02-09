@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 68" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 14" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_arbre_bin.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 30" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lecture.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 14" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_arbre_bin.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 122" line=" 5" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 122" line=" 5" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 12" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 68" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 71" line=" 67" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 38" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 38" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 31" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 110" line=" 27" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 104" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 45" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 76" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 75" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 8" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/codage_huffmann_exception.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 5" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 8" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 49" line=" 38" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/arbre_bin_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 3" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 74" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 51" line=" 13" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 74" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/codage_huffmann_exception.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 6" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 5" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 74" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 8" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/lca_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 4" line=" 3" >
+      <vfs_project>/home/szheng/Annee_1/Prog_Imperative/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/szheng/Annee_1/Prog_Imperative/MN07/src/test_lca.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

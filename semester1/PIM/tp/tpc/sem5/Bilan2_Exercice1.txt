@@ -1,0 +1,35 @@
+Indiquer vos réponses aux questions de l'exercice 1 du Bilan 2 ci-après : 
+
+[B1.1] Quelle est la portée de chaque variable déclarée ? Pour chaque variable, on donnera le numéro de ligne où commence et se termine sa portée.
+
+Pour la variable a, sa portée commence à la ligne 13 et se termine à la ligne 18.
+Pour la variable r, sa portée commence à la ligne 30 et se termine à la ligne 33.
+Pour la variable n, sa portée commence à la ligne 8 et se termine à la ligne 37
+Pour la variable p, sa portée commence à la ligne 9 et se termine à la ligne 37.
+
+[B1.2] Y a-t-il un exemple de masquage de variable dans ce programme ?
+
+Il y a un exemple de masquage de variable dans ce programme.
+À la ligne 22 la variable n qui valait 5 est masqué par une variable n qui vaut 7 uniquement de la ligne 22 à 25 puis la variable n vaut de nouveau 5 après la ligne 25.
+
+
+[B1.3] Peut-on savoir ce que devrait afficher l’exécution de ce programme ?
+
+Le programme devrait afficher les valeurs de p, de n, de a et de r suivant leurs valeurs dans le programme.
+
+
+[B1.4] Même s’il compile sans erreur, ce programme est faux. Pourquoi ?
+
+Ce programme est faux car le pointeur pointe sur null et à la ligne 27, on lui demande de récupérer l'information de la case mémoire sur laquelle il pointe alors qu'il nd pointe sur rien.
+
+
+[B1.5] La valeur de `p` change-t-elle après l’initialisation de la ligne 14 ?
+
+La valeur de 'p' change après l'initialisation de la ligne 14, après la ligne 18 le pointeur repointe sur null comme avant la ligne 12.
+
+
+[B1.6] Que se passerait-il si on modifiait `*p` après la ligne 19 ?
+
+Le programme ne sera alors plus faux.
+
+

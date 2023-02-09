@@ -1,0 +1,60 @@
+Date de l'évaluation : ven. 11 mars 2022 12:25:54 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 0
+
+Erreurs checkstyle (différentes/types) : 34/10	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : Non identifiée
+
+OperationInterditeException : JAMAIS LEVÉE
+OperationInterditeException : JAMAIS RECUPÉRÉE
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:76:         } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:46:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/Jouer.java:116:              Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:31:           String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/Jouer.java:4:import java.util.Random;
+  | allumettes/Jouer.java:143:              Random generator = new Random();
+
+Utilisation de '3' : Ne pas utiliser de constante littérale hors -1, 0 ou 1 (peut-être PRISE_MAX ?)
+  |     allumettes/Jouer.java:68:       if (args[1] == "-confiant" & args.length == 3) {
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de OperationInterditeException.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : OK (25 tests)	(voir evaluations/evaluation1/RobustesseTest.log)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+	Non fait car le projet n'est pas assez avancé
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

@@ -1,0 +1,43 @@
+package allumettes;
+
+import allumettes.Jouer.STRATEGIE;
+
+public class Joueur {
+
+    /**Nom du joueur.
+     * Nom est un String
+     */
+    private String nom;
+
+    /**Stratégie du joueur.
+     * Strat est un String
+     */
+    private STRATEGIE type;
+
+    Joueur (String vnom, STRATEGIE vtype){
+        this.nom = vnom;
+        this.type = STRATEGIE.HUMAIN;
+    }
+
+    Joueur (STRATEGIE vtype){
+        this.nom = "Ordinateur";
+        this.type= vtype;
+    }
+
+    /**Recupere le nom du joueur.
+     */
+    String getNom(){
+        String temp = this.nom;
+        return temp;
+    }
+
+    /**Recupere le nombre d'allumettes que le joueur veut prendre.
+     * @param Jeu jeu : le jeu dans lequelles les allumettes sont prises.
+     */
+    int getPrise(Jeu jeu){
+        if (this.type == STRATEGIE.HUMAIN){
+            return 1;
+        }
+        return 0;
+    }
+}

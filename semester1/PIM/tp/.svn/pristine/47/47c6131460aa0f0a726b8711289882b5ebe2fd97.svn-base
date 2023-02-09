@@ -1,0 +1,88 @@
+% Compte-rendu minimal du mini-projet SDA : LCA et TH
+% Auteur : NOM Prénom MEISSNER Léà
+% Groupe de TP : ...N
+
+
+**Consigne :** Vous devez écrire vos réponse à la place des ... en laissant
+une ligne vide avant et deux après votre réponse.
+
+**Remarque :** Ce document utilise le langage Markdown. On peut en engendrer
+une version PDF en faisant par exemple :
+
+~~~
+pandoc --toc -N -o LISEZ-MOI.pdf LISEZ-MOI.txt
+~~~
+
+
+# Exercice 1
+
+## Question 1.4
+
+**Indiquer les inconvénients/avantages d'une implantation par listes chaînées
+d'une SDA.**
+
+Une implantation par liste chaînées à comme avantage d'être souple et plutot simple à implanter.
+Mais celle ci a comme inconvénient de ne pas être optimisée. 
+La recherche d'une clé parmi 10000 est longue car il n'y a pas de hiérarchisation dans le stockage des clés.
+
+
+# Évaluation expérimentale.
+
+## Performance comparée de LCA et TH
+
+Indiquer ici les résultats obtenus.
+
+Voici une liste non exhaustive des résultats obtenus avec la LCA
+Borne       Taille     Min       Max        Temps
+10          1000       86        123        0.003s
+100         10 000     72        127        3.176s
+100         100 000    930       1077       32.080s
+100         1 000 000  9613      10242      5m 20.644s
+1000        10 000     1         23         3.000s
+1000        100 000    
+10          1 000 000  99404     100527     2.412
+10          10 000 000 999 024   1 001 938  23.608s
+À partir d'une borne de 1000 et d'une taille de 100000 le programme prends plus d'une heure ce qui n'est pas efficace.  
+Pour conclure une lca est très efficace lorsque sa taille n'est pas trop conséquente, inférieur à 1000 avec cet ordinateur.Sinon la table de hachage est bien plus rapide comme nous le montre les résultats suivant.
+Borne      Taille        Min           Max             Temps
+10         1 000 000     99450         100435          51.238 ici lca est plus rapide que th (voir ligne 43)
+100        1 000 000     9737          10280           54.501s
+1000       100 000       73            134             8.690s
+1000       1 000 000     907           1087            1m26.544s
+Comme la fonction de hachage est N associe N et qu'on a fixé la table de hachage a une capacité de 1000, on ne peut pas prendre une borne au desus de 1000 sinon une exception apparait.
+Nous pouvons tout de même voir qu'avec une borne supérieure ou égale à 100 la TH est bien plus efficace qu'une simple. Pour une borne de 100 et une taille de 1 000 000, le temps d'exécution est divisé par 5.9.
+
+
+## Qualité du générateur aléatoire
+
+Indiquer les conclusions quant à la qualité du générateur aléatoire.
+
+Le générateur aléatoire est de qualité, c'est à dire a un faible écart par rapport a un générateur aléatoire parfait car l'écart en pourcent par rapport à un génarateur parfait reste le même lorsque la taille et la borne sont multipliés tous les 2 par 10.
+
+
+# Principales difficultés rencontrées
+
+Indiquer ici les principales difficultés rencontrées lors de la réalisation de
+ce projet et comment elles ont été surmontées ou contournéeS.
+
+La principale difficulté était l'écrture des packages dans le fichier sujet_th.adb par exemple car ce sujet n'avait pas grandement été abordé. 
+
+
+# Informations complémentaires
+
+Indiquer ici les informations qui pourraient aider à la compréhension du
+travail réalisé.
+
+Cette partie peut être vide.
+
+...
+
+
+
+# Bilan personnel
+
+Quel bilan personnel tirez vous de ce mini-projet ?
+
+Ce mini-projet m'a appris l'écriture de module et de fonction génériques dans language Ada et m'a également permis de me familiariser plus grandement avec les pointeurs que je n'avais jamais manipuler avant cette année.
+
+

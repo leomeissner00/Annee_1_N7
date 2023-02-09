@@ -1,0 +1,93 @@
+#include <stdlib.h> 
+#include <stdio.h>
+#include <assert.h>
+#include <stdbool.h>
+
+// Definition du type monnaie
+// 
+struct t_monnaie {
+    int valeur;
+    char devise;
+};
+typedef struct t_monnaie t_monnaie;
+
+/**
+ * \brief Initialiser une monnaie 
+ * \param[t_monnaie monnaie, int valeur, char devise]
+ * \pre 
+ * // valeur > 0
+ */ 
+void initialiser(t_monnaie monnaie, int val, char dev){
+    
+    t_monnaie * ptr_monnaie =&monnaie;
+    ptr_monnaie->valeur = val;
+    ptr_monnaie->devise = dev;
+}
+
+
+/**
+ * \brief Ajouter une monnaie m2 à une monnaie m1 
+ * \param[t_monnaie m1, t_monnaie m2]
+ * // TODO
+ */ 
+bool ajouter(t_monnaie m1, t_monnaie m2){
+    bool correct = false;
+    if (m1.devise = m2.devise){
+        t_monnaie *ptr_m1 = &m1;
+        t_monnaie *ptr_m2 = &m2;
+        ptr_m2 -> valeur = m1.valeur+m2.valeur;
+        correct = true;
+    }
+}
+
+
+/**
+ * \brief Tester Initialiser 
+ * \param[]
+ * // TODO
+ */ 
+void tester_initialiser(){
+    t_monnaie monnaie;
+    int val = 5;
+    int dev = 'e';
+    initialiser(monnaie, val, dev);
+    
+
+    assert(5 == monnaie.valeur);
+    assert('e' == monnaie.devise);
+}
+
+/**
+ * \brief Tester Ajouter 
+ * \param[]
+ * // TODO
+ */ 
+void tester_ajouter(){
+    t_monnaie m1;
+    int val = 5;
+    int dev = 'e';
+    initialiser(m1, val, dev);
+    t_monnaie m2;
+    val = 3;
+    dev = 'e';
+    initialiser(m2, val, dev);
+    ajouter (m1,m2);
+
+    assert(8 == m2.valeur);
+    assert('e' == m2.devise);
+}
+
+
+
+int main(void){
+    // Un tableau de 5 monnaies
+    // TODO
+
+    //Initialiser les monnaies
+    // TODO
+ 
+    // Afficher la somme des toutes les monnaies qui sont dans une devise entrée par l'utilisateur.
+    // TODO
+
+    return EXIT_SUCCESS;
+}

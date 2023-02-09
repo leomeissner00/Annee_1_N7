@@ -1,0 +1,63 @@
+with Ada.Text_IO    use Ada.Text_IO;
+with Ada.Command_Line   use Ada.Command_Line;
+with Ada.Strings.Bounded;
+
+
+procedure Decompresser is
+        
+        package SB is new Ada.Strings.Bounded.Generic_Bounded_Length (Max => 100);
+        use SB;
+        
+        Cur_Argument : SB.Bounded_String;
+        Input_File_Path : SB.Bounded_String;
+        Output_File_Path : SB.Bounded_String;
+        I : Integer := 1;
+        
+        
+        
+        type T_Octet is mod 2 ** 8;	-- sur 8 bits
+        for T_Octet'Size use 8;
+
+        File_Name : String :=  "exemple_fichier.out";
+        File      : Ada.Streams.Stream_IO.File_Type;	-- car il y a aussi Ada.Text_IO.File_Type
+        S         : Stream_Access;
+        Octet     : T_Octet;
+begin
+        --Vérifier qu'il n'y a pas d'argument en plus dans la ligne de commande
+        if Argument_Count /= 0 then
+                raise Argument_Exception;
+        end if;
+        
+        --Vérifier que le fichier est bien un .hff
+        --------------------------------------------------------------
+        --Il y a un essai dans essai_svn mais ça ne fonctionne pas
+        --------------------------------------------------------------
+        
+        
+   
+        -- Lire le contenu du fichier
+        -- --------------------------
+        --   Ouvrir le fichier en lecture
+        Open(File, In_File, File_Name);
+        
+        --   Lire, vérifier et afficher de temps en temps le contenu
+        --   Attention, il faut lire les données dans le même ordre qu'elles ont été écrite.
+        --   Ici, le problème ne se pose pas car il n'y a que des octets.
+        S := Stream(File);
+        
+        
+        --Reconstruire l'arbre de Huffmann
+        ----------------------------------
+        
+        -- Récupérer les carctères à utiliser pour la décompression
+        Initialiser(Tableau_caractere);
+        Compteur := 0;
+        Premier_carctere := T_Octet'Input(S);
+                
+        
+        
+        
+        
+        
+        
+end Decompresser;

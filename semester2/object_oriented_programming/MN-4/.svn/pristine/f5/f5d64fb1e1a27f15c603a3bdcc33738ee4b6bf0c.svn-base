@@ -1,0 +1,138 @@
+package tableur;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Observer;
+import java.util.Observable;
+
+public class TableurControleur implements ActionListener {
+
+    public TableurControleur() {
+        this
+    }
+
+      @Override
+    public void actionPerformed(ActionEvent e) {
+
+
+        if (e.getSource().getClass() == JMenuItem.class) {
+
+            if (e.getSource() == itemNouveau ) {
+                System.out.println("test nouveau");
+                for (int i = 0; i < content.getComponentCount(); i++) {
+                    System.out.println("Nouveau");
+                    System.out.println(((JTextField)content.getComponent(i)).getText());
+                }
+            }
+                    
+            if (e.getSource() == itemOuvrir ) {
+                System.out.println("test ouvrir");
+            } 
+            
+            if (e.getSource() == content ) {
+                System.out.println("test content");
+            } 
+
+        }
+       
+        if (e.getSource().getClass() == Cellule.class) {
+            Cellule cell = ((Cellule) e.getSource());
+            String textEntree = cell.getText();
+            if (textEntree.length() > 0 && textEntree.charAt(0) == '=') {
+                Formule formule = Lecteur.convertir(textEntree.substring(1));
+                double val = formule.evaluer(tab);
+                cell.setText(String.valueOf(val));
+            }
+        }
+        //FIXME Recuperer les valeurs grace a la pos
+        //System.out.print(tab.getValeur(new Position(1, 1)));
+        
+    }
+        
+    
+/*
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	Historique history = tab.getHistorique();
+    	//il nous faudrait un �l�ment m�moire si on doit impl�menter ces actions
+    	switch ((String)e.getSource()) {
+    	case "ItemNouveau":
+    		String[] args;
+    	    TableurVisuel newTab = new TableurVisuel("Tableur",  new Tableur());
+    		newTab.main(args);
+    		break;
+    	case "itemOuvrir":
+    		//d�pend de la mani�re dont on code le fichier produit <- TO-DO
+    		break;
+    	case "itemEnregister":
+    		//""
+    		break;
+    	case "itemEnregisterSous":
+    		//""
+    		break;
+    	case "itemAnnuler":
+    		Action last = history.getDernierElement();
+    		last.annuler(tab);
+    		break;
+    	case "itemRetablir":
+    		//diff�rence entre annuler et r�tablir ?
+    		break;
+    	case "itemCopier":
+    		ActionSelectionnerCellule derniereAction = (ActionSelectionnerCellule) history.getDernierElement();
+    		ActionCopier a = ActionCouper(derniereAction.getPositionSelectionnee(), mouseClicked(e), tab.getFormule(derniereAction.getPositionSelectionnee())); //Potentiellement revoir Couper, comment on fait ? on s�lectionne les deux cases concern�es ? ou on met en m�moire.
+    		a.appliquer(tab);
+    		break;
+    	case "itemCouper":
+    		ActionSelectionnerCellule derniereAction2 = (ActionSelectionnerCellule) history.getDernierElement();
+    		ActionCouper b = ActionCouper(derniereAction2.getPositionSelectionnee(), mouseClicked(e), tab.getFormule(derniereAction2.getPositionSelectionnee()));
+    		b.appliquer(tab);
+    		break;
+    	
+    	case "itemColler": //avoir coller indique que couper ne devrait pas demander la nouvelle postion
+    		//ActionCouper (ou ActionCopier modifie d�j� la cellule o� on copie, alors soit on enl�ve Coller ou on modifie Couper et Copier
+    		break;
+    	case "itemRAZ":
+    		cleanupTableur();
+    		break;
+    	case "itemApparence":
+    		//double scanner ou sous-menu avec des options ?
+    		break;
+    	case "itemFormat":
+    		//""
+    		break;
+    	case "itemDimension":
+    		//double scanner //� implanter plus tard, assez mineur en r�alit�
+    		this.setSize(1920, 1080);
+    		break;
+        default:
+        	System.out.println("Default");
+	}}
+    
+
+    public Position mouseClicked(MouseEvent e) { //renvoie une position, n�cessaire si on veut acc�der aux cellules
+        int x = e.getX(); //coordonn�es du clic, potentiellement utilisable si la taille du tableur est connu.
+        int y = e.getY();
+        Position CelluleSelectionnee = new Position(x/192, y/36); //30 cases * 36 pixels = 1080 : hauteur et 10 cases * 192 = 1920
+        ActionSelectionnerCellule a = new ActionSelectionnerCellule(CelluleSelectionnee); //r�gler le probl�me d'architecture
+        a.appliquer(tab);
+        return CelluleSelectionnee; 
+    }
+   		
+    */
+
+    @Override
+    public void update(Observable o, Object arg) {
+        
+        
+    }
+    
+    
+}
+
+
+}

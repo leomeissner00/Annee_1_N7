@@ -1,0 +1,36 @@
+package test.TestComposant;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.*;
+
+import tableur.Tableur;
+import tableur.action.elementaire.ActionDefinirCellule;
+import tableur.action.Action;
+import tableur.composant.*;
+import tableur.math.*;
+import tableur.math.formule.*;
+
+public class TestHistorique {
+    Action a1;
+    Tableur tab;
+    Position pos1;
+    Formule f1;
+
+    @Before
+    public void setup() {
+    	tab = new Tableur();
+    	pos1 = new Position(1,1);
+    	f1 = new FormuleVide();
+    	a1 = new ActionDefinirCellule(pos1,f1);
+    }
+
+    @Test
+    public void testHistorique() {
+        Historique hist = tab.getHistorique();
+    	assert(hist.estVideHistorique());
+    	assert(hist.estVideReverseHistorique());
+    	a1.appliquer(this.tab);
+    	assert(!hist.estVideHistorique());
+    	assert(!hist.estVideReverseHistorique());
+    }
+}

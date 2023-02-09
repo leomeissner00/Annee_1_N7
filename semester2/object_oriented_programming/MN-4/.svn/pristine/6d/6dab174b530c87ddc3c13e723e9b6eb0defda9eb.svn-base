@@ -1,0 +1,40 @@
+package tableur.composant.cellule;
+
+import tableur.Tableur;
+import tableur.composant.Cellule;
+import tableur.exception.NoMeasurableException;
+import tableur.math.Formule;
+
+public class CelluleFormule extends Cellule {
+    
+    private Formule formule;
+
+
+    public CelluleFormule(Formule form) {
+        super();
+        this.formule = form;
+    }
+    
+    @Override
+    public double getValeur(Tableur tab) throws NoMeasurableException {
+        return this.formule.evaluer(tab);
+    }
+
+    @Override
+    public CelluleFormule clone() {
+        return new CelluleFormule(this.formule);
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+
+    public String getText() {
+        return this.formule.toString();
+    }
+
+}

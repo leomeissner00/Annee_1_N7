@@ -1,0 +1,247 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnata
+A -gnatwa
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_STREAMS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U decompresser%b	decompresser.adb	642529af NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W codage_huffmann_exception%s  codage_huffmann_exception.ads  codage_huffmann_exception.ali
+W lca_projet%s		lca_projet.adb		lca_projet.ali
+Z system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-assert.ads		20210520051127 a718b65c ada.assertions%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20210520051127 4aa66568 ada.command_line%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-ststio.ads		20210520051128 d6d358e8 ada.streams.stream_io%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D codage_huffmann_exception.ads  20220108111157 ff12cf4d codage_huffmann_exception%s
+D decompresser.adb	20220113125910 ba648492 decompresser%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D lca_projet.ads	20220112090729 804cbf2d lca_projet%s
+D lca_projet.adb	20220112090729 d927f07e lca_projet%b
+D system.ads		20210520051134 a2da961d system%s
+D s-assert.ads		20210520051131 6a49a4e4 system.assertions%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210520051133 e251976f system.storage_pools.subpools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [decompresser standard 9 11 none]
+G r i none [decompresser standard 9 11 none] [lca_projet standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 21|1r6 1r32 2r6 2r34 3r6 3r24 4r6 4r32 5r6 5r33 194r39 250r21
+X 5 a-comlin.ads
+36K13*Command_Line 144e21 21|4w10 4r36
+52V13*Argument{string} 21|265s41
+X 9 a-stream.ads
+36K13*Streams 87e16 21|5r10 5r37 194r43 250r25
+X 10 a-ststio.ads
+39K21*Stream_IO 224e26 21|5w18 5r45 194r51 250r33
+42P9*Stream_Access(9|39R9) 21|73r54 103r55 193r78 195r22 251r21
+44P9*File_Type 21|194r61 250r43
+47n23*In_File{47E9} 21|283r20
+47n32*Out_File{47E9} 21|202r45
+68U14*Create 21|202s17
+74U14*Open 21|283s9
+80U14*Close 21|245s17 304s9
+92V13*Stream{42P9} 21|203s23 284s14
+X 11 a-string.ads
+16K13*Strings 35e16 21|2r10 2r38 3w10 3r28
+X 14 a-strunb.ads
+83K21*Unbounded 765e26 21|2w18 2r46
+88R9*Unbounded_String<7|43R9> 744e15 21|14r63 18r42 25r62 27r30 50r50 76r23
+. 103r111 103r197 143r105 144r24 193r54 193r140 197r24 249r21 255r22 260r27
+91r4*Null_Unbounded_String{88R9} 21|112r31 149r25 205r25 230r57
+93V13*Length{natural} 21|152s30 161s36 164s49 165s69 166s90 168s52 171s78
+. 202s75 268s12 274s46 274s67
+104V13*To_Unbounded_String{88R9} 21|34s30 39s50 155s46 162s49 169s65 265s21
+117V13*To_String{string} 21|56s24 110s33 123s49 212s49 227s44 240s35 283s29
+128U14*Append 21|155s33
+144U14*Append 21|131s25 216s25
+152V14*"&"{88R9} 21|39s48
+192V13*Element{character} 21|154s28 165s55
+199U14*Replace_Element 21|171s57
+208V13*Slice{string} 21|202s55 274s29
+217V13*Unbounded_Slice{88R9} 21|166s65
+239V14*"="{boolean} 21|223s41
+X 17 a-textio.ads
+58K13*Text_IO 725e16 21|1w10 1r36
+463U14*Put 21|308s43
+X 20 codage_huffmann_exception.ads
+2K9*Codage_Huffmann_Exception 7e30 21|6w6 6r45
+4X9*Pas_hff_Exception 21|270r23 276r31 308r22
+X 21 decompresser.adb
+9U11*decompresser 9b11 310l5 310t17
+10M14 T_Octet 11r13 18r72 25r46 26r29 50r75 63r16 74r37 75r37 78r38 81r38
+. 88r46 103r81 108r26 121r42 193r107 198r32 210r42 229r49 259r21
+13K17 LCA_decompress[24|8] 15r13 73r120 143r66 254r29 299r9
+17K17 LCA_decompress2[24|8] 19r13 143r131 146r35 193r232 196r24 243r17 256r26
+. 303r9
+25V18 Octet_to_binaire{14|88R9} 25b18 25>35 44l13 44t29 79s24 85s32 109s36
+. 122s52 211s52 227s54 240s45
+25m35 Octet{10M14} 31r25
+26m17 Bit{10M14} 32m17 33r50 37m25 38r58
+26m22 temp{10M14} 31m17 32r24 35m17 35r25 37r32 40m25 40r33
+27r17 Octet_str{14|88R9} 34m17 39m25 39r38 42r24
+28a17 Bit_str{string} 33m17 34r50 34r61 38m25 39r70 39r81
+36i21 N{integer}
+50V18 Binaire_to_octet{10M14} 50b18 50>36 64l13 64t29 158s68
+50r36 Octet_str{14|88R9} 56r34
+52a17 Str{string} 56m17 58r28
+53i17 somme{integer} 55m17 59m33 59r42 63r24
+57i21 i{integer} 58r32 59r56
+73U19 Creation_tableau_caractere 73b19 73>47 73=69 73<96 92l13 92t39 291s9
+73p47 S{10|42P9} 78r52 81r52 88r60
+73i69 Compteur{integer} 86r56 89m25 89r37
+73p96 Tableau_caractere{24|10P14[13]} 80m29 86m37
+74m17 Premier_caractere{10M14} 78m17 79r41 83r44 87m25
+75m17 Nouveau_caractere{10M14} 81m17 83r23 85r49 87r46 88m25
+76r17 Cle{14|88R9} 79m17 80r51 85m25 86r66
+103U19 Recuperation_parcours_infixe 103b19 103>48 103<70 103<90 103<129 103=155
+. 103<181 135l13 135t41 294s9
+103p48 S{10|42P9} 108r40 121r56
+103m70 Octet{10M14} 108m17 109r53 121m33 122r69
+103r90 Octet_Un_chaine{14|88R9} 109m17 110r43 122m33 123r59
+103a129 Octet_chaine{string} 110m17 123m33 127r28 131r44
+103i155 Compteur{integer} 115r39 117m17 120r28 124m33 127r41 131r57 132m25
+. 132r37
+103r181 Suite_bits{14|88R9} 112m17 131m32
+104i17 nbr_feuille_totale{integer} 115m17 133r35
+105i17 nbr_feuille{integer} 116m17 128m33 128r48 133r56
+143V18 Creation_table_huffmann{24|10P14[17]} 143b18 143>43 143>89 181l13
+. 181t36 298s27
+143p43 Tableau_caractere{24|10P14[13]} 158r95
+143r89 Suite_bits{14|88R9} 152r37 154r36 164r56
+144r17 Code{14|88R9} 149m17 155m40 155r40 158r62 161r43 162m41 165r63 165r76
+. 166m57 166r81 166r97 168r59 169m57 171m73 171r73 171r85
+145i17 position_feuille{integer} 150m17 158r114 159m33 159r53
+146p17 Codage_Huffmann{24|10P14[17]} 158m45 158r45 179r24
+152i21 i{integer} 154r48 164r44
+193U19 Decompression_texte 193b19 193>40 193>72 193=93 193=116 193=158 193=187
+. 193>213 246l13 246t32 302s9
+193r40 File_Name{14|88R9} 202r61 202r82
+193p72 S{10|42P9} 210r56
+193m93 Octet{10M14} 210m33 211r69
+193r116 Octet_Un_chaine{14|88R9} 211m33 212r59
+193a158 Octet_chaine{string} 212m33 216r38
+193i187 Compteur{integer} 209r28 213m33 216r51 238m25 238r37
+193p213 Codage_Huffman{24|10P14[17]} 219r32 221r44
+194p17 fichier_decompresse{10|44P9} 202m24 202r24 203r30 245m24 245r24
+195p17 SC{10|42P9} 203m17 229r63
+196p17 temp{24|10P14[17]} 219m25 223r50 225r67 225r79 227r81 227r93 234m33
+. 234r53 243m39 243r39
+197r17 Code{14|88R9} 205m17 216m32 216r32 223r36 230m49
+198m17 Bonne_Donnee{10M14} 225m41 229r67 240r62
+221i29 i{integer}
+249r9 File_Name{14|88R9} 265m9 268r19 274r35 274r53 274r74 283r39 302r30
+250p9 File{10|44P9} 283m14 283r14 284r21 304m16 304r16
+251p9 S{10|42P9} 284m9 291r37 294r38 302r41
+252a9 File_case{string} 274m17 275r20
+254p9 Tableau_caractere{24|10P14[13]} 289m21 289r21 291m50 291r50 298r51
+. 299m30 299r30
+255r9 Suite_bits{14|88R9} 294m89 298r70
+256p9 Codage_Huffman{24|10P14[17]} 297m21 297r21 298m9 302r92 303m31 303r31
+257i9 Compteur{integer} 290m9 291m40 291r40 294m79 294r79 302m82 302r82
+259m9 Octet{10M14} 294m41 302m44 302r44
+260r9 Octet_Un_chaine{14|88R9} 294m48 302m51 302r51
+261a9 Octet_chaine{string} 294m65 302m68 302r68
+X 24 lca_projet.ads
+5+14 T_Cle 21|14r33 18r33
+6+14 T_Donnee 21|14r51 18r60
+8k9*LCA_projet 21|7w6 14r21 18r21 24|84e15
+10P14 T_LCA 21|73r135[13] 143r81[13] 143r147[17] 146r51[17] 193r248[17] 196r40[17]
+. 254r44[13] 256r42[17]
+13U19 Initialiser 21|289s9[13] 297s9[17]
+22V18 Taille{integer} 21|221s37[17]
+29U19 Enregistrer 21|80s17[13] 86s25[13] 158s33[17]
+48V18 La_Donnee{14|88R9} 21|158s85[13] 225s57[17] 227s71[17]
+51V18 La_Cle{14|88R9} 21|223s43[17] 225s72[17] 227s86[17]
+54V18 La_Suivante{10P14[21|17]} 21|234s41[17]
+58U19 Vider 21|243s33[17] 299s24[13] 303s25[17]
+X 26 system.ads
+67M9*Address
+X 36 s-memory.ads
+53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{26|67M9} 105i<c,__gnat_realloc>22
+X 44 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+

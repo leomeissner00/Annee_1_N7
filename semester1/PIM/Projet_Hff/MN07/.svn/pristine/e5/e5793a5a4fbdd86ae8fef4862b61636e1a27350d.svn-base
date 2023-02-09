@@ -1,0 +1,128 @@
+--with Arbre_Exceptions;         use Arbre_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body arbre_bin_projet is
+
+	procedure Free is
+		new Ada.Unchecked_Deallocation (Object => T_Noeud, Name => T_ABR);
+
+
+	procedure Initialiser(Arbre: out T_Abr) is
+	begin
+		Arbre := null;
+	end Initialiser;
+
+
+	function Est_Vide (Arbre : T_Abr) return Boolean is
+	begin
+		return Arbre = null;
+	end Est_Vide;
+
+
+
+	procedure Enregistrer_feuille (Arbre : in out T_Abr ; Donnee : in Integer ; Cle : in T_Cle) is
+	begin
+
+
+		Arbre := new T_Noeud' (Donnee => Donnee, Cle => Cle , Sous_Arbre_Gauche => Null , Sous_Arbre_Droit => Null);
+		
+	end Enregistrer_feuille;
+
+
+	procedure Vider (Arbre : in out T_Abr) is
+	begin
+		if Arbre = null then
+			Free(Arbre);
+
+		else
+			Vider(Arbre.all.Sous_Arbre_Gauche);
+			Vider(Arbre.all.Sous_Arbre_Droit);
+			Free(Arbre);
+
+		end if;
+	end Vider;
+
+	function Taille(Arbre : in T_Abr) return Integer is 
+
+	begin 
+		if Est_Feuille(Arbre) then
+			return 0;
+		else
+			return Taille(Arbre.all.Sous_Arbre_Gauche) + Taille(Arbre.all.Sous_Arbre_Droit)+1;
+		end if;
+
+	end Taille;
+
+	function Droite(Arbre : in T_Abr) return T_Abr is 
+	begin 
+		return Arbre.all.Sous_Arbre_Droit;
+		
+	end Droite;
+
+
+	function Gauche(Arbre : in T_Abr) return T_Abr is 
+	begin
+		return Arbre.all.Sous_Arbre_Gauche;
+
+	end Gauche;
+
+
+	procedure Fusionner(Arbre_g : in out T_abr; Arbre_d : in T_Abr) is
+
+		Donnee : Integer;
+		Cle : T_Cle;
+		
+	begin
+		Donnee := Arbre_d.all.Donnee + Arbre_g.all.Donnee;
+		Cle := Arbre_g.all.Cle;
+		Arbre_g := new T_Noeud' (Donnee => Donnee, Cle => Cle , Sous_Arbre_Gauche => Arbre_g , Sous_Arbre_Droit => Arbre_d);
+	
+	end Fusionner;
+
+
+
+	function La_Cle (Arbre : in T_Abr) return T_Cle is 
+	begin
+	return Arbre.all.Cle;
+	end La_Cle;
+
+
+	function La_Donnee (Arbre : in T_Abr) return Integer is 
+	begin
+	return Arbre.all.Donnee;
+	end La_Donnee;
+
+
+	procedure Pour_Chaque_bin (Arbre : in T_Abr) is
+		
+	begin
+		
+		if Est_Feuille(Arbre) then
+			Traiter(Arbre.all.Donnee, Arbre.all.Cle);
+		else
+			begin
+				Pour_Chaque_bin(Arbre.all.Sous_Arbre_Gauche);
+				Pour_Chaque_bin(Arbre.all.Sous_Arbre_Droit);
+			exception
+				when others => 
+					Pour_Chaque_bin(Arbre.all.Sous_Arbre_Gauche);
+					Pour_Chaque_bin(Arbre.all.Sous_Arbre_Droit);
+			end;
+		end if;
+	end Pour_Chaque_bin;
+
+
+
+	function Est_Feuille (Arbre : in T_Abr) return Boolean is 
+	begin 
+		if Arbre.all.Sous_Arbre_Gauche = null and Arbre.all.Sous_Arbre_Droit = null then
+
+			return True;
+
+		end if;
+
+		return False;
+
+	end Est_Feuille;
+
+end arbre_bin_projet;

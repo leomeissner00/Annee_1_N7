@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 24" line=" 43" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/test_piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 44" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/piles.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 50" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/piles.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 100" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/parenthesage.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/integer_io.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/exemple_integer_io.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/afficher_un_entier.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/afficher_un_entier.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

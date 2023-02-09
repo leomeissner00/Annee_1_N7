@@ -1,0 +1,39 @@
+package tableur.math.calcul;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.exception.NoMeasurableException;
+
+public class CalculFrequence {
+	
+	private Tableur tab;
+	private double reel;
+	
+	public CalculFrequence(Tableur tableur, double re) {
+		this.tab = tableur;
+		this.reel = re;
+	}
+	
+	public double calculer(Position pos1, Position pos2) throws NoMeasurableException {
+		int occurences = 0;
+		double freq;
+		int largeur = Math.abs(pos2.x - pos1.x);
+		int hauteur = Math.abs(pos2.y - pos1.y);
+		int nbElmt = hauteur*largeur;
+		Position actif = new Position(pos1.x, pos1.y);
+		int x_arrivee = pos2.x;
+		int y_arrivee = pos2.y;
+		for (int i = pos1.x; i <= x_arrivee; i++) {
+			for (int j = pos1.y; j <= y_arrivee; j++) {
+				actif.x = i;
+				actif.x = j;
+				Cellule cellactif = this.tab.getCellule(actif);
+				double valeur = cellactif.getValeur();
+				if(valeur == this.reel) { occurences++;}	
+			}
+		}
+		freq = occurences / nbElmt;
+		return freq;
+	}
+
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="psrc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/home/lmeissne/Téléchargements/jfreechart-1.0.1.tar.gz"/>
+	<classpathentry kind="lib" path="/home/lmeissne/Téléchargements/jcommon-1.0.8.tar.gz"/>
+	<classpathentry kind="lib" path="/home/lmeissne/Téléchargements/afficheur.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

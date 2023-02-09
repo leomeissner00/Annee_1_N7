@@ -1,0 +1,67 @@
+
+-- DÉfinition de structures de donnÉes associatives sous forme d'un arbre
+-- binaire de recherche (ABR).
+generic
+	type T_Cle is private;
+	type T_Donnee is private;
+	-- with function "<" (Gauche, Droite : in T_Cle) return Boolean;
+
+package arbre_bin_projet is
+
+	type T_Abr is limited private;
+
+	-- Initialiser une Sda.  La Sda est vide.
+	procedure Initialiser(Sda: out T_Abr) with
+		Post => Est_Vide (Sda);
+
+
+	-- Est-ce qu'une Sda est vide ?
+	function Est_Vide (Sda : T_Abr) return Boolean;
+
+
+	-- Enregistrer une Donnée associÉe à une Clé dans une Sda.
+	-- Si la clÉ est déjà présente dans la Sda, sa donnÉe est changée.
+	procedure Enregistrer_noeud (Sda : in out T_Abr ; Cle : in T_Cle ; Donnee : in T_Donnee) 
+		
+
+
+	-- Supprimer tous les ÉlÉments d'une Sda.
+	procedure Vider (Sda : in out T_Abr) with
+		Post => Est_Vide (Sda);
+
+	procedure Droite(Sda : in out T_Abr)
+
+	
+	procedure Gauche(Sda : in out T_Abr)
+
+			
+	procedure Fusionner(Sda_1 : in out T_abre, Sda_2 : in)
+			
+
+	function Donnee (Sda : in T_Abr) return T_Donnee;
+		
+			
+	-- Appliquer un traitement (Traiter) pour chaque couple d'une Sda.
+	-- Le parcours est infixe : on traite le sous-arbre gauche, puis le
+	-- noeud, puis le sous-arbre droit.
+	generic
+		with procedure Traiter (Cle : in T_Cle; Donnee: in T_Donnee);
+	procedure Pour_Chaque (Sda : in T_Abr);
+
+
+private
+
+	type T_Noeud;
+	type T_Abr is access T_Noeud;
+	type T_Noeud is
+		record
+			Cle: T_Cle;
+			Donnee : T_Donnee;
+			Sous_Arbre_Gauche : T_Abr;
+			Sous_Arbre_Droit : T_Abr;
+			-- Invariant
+			--    Pour tout noeud N dans Sous_Arbre_Gauche, N.Cle < Cle
+			--    Pour tout noeud N dans Sous_Arbre_Droit,  N.Cle > Cle
+		end record;
+
+end arbre_bin_projet;

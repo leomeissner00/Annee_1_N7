@@ -1,0 +1,128 @@
+package tableur;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JMenuItem;
+
+import tableur.action.Action;
+import tableur.composant.Cellule;
+import tableur.composant.Historique;
+import tableur.composant.Position;
+import tableur.composant.cellule.CelluleFormule;
+import tableur.exception.NoFormuleException;
+import tableur.exception.NoMeasurableException;
+import tableur.math.Formule;
+
+public class Tableur implements Serializable{
+    
+    public final int WIDTH = 10;
+    public final int HEIGHT = 30;
+
+    private TableurVisuel visuel;
+    private TableurControleur controleur;
+    private Historique historique;
+
+    private Position cursor;
+
+    public Map<String, Cellule> cells;
+
+    JMenuItem itemNouveau = new JMenuItem("Nouveau");
+    JMenuItem itemOuvrir = new JMenuItem("Ouvrir");
+    JMenuItem itemEnregistrer = new JMenuItem("Enregistrer");
+    JMenuItem itemEnregistrerSous = new JMenuItem("Enregistrer Sous");
+
+    JMenuItem itemAnnuler = new JMenuItem("Annuler");
+    JMenuItem itemRetablir = new JMenuItem("Retablir");
+    JMenuItem itemCopier = new JMenuItem("Copier");
+    JMenuItem itemCouper = new JMenuItem("Couper");
+    JMenuItem itemColler = new JMenuItem("Coller");
+    JMenuItem itemRAZ = new JMenuItem("RAZ");
+
+    JMenuItem itemApparence = new JMenuItem("Apparence");
+    JMenuItem itemFormat = new JMenuItem("Format");
+    JMenuItem itemDimension = new JMenuItem("Dimensions");
+
+    public Tableur() { 
+        cells = new HashMap<String, Cellule>();
+        this.cursor = new Position(0, 0);
+        this.historique = new Historique(this);
+        this.controleur = new TableurControleur(this);
+        this.visuel = new TableurVisuel("Tableur", this, this.controleur );
+        
+    }
+
+    public Position getPosCursor() {
+        return this.cursor.clone();
+    }
+
+    private void verifierIndice(Position pos) {
+        if ( pos.x < 0 || pos.y < 0) {
+            throw new IndexOutOfBoundsException("La position doit etre superieur ou egal au couple (0,0)");
+        }
+    }
+
+    public Historique getHistorique() {
+        return this.historique;
+    }
+
+    public void addHistorique(Action action) {
+        this.historique.ajouterAction(action);
+    }
+
+    public void delCellule(Position pos) {
+        verifierIndice(pos);
+        cells.remove(pos.toString());
+        this.update();
+    }
+
+    public void setCellule(Position pos, Formule formule) {
+        verifierIndice(pos);
+        cells.put(pos.toString(), new CelluleFormule(pos, formule, this));
+        this.update();
+    }
+
+    public void setCellule(Position pos, String text) {
+        verifierIndice(pos);
+        cells.put(pos.toString(), new Cellule(pos, text));
+        this.update();
+    }
+
+    public double getValeur(Position pos) throws NoMeasurableException {
+        verifierIndice(pos);
+        return this.getCellule(pos).getValeur();
+    }
+
+    public Formule getFormule(Position pos) throws NoFormuleException {
+        verifierIndice(pos);
+        if (this.getCellule(pos).getClass() != CelluleFormule.class) {
+            return ((CelluleFormule) this.getCellule(pos)).getFormule();
+        } else {
+            throw new NoFormuleException();
+        }
+    }
+
+    public Cellule getCellule(Position pos) {
+        verifierIndice(pos);
+        Cellule cell = this.cells.get(pos.toString());
+    	if (cell != null) {
+    		return cell;
+    	} else {
+    		return new Cellule(pos);
+        }
+    }
+
+    public void update() {
+        this.visuel.update();
+    }
+    
+    public void reset() {
+//    	 for (int i = 0; i < WIDTH; i++ ) {
+//            for (int j = 0; j < HEIGHT; j++ ) {
+//                this.delCellule(new Position(i,j)); //pas bon, on freeze
+//            }
+//    	 }
+        this.cells.clear();
+   }
+
+}

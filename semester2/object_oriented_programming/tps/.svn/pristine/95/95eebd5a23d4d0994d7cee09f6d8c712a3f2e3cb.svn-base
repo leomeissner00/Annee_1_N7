@@ -1,0 +1,68 @@
+File Cercle.java: 548 tokens, 177 lines (not NL-terminated)
+Total input: 1 file (1 new, 0 old), 548 tokens
+
+Cercle.java: line 39-41 [33]
+Cercle.java: line 151-153
+< 	public Cercle(Point p1, Point p2) {
+< 		if (p1 == null  || p2 == null || p1.distance(p2)== 0)
+< 			throw new AssertionError();
+---
+> 	public static Cercle creerCercle(Point vcentre, Point p) {
+> 		if (vcentre == null || p == null || vcentre.distance(p) == 0)
+> 			throw new AssertionError();
+
+Cercle.java: line 27-39 [29]
+Cercle.java: line 44-55
+< 		this.centre = vcentre;
+< 		this.couleur = Color.blue;
+< 		this.centre.setCouleur(Color.blue);
+< 	}
+< 	
+< 	/** Construire un cercle bleu à partir de 2 point
+< 	 *  diamétralement opposés
+< 	 * @param p1 point numéro 1
+< 	 * @param p2 point numéro 2
+< 	 * @throws AssertionError if p1 = null or p2 = null
+< 	 * 							or p1 = p2
+< 	 */
+< 	public Cercle(Point p1, Point p2) {
+---
+> 		this.centre = vcentre;
+> 		this.couleur = Color.blue;
+> 		this.centre.setCouleur(Color.blue);
+> 	}
+> 	
+> 	/** Construire un cercle à partir de 2 point
+> 	 *  diamétralement opposés et de sa couleur
+> 	 * @param p1 point numéro 1
+> 	 * @param p2 point numéro 2
+> 	 * @param couleur Couleur du cercle
+> 	 */
+> 	public Cercle(Point p1, Point p2, Color couleur) {
+
+Cercle.java: line 79-89 [26]
+Cercle.java: line 89-99
+< 		return 2.0*this.rayon;
+< 	}
+< 
+< 	/** Changer le rayon du cercle.
+< 	  * @param vrayon nouveau rayon
+< 	  * @throws AssertionError if vrayon <= 0
+< 	  */
+< 	public void setRayon(double vrayon) {
+< 		if (vrayon <= 0)
+< 			throw new AssertionError();
+< 		this.rayon = vrayon;
+---
+> 		this.rayon = vrayon;
+> 	}
+> 	
+> 	/** Changer le diametre du cercle.
+> 	  * @param vdiametre nouveau diametre
+> 	  * @throws AssertionError if vdiametre <= 0
+> 	  */
+> 	public void setDiametre(double vdiametre) {
+> 		if (vdiametre <= 0)
+> 			throw new AssertionError();
+> 		this.rayon = vdiametre/2.0;
+

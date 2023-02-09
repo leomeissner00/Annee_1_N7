@@ -1,0 +1,42 @@
+package tableur.composant;
+
+import javax.swing.JTextField;
+import tableur.exception.NoMeasurableException;
+
+public class Cellule extends JTextField {
+
+    protected Position pos;
+    
+    public Cellule(Position pos) {
+        super();
+        this.pos = pos.clone();
+    }
+    
+    public Cellule(Position position, String text) {
+        super(text);
+        this.pos = new Position(position.x, position.y);
+    }
+
+    public double getValeur() throws NoMeasurableException {
+        try {
+            return Double.parseDouble(this.getText());
+        } catch (NumberFormatException e) {
+            throw new NoMeasurableException();
+        } catch (NullPointerException e) {
+            return 0;
+        }
+    }
+
+    public Cellule clone() {
+        return new Cellule(this.pos, this.getText());
+    }
+
+    public Position getPosition() {
+        return this.pos.clone();
+    }
+
+    public String toString() {
+        return this.getText();
+    }
+
+}

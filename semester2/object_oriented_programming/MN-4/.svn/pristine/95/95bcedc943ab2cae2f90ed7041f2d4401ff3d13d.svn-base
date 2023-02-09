@@ -1,0 +1,9 @@
+package tableur.math;
+
+import tableur.composant.Position;
+
+public interface Traitement {
+	
+	public void traiter(Position pos1, Position pos2);
+	
+}

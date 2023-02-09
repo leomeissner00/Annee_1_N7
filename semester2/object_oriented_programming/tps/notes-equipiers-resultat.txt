@@ -1,0 +1,8 @@
+
+Résultat de l'interprétation du fichier notes-equipiers.txt :
+
+Justin BARBIER (jbarbier4) : 1
+Tom BERTRAND (tbertran3)   : 1
+Mael MATHURIN (mmathuri)   : 1
+Johan STRAGIER (jstragie)  : 1
+Steven ZHENG (szheng)      : 1

@@ -1,0 +1,43 @@
+package tableur.action.elementaire;
+
+import tableur.Tableur;
+import tableur.action.Action;
+import tableur.composant.Position;
+import tableur.math.Formule;
+import tableur.math.formule.FormuleVide;
+
+public class ActionColler implements Action {
+    
+    private Position pos;
+    private Formule form;
+
+
+    public ActionColler(Position pos, Formule formule) {
+        this.pos = pos;
+        this.form = formule;
+    }
+
+
+
+
+	@Override
+	public void appliquer(Tableur tab) {
+		
+		tab.addHistorique(this);
+	}
+
+
+
+
+	@Override
+	public void annuler(Tableur tab) {
+		//do nothing
+		return ;
+	}
+	
+	public Position getPositionSelectionnee() {
+		return this.pos;
+	}
+
+
+}

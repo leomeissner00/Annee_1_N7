@@ -1,0 +1,55 @@
+Nom       : Meissner
+Prénom    : Léo
+Groupe TP : N
+
+Les « ... » indiquent les endroits à compléter.
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+
+* Temps passé sur la V1 : 10 heures 00 minutes
+* Temps passé sur la V2 : ... heures ... minutes
+
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+
+
+=====[ Questions ]==============================================================
+
+--------------------------------------------------------------------------------
+Pourquoi l'exception OperationInterditeException ne peut pas être définie
+comme vérifiée par le compilateur ?
+--------------------------------------------------------------------------------
+
+OpérationInterditeException ne peut pas être définie comme vérifiée par le compliateur car elle est n'est pas traité lorsque celle-ci est lancé mais est traitée par l'arbitre.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qu'il faut faire pour ajouter un nouveau niveau de jeu, par
+exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
+les étapes à faire.
+--------------------------------------------------------------------------------
+
+Pour ajouter une stratégie, d'abord créer une nouvelle classe qui implémente l'interface stratégie et completer la méthode getPrise(). Ensuite il suffit de rajouter cette stratégie à chaque endroit ou les stratégies existantes sont mentionnées dans le programme jouer.java.
+
+
+--------------------------------------------------------------------------------
+Expliquer ce qui permet, dans votre conception, de changer dynamiquement
+(en cours d'exécution du programme) la stratégie d'un joueur (C14).
+--------------------------------------------------------------------------------
+
+Afin de changer dynamiquement la stratégie d'un joueur il faudrait pour un joueur humain de rentrer une commande tel que strat et à ce moment là la prochaine ligne entrée serait la nouvelle stratégie.
+
+
+=====[ Explications ]===========================================================
+
+--------------------------------------------------------------------------------
+Donner ici les explications supplémentaires utiles à la compréhension du
+travail rendu.
+--------------------------------------------------------------------------------
+
+...
+
+--------------------------------------------------------------------------------

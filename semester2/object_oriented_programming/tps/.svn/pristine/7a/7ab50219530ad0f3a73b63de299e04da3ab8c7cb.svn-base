@@ -1,0 +1,16 @@
+./allumettes/Joueur.java:39: error: cannot find symbol
+    int getPrise(Jeu jeu) throws CoupInvalideException, EntreeInvalideException{
+                                                        ^
+  symbol:   class EntreeInvalideException
+  location: class Joueur
+./allumettes/Joueur.java:42: error: cannot find symbol
+        	throw new EntreeInvalideException(val, "Vous devez donner un entier.");
+        	          ^
+  symbol:   class EntreeInvalideException
+  location: class Joueur
+./allumettes/Arbitre.java:102: error: cannot find symbol
+			}catch (EntreeInvalideException e) {
+			        ^
+  symbol:   class EntreeInvalideException
+  location: class Arbitre
+3 errors

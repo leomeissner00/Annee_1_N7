@@ -1,0 +1,149 @@
+with Ada.Text_IO;          use Ada.Text_IO;
+with Ada.Integer_Text_IO;  use Ada.Integer_Text_IO;
+with Ada.Command_Line;     use Ada.Command_Line;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with arbre_bin_projet;
+with LCA_projet;
+
+procedure compresser is 
+
+
+
+	type T_Octet is mod 2 ** 8;	
+	for T_Octet'Size use 8;
+	
+	procedure Octet_to_binaire(Octet : in out T_Octet) is 
+			Bit   : T_Octet;
+
+		begin
+
+
+			for N in 1..8 loop
+				Bit := Octet / 128;
+				--Put(Integer(Bit), 1);
+				Octet := Octet * 2;
+			end loop;
+			New_Line;
+		
+
+			Octet := 255;
+			Octet := Octet + 1;
+			pragma assert (Octet = 0);
+		
+	end Octet_to_binaire;
+
+		
+	procedure Creation_tableau_frequence(Nom_fichier : in String, table_frequence : in out T_LCA) is
+		
+
+		File_Name : String :=  "exemple_fichier.out";
+		File      : Ada.Streams.Stream_IO.File_Type;	
+		S         : Stream_Access;
+		Octet     : T_Octet;
+		Nouveau_arbre : T_Abr;
+	
+	begin
+		
+		Create (File, Out_File, File_Name);
+
+
+		S := Stream (File);
+		for I in 0..128 loop
+			T_Octet'Write(S, T_Octet(I));
+		end loop;
+
+
+		Close (File);
+
+	
+
+		Open(File, In_File, Nom_fichier);
+
+
+		S := Stream(File);
+		while not End_Of_File(File) loop
+			Octet := T_Octet'Input(S);
+			Octet_to_binaire(Octet);
+			if Cle_Presente(table_frequence, Octet) then
+				
+				Enregistrer(tableau_frequence, Octet, La_Donnee(table_frequence, Octet) + 1);
+			else
+				Enregistrer(tableau_frequence, Octet, 1);
+
+		end loop;
+
+
+		Close (File);
+
+		end Creation_tableau_frequence;
+
+
+	procedure Min_frequence(table_frequence : in out T_LCA) return T_Abr is 
+			
+		Cle : T_Cle;	
+		Min : Integer;
+
+		begin
+
+		Initialiser(Minimum);
+		Cle := La_Cle(tableu_frequence);
+		Min := La_Donnee(table_frequence, Cle);
+		table_frequence := Suivant(table_frequence);
+
+		while table_frequence /= null loop
+
+			if Min > La_Donnee(table_frequence) then 
+
+				Cle := La_Cle(tableu_frequence);
+				Min := La_Donnee(table_frequence, Cle);
+
+			end if;
+
+			table_frequence := Suivant(tableu_frequence);
+
+		end loop;
+
+		Enregistrer_noeud(Minimum, Min, Cle);
+
+		return Minimum;
+	end Min_frequence
+
+
+	procedure Arbre_Huffman(table_frequence : in T_LCA, arbre_bin : in out T_Abr) is 
+			
+			arbre_1 : T_Abr;
+			arbre_2 : T_Abr;
+			derniere_cle : T_Cle;
+			
+		begin
+			
+			while Taille(table_frequence) >= 2 loop
+				arbre_1 := Min_frequence(table_frequence);
+				Supprimer(table_frequence, Cle(arbre_1));
+				arbre_2 := Min_frequence(table_frequence)
+				Supprimer(table_frequence, Cle(arbre_2));
+				Fusionner(arbre_1,arbre_2);
+				Enregistrer(table_frquence, Cle(arbre_1), Donnee(arbre_1));
+				derniere_cle := Cle(arbre_1);
+			end loop;
+
+			Enregistrer_noeud(arbre_bin, La_Donnee(table_frequence,derniere_cle), derniere_cle);
+
+	table_frequence : T_LCA;
+	table_Huffman : T_LCA;
+	Suite_bits : T_LCA;
+	Code : T_LCA;
+	arbre_bin : T_Abr;
+
+begin
+
+	Initialiser(table_frequence);
+
+	Creation_tableau_frequence("test.txt", table_frequence);
+			
+	Initialiser(arbre_bin);
+	Arbre_Huffman(table_frequence, arbre_bin);
+	
+	
+
+end compresser;

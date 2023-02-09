@@ -1,0 +1,23 @@
+package tableur.math.formule;
+
+import tableur.Tableur;
+import tableur.composant.Position;
+import tableur.math.Formule;
+
+public class FormuleCellule implements Formule{
+    
+    private Position positionCellule;
+
+    public FormuleCellule(int posX, int posY) {
+        this.positionCellule = new Position(posX, posY);
+    }
+
+    @Override
+    public double evaluer(Tableur tableur) {
+        return tableur.getValeur(this.positionCellule);
+    }
+
+    
+
+    
+}

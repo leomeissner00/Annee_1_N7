@@ -1,0 +1,148 @@
+File allumettes/Arbitre.java: 411 tokens, 122 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/Joueur.java: 140 tokens, 46 lines
+File allumettes/OperationInterditeException.java: 21 tokens, 10 lines
+File allumettes/StrategieNaive.java: 66 tokens, 18 lines
+File allumettes/StrategieRapide.java: 47 tokens, 13 lines
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File allumettes/Jouer.java: 513 tokens, 140 lines
+File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/StrategieHumaine.java: 136 tokens, 32 lines
+File allumettes/JeuAllumettes.java: 126 tokens, 43 lines
+File allumettes/EntreeInvalideException.java: 68 tokens, 33 lines
+File allumettes/StrategieExpert.java: 101 tokens, 23 lines
+File allumettes/Procuration.java: 59 tokens, 21 lines
+File allumettes/Strategie.java: 14 tokens, 5 lines
+File allumettes/StrategieTricheur.java: 90 tokens, 22 lines
+Total input: 16 files (16 new, 0 old), 1904 tokens
+
+allumettes/CoupInvalideException.java: line 1-39 [68]
+allumettes/EntreeInvalideException.java: line 1-33
+< package allumettes;
+< 
+< /** Exception qui indique qu'un coup invalide est joué.
+<  * @author	Xavier Crégut
+<  * @version	$Revision: 1.3 $
+<  */
+< public class CoupInvalideException extends Exception {
+< 
+< 	/** Le coup joué. */
+< 	private int coup;
+< 
+< 	/** Problème identifié. */
+< 	private String probleme;
+< 
+< 	/** Initialiser CoupInvalideException à partir du coup joué
+< 	 * et du problème identifié.  Par exemple, on peut avoir coup
+< 	 * qui vaut 0 et le problème "< 1".
+< 	 * @param coup le coup joué
+< 	 * @param probleme le problème identifié
+< 	 */
+< 	public CoupInvalideException(int coup, String probleme) {
+< 		super("Coup invalide car " + probleme + " : " + coup);
+< 		this.coup = coup;
+< 		this.probleme = probleme;
+< 	}
+< 
+< 	/** Retourner le coup.
+< 	  * @return le coup */
+< 	public int getCoup() {
+< 		return this.coup;
+< 	}
+< 
+< 	/** Indiquer le problème.
+< 	  * @return le problème */
+< 	public String getProbleme() {
+< 		return this.probleme;
+< 	}
+< 
+< }
+---
+> package allumettes;
+> 
+> public class EntreeInvalideException extends RuntimeException{
+> 	/** Le coup joué. */
+> 	private int coup;
+> 
+> 	/** Problème identifié. */
+> 	private String probleme;
+> 
+> 	/** Initialiser EntreeInvalideException à partir du coup joué
+> 	 * et du problème identifié.  Par exemple, on peut avoir coup
+> 	 * qui vaut 0 et le problème "< 1".
+> 	 * @param coup le coup joué
+> 	 * @param probleme le problème identifié
+> 	 */
+> 	public EntreeInvalideException(int coup, String probleme) {
+> 		super("Coup invalide car " + probleme + " : " + coup);
+> 		this.coup = coup;
+> 		this.probleme = probleme;
+> 	}
+> 
+> 	/** Retourner le coup.
+> 	  * @return le coup */
+> 	public int getCoup() {
+> 		return this.coup;
+> 	}
+> 
+> 	/** Indiquer le problème.
+> 	  * @return le problème */
+> 	public String getProbleme() {
+> 		return this.probleme;
+> 	}
+> }
+
+allumettes/Jouer.java: line 116-123 [32]
+allumettes/Jouer.java: line 124-131
+< 				Strat = new StrategieHumaine();
+< 				return Strat.getPrise(jeu);
+< 			
+< 			case "rapide":
+< 				Strat = new StrategieRapide();
+< 				return Strat.getPrise(jeu);
+< 				
+< 			case "expert":
+---
+> 				Strat = new StrategieExpert();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "naif":
+> 				Strat = new StrategieNaive();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "tricheur":
+
+allumettes/StrategieHumaine.java: line 19-24 [30]
+allumettes/StrategieTricheur.java: line 9-14
+< 			if (val_string.equals("triche")) {
+< 				try {
+< 					jeu.retirer(1);
+< 				}catch(CoupInvalideException e) {
+< 					System.out.println(e.getProbleme());
+< 				}
+---
+> 			while(jeu.getNombreAllumettes() > 2) {
+> 				try {
+> 					jeu.retirer(1);
+> 				} catch (CoupInvalideException e) {
+> 					System.out.println(e.getProbleme());
+> 				}
+
+allumettes/StrategieRapide.java: line 1-7 [25]
+allumettes/StrategieTricheur.java: line 1-7
+< package allumettes;
+< 
+< public class StrategieRapide implements Strategie {
+< 
+< 	@Override
+< 	public int getPrise(Jeu jeu) {
+< 		if (jeu.getNombreAllumettes() < Jeu.PRISE_MAX) {
+---
+> package allumettes;
+> 
+> public class StrategieTricheur implements Strategie{
+> 
+> 	@Override
+> 	public int getPrise(Jeu jeu) {
+> 		if (jeu.getNombreAllumettes()>1) {
+

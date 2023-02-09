@@ -1,0 +1,83 @@
+V "GNAT Lib v2021"
+A -gnata
+A -gnatwa
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U arbre_bin_projet%b	arbre_bin_projet.adb	9dbfc04a NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
+
+U arbre_bin_projet%s	arbre_bin_projet.ads	e43b0dc5 BN EE NE OO PK GE IL
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D arbre_bin_projet.ads	20220105194455 e43b0dc5 arbre_bin_projet%s
+D arbre_bin_projet.adb	20220112090729 ba2c61ea arbre_bin_projet%b
+D system.ads		20210520051134 a2da961d system%s
+G a e
+G c Z s b [arbre_bin_projet standard 9 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|2r6 7r21
+X 2 a-uncdea.ads
+17+9 Object 4|7r49
+18P9 Name(17+9) 4|7r68
+20u15*Unchecked_Deallocation 4|2w10 7r25
+X 3 arbre_bin_projet.ads
+6+14 T_Cle 24r94 41r51 48r70 62r31 4|23r94 73r23 84r51
+9k9*arbre_bin_projet 6z14 57E14 68l5 68e21 4|4b14 130l5 130t21
+11P14*T_Abr 14r42 19r36 24r55 26r34 29r41 32r36 32r50 35r36 35r50 38r46 38r66
+. 41r37 44r40 49r46 51r42 58c14 63r45 64r44 4|7r76 10r42 16r36 23r55 32r41
+. 45r36 56r36 56r50 63r36 63r50 70r46 70r66 84r37 90r40 96r47 116r42
+14U19*Initialiser 14<31 4|10b19 13l13 13t24
+14p31 Arbre{11P14} 15r35 4|10b31 12m17
+19V18*Est_Vide{boolean} 15s25 19>28 30s25 4|16b18 19l13 19t21
+19p28 Arbre{11P14} 4|16b28 18r24
+24U19*Enregistrer_feuille 24=40 24>63 24>85 4|23b19 29l13 29t32
+24p40 Arbre{11P14} 4|23b40 27m17
+24i63 Donnee{integer} 4|23b63 27r50
+24*85 Cle{6+14} 4|23b85 27r65
+26V18*Taille{integer} 26>26 4|45b18 51s32 51s70 54l13 54t19
+26p26 Arbre{11P14} 4|45b25 48r32 51r39 51r77
+29U19*Vider 29=26 4|32b19 38s25 39s25 43l13 43t18
+29p26 Arbre{11P14} 30r35 4|32b26 34r20 35m30 38r31 39r31 40m30
+32V18*Droite{11P14} 32>25 4|56b18 60l13 60t19
+32p25 Arbre{11P14} 4|56b25 58r24
+35V18*Gauche{11P14} 35>25 4|63b18 67l13 67t19
+35p25 Arbre{11P14} 4|63b25 65r24
+38U19*Fusionner 38=29 38>53 4|70b19 80l13 80t22
+38p29 Arbre_g{11P14} 4|70b29 76r48 77r24 78m17 78r94
+38p53 Arbre_d{11P14} 4|70b53 76r27 78r124
+41V18*La_Cle{6+14} 41>26 4|84b18 87l13 87t19
+41p26 Arbre{11P14} 4|84b26 86r16
+44V18*La_Donnee{integer} 44>29 4|90b18 93l13 93t22
+44p29 Arbre{11P14} 4|90b29 92r16
+48U32 Traiter 48>41 48>62 4|101s25
+48i41 Donnee{integer}
+48*62 Cle{6+14}
+49u19*Pour_Chaque_bin 49>35 4|96b19 104s33 105s33 108s41 109s41 112l13 112t28
+49p35 Arbre{11P14} 4|96b36 100r32 101r33 101r51 104r49 105r49 108r57 109r57
+51V18*Est_Feuille{boolean} 51>31 4|48s20 100s20 116b18 126l13 126t24
+51p31 Arbre{11P14} 4|116b31 118r20 118r59
+57R14 T_Noeud 58r30 59c14 66e27 4|7r59 27r30 78r32
+61i25 Donnee{integer} 4|27m40 76r39 76r60 78m42 92r26 101r43
+62*25 Cle{6+14} 4|27m58 77r36 78m60 86r26 101r61
+63p25 Sous_Arbre_Gauche{11P14} 4|27m71 38m41 51r49 65r34 78m73 104r59 108r67
+. 118r30
+64p25 Sous_Arbre_Droit{11P14} 4|27m99 39m41 51r87 58r34 78m104 105r59 109r67
+. 118r69
+X 4 arbre_bin_projet.adb
+6U19 Free[2|20] 35s25 40s25
+72i17 Donnee{integer} 76m17 78r52
+73*17 Cle{3|6+14} 77m17 78r67
+

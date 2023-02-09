@@ -1,0 +1,34 @@
+package tableur.math.traitement;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.math.*;
+import tableur.math.formule.*;
+
+public class TraitementSomme implements Traitement{
+
+	private Tableur tab;
+	
+	private double membre;
+
+	public TraitementSomme(Tableur tableur, double nb) {
+		this.tab = tableur;
+		this.membre = nb;
+	}
+
+	public void traiter(Position pos1, Position pos2) {
+		Position actif = new Position(pos1.x, pos1.y);
+		int x_arrivee = pos2.x;
+		int y_arrivee = pos2.y;
+		for (int i = pos1.x; i <= x_arrivee; i++) {
+			for (int j = pos1.y; j <= y_arrivee; j++) {
+				actif.x = i;
+				actif.x = j;
+				Cellule cellactif = this.tab.getCellule(actif);
+				Formule form1 = cellactif.getFormule();
+				cellactif.setFormule(new FormuleMultiplication(form1, this.membre));		
+			}
+		}
+	}
+
+}

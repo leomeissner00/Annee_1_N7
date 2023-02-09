@@ -1,0 +1,13 @@
+package tableur.math;
+
+import tableur.Tableur;
+
+public interface Formule{
+
+    static Formule toFormule(String stringFormule) {
+        return Lecteur.convertir(stringFormule);
+    }
+
+    double evaluer(Tableur tab);
+
+}

@@ -1,0 +1,137 @@
+package tableur;
+
+
+import tableur.composant.*;
+import tableur.math.Formule;
+import tableur.math.Lecteur;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.plaf.DimensionUIResource;
+
+public class TableurVisuel extends JFrame implements Observer {
+
+    private Tableur tab;
+    private Container content;
+
+    private JMenuBar menuBar = new JMenuBar();
+    
+    JMenu menuFichier = new JMenu("Fichier");
+    JMenu menuEditer = new JMenu("Editer");
+    JMenu menuOption = new JMenu("Option");
+
+    JMenuItem itemNouveau = new JMenuItem("Nouveau");
+    JMenuItem itemOuvrir = new JMenuItem("Ouvrir");
+    JMenuItem itemEnregistrer = new JMenuItem("Enregistrer");
+    JMenuItem itemEnregistrerSous = new JMenuItem("Enregistrer Sous");
+
+    JMenuItem itemAnnuler = new JMenuItem("Annuler");
+    JMenuItem itemRetablir = new JMenuItem("Retablir");
+    JMenuItem itemCopier = new JMenuItem("Copier");
+    JMenuItem itemCouper = new JMenuItem("Couper");
+    JMenuItem itemColler = new JMenuItem("Coller");
+    JMenuItem itemRAZ = new JMenuItem("RAZ");
+
+    JMenuItem itemApparence = new JMenuItem("Apparence");
+    JMenuItem itemFormat = new JMenuItem("Format");
+    JMenuItem itemDimension = new JMenuItem("Dimensions");
+
+    JTextField tx;
+
+    public TableurVisuel( String name,  Tableur tab) {
+        super(name);
+        this.tab = tab;
+        tab.addObserver(this);
+        this.content = this.getContentPane();
+        setupJFrame();
+    }
+
+    public void setupTableur() {
+        
+        for (int i = 0; i<tab.WIDTH; i ++) {
+            for (int j = 0; j<tab.HEIGHT; j ++) {
+            	Position pos = new Position(i,j);
+                tx = tab.getCellule(pos);
+                tx.addActionListener(this);
+                content.add(tx);
+            }
+        }
+    }
+    
+ public void cleanupTableur() {
+        
+        for (int i = 0; i<tab.WIDTH; i ++) {
+            for (int j = 0; j<tab.HEIGHT; j ++) {
+            	Position pos = new Position(i,j);
+                tab.delCellule(pos);
+            }
+        }
+        setupTableur();
+    }
+
+
+    private void setupJFrame() {
+        this.setLocation(100, 100);
+        
+        DimensionUIResource dim = new DimensionUIResource(100, 100);
+
+        this.setMinimumSize(dim);
+        this.setVisible(true);
+        this.pack();
+        this.setSize(1920, 1080);
+
+        this.setJMenuBar(menuBar);
+
+        menuFichier.add(itemNouveau);
+        menuFichier.add(itemOuvrir);
+        menuFichier.add(itemEnregistrer);
+        menuFichier.add(itemEnregistrerSous);
+
+        menuEditer.add(itemAnnuler);
+        menuEditer.add(itemRetablir);
+        menuEditer.add(itemCopier);
+        menuEditer.add(itemCouper);
+        menuEditer.add(itemColler);
+        menuEditer.add(itemRAZ);
+
+        menuOption.add(itemApparence);
+        menuOption.add(itemFormat);
+        menuOption.add(itemDimension);
+
+        itemNouveau.addActionListener(this);
+        itemOuvrir.addActionListener(this);
+        itemEnregistrer.addActionListener(this);
+        itemEnregistrerSous.addActionListener(this);
+
+        itemAnnuler.addActionListener(this);
+        itemRetablir.addActionListener(this);
+        itemCopier.addActionListener(this);
+        itemCouper.addActionListener(this);
+        itemColler.addActionListener(this);
+        itemRAZ.addActionListener(this);
+
+        itemApparence.addActionListener(this);
+        itemFormat.addActionListener(this);
+        itemDimension.addActionListener(this);
+
+        menuBar.add(menuFichier);
+        menuBar.add(menuEditer);
+        menuBar.add(menuOption);
+
+        content.setLayout(new GridLayout(tab.HEIGHT,tab.WIDTH));
+        setupTableur();
+    }
+
+        @Override
+    public void update(Observable o, Object arg) {
+        
+        
+    }
+}
+
+
+  

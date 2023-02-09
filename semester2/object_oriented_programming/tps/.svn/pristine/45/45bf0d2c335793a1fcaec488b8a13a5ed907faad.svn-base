@@ -1,0 +1,54 @@
+import java.awt.Color;
+
+/** Cercle modélise un cercle géométrique dans un plan équipé d'un
+ * repère cartésien.  Un Cercle peut être affiché et translaté.
+ * Il est possible de déterminer si un point se trouve à l'intérieur 
+ * du cercle ou non.
+ *
+ * @author  Léo Meissner <leo.meissner@etu.toulouse-inp.fr>
+ */
+public class Cercle {
+	private double r;		// rayon
+	private Point centre;		// centre du cercle
+	private Color couleur;	// couleur du cercle
+
+	/** Construire un cercle à partir de son centre et de son rayon.
+	 * @param vr rayon
+	 * @param vcentre centre du cercle
+	 */
+	public Cercle(double vr, Point vcentre) {
+		this.r = vr;
+		this.centre = vcentre;
+		this.couleur = Color.blue;
+	}
+
+	/** Obtenir le rayon du cercle.
+	 * @return rayon du cercle
+	 */
+	public double getR() {
+		return this.r;
+	}
+
+	/** Obtenir le centre du cercle.
+	 * @return centre du cercle
+	 */
+	public Point getCentre() {
+		return this.centre;
+	}
+
+	/** Changer le rayon du cercle.
+	  * @param vr nouveau rayon
+	  */
+	public void setR(double vr) {
+		this.r = vr;
+	}
+
+	/** Changer le centre du cercle.
+	  * @param vcentre nouveau centre
+	  */
+	public void setCentre(Point vcentre) {
+		this.centre = vcentre;
+	}
+
+
+}

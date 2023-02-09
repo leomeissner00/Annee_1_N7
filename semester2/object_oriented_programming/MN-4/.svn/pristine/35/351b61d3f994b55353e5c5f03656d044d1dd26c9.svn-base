@@ -1,0 +1,9 @@
+package tableur.action;
+
+import tableur.Tableur;
+
+public interface Action {
+
+    void appliquer(Tableur tab);
+    void annuler(Tableur tab);    
+}

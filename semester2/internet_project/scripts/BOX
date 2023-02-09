@@ -1,0 +1,16 @@
+#!/bin/bash
+ip link set dev eth0 up
+ip link set dev eth4 up
+echo 1 >/proc/sys/net/ipv4/ip_forward
+ip addr add 192.168.189.129/25 dev eth0
+ip addr add 31.1.255.1/25 dev eth4
+ip route add default via 31.1.255.2
+service isc-dhcp-server start
+iptables -F
+iptables -t nat -A POSTROUTING -o eth4 -j MASQUERADE
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+iptables -P FORWARD DROP
+iptables -t filter -A FORWARD -p udp -j ACCEPT
+iptables -t filter -A FORWARD -p tcp -j ACCEPT
+iptables -t filter -A FORWARD -p ICMP -j ACCEPT

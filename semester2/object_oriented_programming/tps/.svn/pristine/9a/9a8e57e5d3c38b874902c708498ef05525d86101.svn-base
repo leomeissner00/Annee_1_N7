@@ -1,0 +1,70 @@
+1,9c1,59
+< Exception in thread "main" java.lang.NoClassDefFoundError: allumette/StrategieExpert
+< 	at allumette.Jouer.getStrategie(Jouer.java:109)
+< 	at allumette.Joueur.<init>(Joueur.java:21)
+< 	at allumette.Jouer.main(Jouer.java:33)
+< Caused by: java.lang.ClassNotFoundException: allumette.StrategieExpert
+< 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+< 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+< 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+< 	... 3 more
+---
+> Allumettes restantes : 13
+> Xavier, combien d'allumette ? Xavier prend 4 allumette.
+> Impossible ! Nombre invalide : 4 (> 3)
+> 
+> Allumettes restantes : 13
+> Xavier, combien d'allumette ? Xavier prend 5 allumette.
+> Impossible ! Nombre invalide : 5 (> 3)
+> 
+> Allumettes restantes : 13
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+> Impossible ! Nombre invalide : 0 (< 1)
+> 
+> Allumettes restantes : 13
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+> 
+> Allumettes restantes : 13
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+> 
+> Allumettes restantes : 10
+> Ordinateur prend 1 allumette.
+> 
+> Allumettes restantes : 9
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+> 
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+> 
+> Allumettes restantes : 5
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+> 
+> Allumettes restantes : 4
+> Ordinateur prend 3 allumette.
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 4 allumette.
+> Impossible ! Nombre invalide : 4 (> 1)
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+> Impossible ! Nombre invalide : 3 (> 1)
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 2 allumette.
+> Impossible ! Nombre invalide : 2 (> 1)
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+> Impossible ! Nombre invalide : 0 (< 1)
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+> 
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+> 
+> Xavier perd !
+> Ordinateur gagne !

@@ -1,0 +1,6 @@
+-- Définition d'une exception commune à tous les codages de Huffmann.
+package Codage_Huffmann_Exception is
+
+        Fichier_Sans_Extension_Hff_Exception : Exception; --Le fichier à décompresser n'a pas l'extension .hff
+
+end Codage_Huffmann_Exception;

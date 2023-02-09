@@ -1,0 +1,76 @@
+/** Tester le polymorphisme (principe de substitution) et la liaison
+ * dynamique.
+ * @author	Xavier Crégut
+ * @version	1.5
+ */
+public class TestPolymorphisme {
+
+	/** Méthode principale */
+	public static void main(String[] args) {
+		// Créer et afficher un point p1
+		Point p1 = new Point(3, 4);	// Est-ce autorisé ? Pourquoi ? Oui car le point est défini normalement 
+		p1.translater(10,10);		// Quel est le translater exécuté ? Celui de point
+		System.out.print("p1 = "); p1.afficher (); System.out.println ();
+										// Qu'est ce qui est affiché ? (13, 14)
+
+		// Créer et afficher un point nommé pn1
+		PointNomme pn1 = new PointNomme (30, 40, "PN1");
+										// Est-ce autorisé ? Pourquoi ? Oui car le constructeur appartient a la sous classe point nommé
+		pn1.translater (10,10);		// Quel est le translater exécuté ?
+		System.out.print ("pn1 = "); pn1.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ? PN1 (40.0 , 50.0)
+
+		// Définir une poignée sur un point
+		Point q;
+
+		// Attacher un point à q et l'afficher
+		q = p1;				// Est-ce autorisé ? Pourquoi ? Oui les deux sont du même type
+		System.out.println ("> q = p1;");
+		System.out.print ("q = "); q.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ? (13, 14)
+
+		// Attacher un point nommé à q et l'afficher
+		q = pn1;			// Est-ce autorisé ? Pourquoi ? Oui car pn1 est convertit en point pour que cela match
+		System.out.println ("> q = pn1;");
+		System.out.print ("q = "); q.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ? (13, 14)
+
+		// Définir une poignée sur un point nommé
+		PointNomme qn;
+
+		// Attacher un point à q et l'afficher
+		qn = pn1;			// Est-ce autorisé ? Pourquoi ? Non on ne peut pas convertir un point en point nommé
+		System.out.println ("> qn = p1;");
+		System.out.print ("qn = "); qn.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ? Impossible
+
+		// Attacher un point nommé à qn et l'afficher
+		qn = pn1;			// Est-ce autorisé ? Pourquoi ? Oui les 2 sont du même type
+		System.out.println ("> qn = pn1;");
+		System.out.print ("qn = "); qn.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ?
+
+		double d1 = p1.distance (pn1);	// Est-ce autorisé ? Pourquoi ? Oui car pn1 est convertit en point
+		System.out.println ("distance = " + d1);
+
+		double d2 = pn1.distance (p1);	// Est-ce autorisé ? Pourquoi ? oui car la methode est la meme pour la super classe et la sous classe
+		System.out.println ("distance = " + d2);
+
+		double d3 = pn1.distance (pn1);	// Est-ce autorisé ? Pourquoi ? oui
+		System.out.println ("distance = " + d3);
+
+		System.out.println ("> qn = q;");
+		qn = qn;				// Est-ce autorisé ? Pourquoi ? Non car q ne peut pas etre convertit en point nommer
+		System.out.print ("qn = "); qn.afficher(); System.out.println ();
+										// Qu'est ce qui est affiché ?
+
+		System.out.println ("> qn = (PointNomme) q;");
+		qn = (PointNomme) q;		// Est-ce autorisé ? Pourquoi ? Oui
+		System.out.print ("qn = "); qn.afficher(); System.out.println ();
+
+		System.out.println ("> qn = (PointNomme) p1;");
+		qn = (PointNomme) p1;		// Est-ce autorisé ? Pourquoi ? Oui
+		System.out.print ("qn = "); qn.afficher(); System.out.println ();
+	}
+
+}

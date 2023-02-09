@@ -1,0 +1,12 @@
+#!/bin/bash
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip addr add 31.1.255.193/27 dev eth0
+ip addr add 31.1.255.225/27 dev eth1
+iptables -F
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD DROP
+iptables -t filter -A FORWARD -p udp -j ACCEPT
+iptables -t filter -A FORWARD -p tcp -j ACCEPT
+#iptables -t filter -A FORWARD -p ICMP -j ACCEPT

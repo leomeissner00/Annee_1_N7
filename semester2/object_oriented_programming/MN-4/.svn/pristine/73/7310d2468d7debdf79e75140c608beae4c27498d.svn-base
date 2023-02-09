@@ -1,0 +1,249 @@
+package tableur;
+
+
+import tableur.composant.*;
+import tableur.math.Formule;
+import tableur.math.Lecteur;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.plaf.DimensionUIResource;
+
+public class TableurVisuel extends JFrame implements Observer, ActionListener {
+
+    private Tableur tab;
+    private Container content;
+
+    private JMenuBar menuBar = new JMenuBar();
+    
+    JMenu menuFichier = new JMenu("Fichier");
+    JMenu menuEditer = new JMenu("Editer");
+    JMenu menuOption = new JMenu("Option");
+
+    JMenuItem itemNouveau = new JMenuItem("Nouveau");
+    JMenuItem itemOuvrir = new JMenuItem("Ouvrir");
+    JMenuItem itemEnregistrer = new JMenuItem("Enregistrer");
+    JMenuItem itemEnregistrerSous = new JMenuItem("Enregistrer Sous");
+
+    JMenuItem itemAnnuler = new JMenuItem("Annuler");
+    JMenuItem itemRetablir = new JMenuItem("Retablir");
+    JMenuItem itemCopier = new JMenuItem("Copier");
+    JMenuItem itemCouper = new JMenuItem("Couper");
+    JMenuItem itemColler = new JMenuItem("Coller");
+    JMenuItem itemRAZ = new JMenuItem("RAZ");
+
+    JMenuItem itemApparence = new JMenuItem("Apparence");
+    JMenuItem itemFormat = new JMenuItem("Format");
+    JMenuItem itemDimension = new JMenuItem("Dimensions");
+
+    JTextField tx;
+
+    public TableurVisuel( String name,  Tableur tab) {
+        super(name);
+        this.tab = tab;
+        tab.addObserver(this);
+        this.content = this.getContentPane();
+        setupJFrame();
+    }
+
+    public void setupTableur() {
+        
+        for (int i = 0; i<tab.WIDTH; i ++) {
+            for (int j = 0; j<tab.HEIGHT; j ++) {
+            	Position pos = new Position(i,j);
+                tx = tab.getCellule(pos);
+                tx.addActionListener(this);
+                content.add(tx);
+            }
+        }
+    }
+    
+ public void cleanupTableur() {
+        
+        for (int i = 0; i<tab.WIDTH; i ++) {
+            for (int j = 0; j<tab.HEIGHT; j ++) {
+            	Position pos = new Position(i,j);
+                tab.delCellule(pos);
+            }
+        }
+        setupTableur();
+    }
+
+
+    private void setupJFrame() {
+        this.setLocation(100, 100);
+        
+        DimensionUIResource dim = new DimensionUIResource(100, 100);
+
+        this.setMinimumSize(dim);
+        this.setVisible(true);
+        this.pack();
+        this.setSize(1920, 1080);
+
+        this.setJMenuBar(menuBar);
+
+        menuFichier.add(itemNouveau);
+        menuFichier.add(itemOuvrir);
+        menuFichier.add(itemEnregistrer);
+        menuFichier.add(itemEnregistrerSous);
+
+        menuEditer.add(itemAnnuler);
+        menuEditer.add(itemRetablir);
+        menuEditer.add(itemCopier);
+        menuEditer.add(itemCouper);
+        menuEditer.add(itemColler);
+        menuEditer.add(itemRAZ);
+
+        menuOption.add(itemApparence);
+        menuOption.add(itemFormat);
+        menuOption.add(itemDimension);
+
+        itemNouveau.addActionListener(this);
+        itemOuvrir.addActionListener(this);
+        itemEnregistrer.addActionListener(this);
+        itemEnregistrerSous.addActionListener(this);
+
+        itemAnnuler.addActionListener(this);
+        itemRetablir.addActionListener(this);
+        itemCopier.addActionListener(this);
+        itemCouper.addActionListener(this);
+        itemColler.addActionListener(this);
+        itemRAZ.addActionListener(this);
+
+        itemApparence.addActionListener(this);
+        itemFormat.addActionListener(this);
+        itemDimension.addActionListener(this);
+
+        menuBar.add(menuFichier);
+        menuBar.add(menuEditer);
+        menuBar.add(menuOption);
+
+        content.setLayout(new GridLayout(tab.HEIGHT,tab.WIDTH));
+        setupTableur();
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+
+        if (e.getSource().getClass() == JMenuItem.class) {
+
+            if (e.getSource() == itemNouveau ) {
+                System.out.println("test nouveau");
+                for (int i = 0; i < content.getComponentCount(); i++) {
+                    System.out.println("Nouveau");
+                    System.out.println(((JTextField)content.getComponent(i)).getText());
+                }
+            }
+                    
+            if (e.getSource() == itemOuvrir ) {
+                System.out.println("test ouvrir");
+            } 
+            
+            if (e.getSource() == content ) {
+                System.out.println("test content");
+            } 
+
+        }
+       
+        if (e.getSource().getClass() == Cellule.class) {
+            Cellule cell = ((Cellule) e.getSource());
+            String textEntree = cell.getText();
+            if (textEntree.length() > 0 && textEntree.charAt(0) == '=') {
+                Formule formule = Lecteur.convertir(textEntree.substring(1));
+                double val = formule.evaluer(tab);
+                cell.setText(String.valueOf(val));
+            }
+        }
+        //FIXME Recuperer les valeurs grace a la pos
+        //System.out.print(tab.getValeur(new Position(1, 1)));
+        
+    }
+        
+    
+/*
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	Historique history = tab.getHistorique();
+    	//il nous faudrait un �l�ment m�moire si on doit impl�menter ces actions
+    	switch ((String)e.getSource()) {
+    	case "ItemNouveau":
+    		String[] args;
+    	    TableurVisuel newTab = new TableurVisuel("Tableur",  new Tableur());
+    		newTab.main(args);
+    		break;
+    	case "itemOuvrir":
+    		//d�pend de la mani�re dont on code le fichier produit <- TO-DO
+    		break;
+    	case "itemEnregister":
+    		//""
+    		break;
+    	case "itemEnregisterSous":
+    		//""
+    		break;
+    	case "itemAnnuler":
+    		Action last = history.getDernierElement();
+    		last.annuler(tab);
+    		break;
+    	case "itemRetablir":
+    		//diff�rence entre annuler et r�tablir ?
+    		break;
+    	case "itemCopier":
+    		ActionSelectionnerCellule derniereAction = (ActionSelectionnerCellule) history.getDernierElement();
+    		ActionCopier a = ActionCouper(derniereAction.getPositionSelectionnee(), mouseClicked(e), tab.getFormule(derniereAction.getPositionSelectionnee())); //Potentiellement revoir Couper, comment on fait ? on s�lectionne les deux cases concern�es ? ou on met en m�moire.
+    		a.appliquer(tab);
+    		break;
+    	case "itemCouper":
+    		ActionSelectionnerCellule derniereAction2 = (ActionSelectionnerCellule) history.getDernierElement();
+    		ActionCouper b = ActionCouper(derniereAction2.getPositionSelectionnee(), mouseClicked(e), tab.getFormule(derniereAction2.getPositionSelectionnee()));
+    		b.appliquer(tab);
+    		break;
+    	
+    	case "itemColler": //avoir coller indique que couper ne devrait pas demander la nouvelle postion
+    		//ActionCouper (ou ActionCopier modifie d�j� la cellule o� on copie, alors soit on enl�ve Coller ou on modifie Couper et Copier
+    		break;
+    	case "itemRAZ":
+    		cleanupTableur();
+    		break;
+    	case "itemApparence":
+    		//double scanner ou sous-menu avec des options ?
+    		break;
+    	case "itemFormat":
+    		//""
+    		break;
+    	case "itemDimension":
+    		//double scanner //� implanter plus tard, assez mineur en r�alit�
+    		this.setSize(1920, 1080);
+    		break;
+        default:
+        	System.out.println("Default");
+	}}
+    
+
+    public Position mouseClicked(MouseEvent e) { //renvoie une position, n�cessaire si on veut acc�der aux cellules
+        int x = e.getX(); //coordonn�es du clic, potentiellement utilisable si la taille du tableur est connu.
+        int y = e.getY();
+        Position CelluleSelectionnee = new Position(x/192, y/36); //30 cases * 36 pixels = 1080 : hauteur et 10 cases * 192 = 1920
+        ActionSelectionnerCellule a = new ActionSelectionnerCellule(CelluleSelectionnee); //r�gler le probl�me d'architecture
+        a.appliquer(tab);
+        return CelluleSelectionnee; 
+    }
+
+
+    		
+    */
+
+    @Override
+    public void update(Observable o, Object arg) {
+        
+        
+    }
+    
+    
+}

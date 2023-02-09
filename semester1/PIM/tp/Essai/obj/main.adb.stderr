@@ -1,0 +1,8 @@
+main.adb:19:29: error: unconstrained subtype not allowed (need initialization)
+main.adb:19:29: error: provide initial value or explicit array bounds
+main.adb:23:29: error: unconstrained subtype not allowed (need initialization)
+main.adb:23:29: error: provide initial value or explicit array bounds
+main.adb:32:66: error: expected private type "Ada.Strings.Unbounded.Unbounded_String"
+main.adb:32:66: error: found type "Standard.String"
+main.adb:32:87: error: expected private type "Ada.Strings.Unbounded.Unbounded_String"
+main.adb:32:87: error: found type "Standard.String"

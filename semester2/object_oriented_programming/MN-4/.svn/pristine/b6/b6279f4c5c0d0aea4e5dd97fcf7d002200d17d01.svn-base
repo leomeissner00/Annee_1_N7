@@ -1,0 +1,19 @@
+package tableur;
+
+
+import java.awt.*;
+
+public class TableurSwing {
+    public TableurSwing() {
+        Tableur tab = new Tableur();
+        TableurVisuel visu = new TableurVisuel("Test", tab);
+    }
+
+    public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new TableurSwing();
+			}
+		});
+	}
+}

@@ -1,0 +1,801 @@
+SCORE: 21
+JUnit version 4.12
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "x", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+	à faire !
+
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+--------------------------------------------------------------------------------
+
+
+E.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@rapide@naif")
+--------------------------------------------------------------------------------
+
+	à faire !
+
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+--------------------------------------------------------------------------------
+
+
+E.
+================================================================================
+> java allumettes.Jouer.main("x", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+	à faire !
+
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+--------------------------------------------------------------------------------
+
+
+E.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@xyz")
+--------------------------------------------------------------------------------
+
+	à faire !
+
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+--------------------------------------------------------------------------------
+
+
+E.
+================================================================================
+> java allumettes.Jouer.main("yyy@rapide", "xxx@ville@naif")
+--------------------------------------------------------------------------------
+
+	à faire !
+
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)
+Allumettes restantes : 13
+yyy prend 0 allumettes.
+Impossible ! Nombre invalide : 0 (< 1)

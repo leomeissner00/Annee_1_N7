@@ -1,0 +1,8 @@
+lmeissne@uranium:~/Annee_1/Env_Informatique$ find Projets_C -name '*.c' | wc -w
+145
+lmeissne@uranium:~/Annee_1/Env_Informatique$ find Projets_C -type d | wc -w
+45
+lmeissne@uranium:~/Annee_1/Env_Informatique$ find Projets_C -name '*.c' | xargs grep printf | wc -l
+109
+lmeissne@uranium:~/Annee_1/Env_Informatique$ find Projets_C -name '*.c' | sed 's/printf/afficher/g'
+

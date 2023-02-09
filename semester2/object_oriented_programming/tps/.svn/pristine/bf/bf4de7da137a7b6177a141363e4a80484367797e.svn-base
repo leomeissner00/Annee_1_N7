@@ -1,0 +1,129 @@
+package allumettes;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ * Lance une partie des 13 allumettes en fonction des arguments fournis sur la
+ * ligne de commande.
+ * 
+ * @author Xavier Crégut
+ * @version $Revision: 1.5 $
+ */
+public class Jouer {
+
+	/**
+	 * Lancer une partie. En argument sont donnés les deux joueurs sous la forme
+	 * nom@stratégie.
+	 * 
+	 * @param args la description des deux joueurs
+	 */
+	public static void main(String[] args) {
+		Joueur j1;
+		Joueur j2;
+		try {
+			verifierNombreArguments(args);
+			//Ensuite Vérifier si c'est juste avec le confiant.	
+			//Et que c'est possbile de split
+
+		} catch (ConfigurationException e) {
+			System.out.println();
+			System.out.println("Erreur : " + e.getMessage());
+			afficherUsage();
+			System.exit(1);
+		}
+		// Construire les joueurs
+		String a_split = args[0]+"@"+args[1];
+		String[] split = a_split.split("@");
+		j1 = new Joueur(split[0], split[1]);
+		j2 = new Joueur(split[2], split[3]);
+		
+		// Construire l'aritre
+		Arbitre arbitre_jeu = new Arbitre(j1, j2);
+		
+		// Construire le jeu
+		JeuAllumettes jeu = new JeuAllumettes(13);
+		
+		arbitre_jeu.arbitrer(jeu);
+
+	}
+
+	private static void verifierNombreArguments(String[] args) {
+		final int nbJoueurs = 2;
+		if (args.length < nbJoueurs) {
+			throw new ConfigurationException("Trop peu d'arguments : " + args.length);
+		}
+		if (args.length > nbJoueurs + 1) {
+			throw new ConfigurationException("Trop d'arguments : " + args.length);
+		}
+	}
+
+	/** Afficher des indications sur la manière d'exécuter cette classe. */
+	public static void afficherUsage() {
+		System.out.println("\n" + "Usage :" + "\n\t" + "java allumettes.Jouer joueur1 joueur2" + "\n\t\t"
+				+ "joueur est de la forme nom@stratégie" + "\n\t\t"
+				+ "strategie = naif | rapide | expert | humain | tricheur" + "\n" + "\n\t" + "Exemple :" + "\n\t"
+				+ "	java allumettes.Jouer Xavier@humain " + "Ordinateur@naif" + "\n");
+	}
+
+	public static class Strategie {
+
+		/*
+		 * private String type;
+		 * 
+		 *//**
+			 * Construit une Strategie à partir de son type. Humain / Naif / Expert /
+			 * Tricheur
+			 * 
+			 * @param vtype : nom de la stratégie
+			 */
+		/*
+		 * public Strategie(String vtype) { this.type = vtype; }
+		 * 
+		 *//**
+			 * Renvoie le type de stratégie qu'un joueur joue.
+			 * 
+			 * @return le type de stratégie qu'un joueur joue
+			 *//*
+				 * public String getType() { return this.type; }
+				 */
+
+		/**
+		 * Applique la stratégie de jeu prédéfinie pour chaque joueur.
+		 * 
+		 * @param nom   : le nom du joueur qui joue
+		 * @param vtype : la stratégie du joueur qui joue
+		 * @return le nombre d'allumettes qu'il veut retirer
+		 */
+		public static int choixNbRetirer(String nom, String vtype, Jeu jeu) {
+			switch (vtype) {
+			case "Humain":
+				System.out.print(nom + ", combien d'allumettes ? ");
+				Scanner sc = new Scanner(System.in);
+				return sc.nextInt();
+
+			case "Expert":
+				if (jeu.getNombreAllumettes() == 1) {
+					return 1;
+				}
+				if (jeu.getNombreAllumettes()-Jeu.PRISE_MAX <= 1) {
+					int val = Jeu.PRISE_MAX +1;
+					do {
+						val --;
+					}while((jeu.getNombreAllumettes()-val) != 1);
+					return val;
+				}
+
+			case "Naif":
+				Random generator = new Random();
+				return (generator.nextInt(3)+1);
+
+			case "Tricheur":
+				return 1;
+			default:
+				return 0;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,31 @@
+Date de l'évaluation : lun. 07 févr. 2022 09:15:31 CET
+
+Compilation de Cercle.java : OK.
+
+Types d'erreurs checkstyle : 0	(voir evaluations/evaluation1/Cercle.checkstyle)
+
+Résultat de recherche de similitudes sur Cercle.java dans evaluations/evaluation1/Cercle.sim
+
+JavaDoc automatique de Cercle : ok	(voir evaluations/evaluation1/Cercle.javadoc)
+
+Test SujetCercleTest : Tests run: 14,  Failures: 1	(voir evaluations/evaluation1/SujetCercleTest.log)
+    1) testerE18(SujetCercleTest)
+        AssertionError: E18 : erreur si translation du centre (x) expected:<1.0> but was:<11.0>
+
+Test SujetCercleTest : Tests run: 14,  Failures: 1	(voir evaluations/evaluation1/SujetCercleTest.log)
+    1) testerE18(SujetCercleTest)
+        AssertionError: E18 : erreur si translation du centre (x) expected:<1.0> but was:<11.0>
+
+Test RobustesseCercleTest : OK (20 tests)	(voir evaluations/evaluation1/RobustesseCercleTest.log)
+Test FormeCercleTest : Tests run: 12,  Failures: 2	(voir evaluations/evaluation1/FormeCercleTest.log)
+    1) testerE6(FormeCercleTest)
+        NoClassDefFoundError: Mesurable2D
+    2) testerE6bis(FormeCercleTest)
+        AssertionError: Cercle doit directement réaliser Mesurable2D !
+
+Test Forme2CercleTest : OK (9 tests)	(voir evaluations/evaluation1/Forme2CercleTest.log)
+
+ComplementsCercleTest : non modifiée (ok)
+
+Pas de mise à jour de CercleTest.java sur le SVN !
+CercleTest.java ne compile pas !!!

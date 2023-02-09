@@ -1,0 +1,22 @@
+package test.TestComposant;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.*;
+
+import tableur.composant.Historique;
+import tableur.action.Action;
+
+public class TestHistorique {
+    
+
+    @Before
+    public void setup() {
+
+    }
+
+    @Test
+    public void testValeur() {
+
+    }
+}

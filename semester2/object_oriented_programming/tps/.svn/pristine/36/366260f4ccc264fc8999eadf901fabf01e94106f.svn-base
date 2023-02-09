@@ -1,0 +1,26 @@
+allumettes/Jouer.java:113: error: cannot find symbol
+			Strategie Strat;
+			^
+  symbol:   class Strategie
+  location: class Strategieaenvlever
+allumettes/Jouer.java:117: error: cannot find symbol
+				Strat = new StrategieHumaine();
+				            ^
+  symbol:   class StrategieHumaine
+  location: class Strategieaenvlever
+allumettes/Jouer.java:121: error: cannot find symbol
+				Strat = new StrategieRapide();
+				            ^
+  symbol:   class StrategieRapide
+  location: class Strategieaenvlever
+allumettes/Jouer.java:125: error: cannot find symbol
+				Strat = new StrategieExpert();
+				            ^
+  symbol:   class StrategieExpert
+  location: class Strategieaenvlever
+allumettes/Jouer.java:129: error: cannot find symbol
+				Strat = new StrategieNaive();
+				            ^
+  symbol:   class StrategieNaive
+  location: class Strategieaenvlever
+5 errors

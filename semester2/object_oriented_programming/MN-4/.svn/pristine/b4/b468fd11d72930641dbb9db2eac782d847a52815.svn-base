@@ -1,0 +1,7 @@
+package tableur.graph.graph2D;
+
+
+
+public class graphics2Dplot /* extends JFreeChart */ {
+	
+}

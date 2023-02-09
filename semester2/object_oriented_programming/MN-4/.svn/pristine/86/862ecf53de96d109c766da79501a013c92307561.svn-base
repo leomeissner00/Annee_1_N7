@@ -1,0 +1,9 @@
+package tableur.math.calcul;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.math.*;
+
+public class CalculVariance {
+
+}

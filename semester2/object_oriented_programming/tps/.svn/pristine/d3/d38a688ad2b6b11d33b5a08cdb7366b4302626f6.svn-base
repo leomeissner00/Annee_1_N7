@@ -1,0 +1,15 @@
+1,3d0
+< 
+< 	à faire !
+< 
+5,11c2,3
+< Exception in thread "main" java.util.NoSuchElementException
+< 	at java.base/java.util.Scanner.throwFor(Scanner.java:937)
+< 	at java.base/java.util.Scanner.next(Scanner.java:1594)
+< 	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+< 	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+< 	at allumettes.Joueur.getPrise(Joueur.java:36)
+< 	at allumettes.Jouer.main(Jouer.java:48)
+---
+> [Je triche...]
+> Abandon de la partie car J1 triche !

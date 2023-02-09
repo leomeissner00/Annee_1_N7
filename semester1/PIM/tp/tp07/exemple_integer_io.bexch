@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__exemple_integer_io.o
+[PROJECT FILES]
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/tp07.gpr
+20211018070808 26779193fbf2e740a6c9150dd0b8835e
+[BOUND OBJECT FILES]
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/piles.o
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/integer_io.o
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/exemple_integer_io.o
+[GENERATED SOURCE FILES]
+b__exemple_integer_io.ads
+b__exemple_integer_io.adb
+b__exemple_integer_io.ali
+[RESULTING OPTIONS]
+-L/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/
+-L/home/lmeissne/Annee_1/Prog_Imperative/tp/tp07/
+-L/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl

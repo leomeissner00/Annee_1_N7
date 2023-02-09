@@ -1,0 +1,65 @@
+Date de l'évaluation : ven. 11 mars 2022 23:29:12 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 2
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 43/12	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/Procuration.java (ok)
+
+OperationInterditeException, levée dans : allumettes/Procuration.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:102:            }catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:44:       } catch (ConfigurationException e) {
+  | allumettes/StrategieTricheur.java:12:               } catch (CoupInvalideException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/StrategieHumaine.java:7: static Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:28:           String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/StrategieNaive.java:3:import java.util.Random;
+  | allumettes/StrategieNaive.java:9:       Random generator = new Random();
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : ok
+Test exempleConfiantTricheurSujet : ok
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : ok
+
+Test RobustesseTest : OK (25 tests)	(voir evaluations/evaluation1/RobustesseTest.log)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : Tests run: 2,  Failures: 2	(voir evaluations/evaluation1/FormeTest.log)
+    1) testerC14_C15(FormeTest)
+        AssertionError: Classe Joueur : La stratégie ne doit pas être du type String. Actual: class String
+    2) testerRespectArchitecture(FormeTest)
+        AssertionError: La méthode devrait être publique : int allumettes.Joueur.getPrise(allumettes.Jeu) throws allumettes.CoupInvalideException
+
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

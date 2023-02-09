@@ -1,0 +1,19 @@
+package tableur.math.formule;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class FormuleVide implements Formule {
+
+    public FormuleVide() {
+    }
+
+    @Override
+    public double evaluer(Tableur tab) {
+        return 0;
+    }
+    
+    public String toString() {
+        return "";
+    }
+}

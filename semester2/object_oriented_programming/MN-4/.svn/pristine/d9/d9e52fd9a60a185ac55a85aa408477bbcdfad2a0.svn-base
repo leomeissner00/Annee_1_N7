@@ -1,0 +1,32 @@
+package tableur.math.calcul;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.math.*;
+
+public class CalculSomme implements Calcul{
+	
+	private Tableur tab;
+	
+	public CalculSomme(Tableur tableur) {
+		this.tab = tableur;
+	}
+	
+	public double calculer(Position pos1, Position pos2) {
+		double somme = 0;
+		Position actif = new Position(pos1.x, pos1.y);
+		int x_arrivee = pos2.x;
+		int y_arrivee = pos2.y;
+		for (int i = pos1.x; i <= x_arrivee; i++) {
+			for (int j = pos1.y; j <= y_arrivee; j++) {
+				actif.x = i;
+				actif.x = j;
+				Cellule cellactif = this.tab.getCellule(actif);
+				double valeur = cellactif.getValeur(this.tab);
+				somme += valeur;	
+			}
+		}
+		return somme;
+	}
+
+}

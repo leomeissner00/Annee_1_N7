@@ -1,0 +1,22 @@
+package allumettes;
+
+public class Arbitre {
+
+    /** Joueur numéro 1. */
+    private Joueur j1;
+
+    /** Joueur numéro 2. */
+    private Joueur j2;
+
+    /**Nombre de tour de la partie */
+    int nbTour = 0;
+
+    Arbitre(Joueur newJ1, Joueur newJ2){
+        this.j1 = newJ1;
+        this.j2 = newJ2;
+    }
+
+    int auTourDe(){
+        return nbTour % 2;
+    }
+}

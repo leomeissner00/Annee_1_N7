@@ -1,0 +1,19 @@
+0a1,2
+> Allumettes restantes : 13
+> Ordinateur prend 3 allumettes.
+2c4,7
+< 	à faire !
+---
+> Allumettes restantes : 10
+> [Je triche...]
+> [Allumettes restantes : 2]
+> Tricheur prend 1 allumette.
+4,5c9,13
+< Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+< 	at allumettes.Jouer.main(Jouer.java:30)
+---
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Tricheur gagne !

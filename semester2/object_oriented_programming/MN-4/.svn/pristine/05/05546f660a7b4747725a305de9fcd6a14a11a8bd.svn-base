@@ -1,0 +1,25 @@
+package tableur.composant;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class Cellule {
+    
+    private Formule formule;
+
+    public Cellule(Formule form) {
+        this.formule = form;
+    }
+    
+    public double getValeur(Tableur tab) {
+        return this.formule.evaluer(tab);
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+}

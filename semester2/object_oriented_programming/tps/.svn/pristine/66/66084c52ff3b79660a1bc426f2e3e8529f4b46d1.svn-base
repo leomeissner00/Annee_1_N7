@@ -1,0 +1,7 @@
+Début de la vérification...
+[ERROR] Jouer.java:41:51: '13' devrait être défini comme une constante. [MagicNumber]
+[ERROR] StrategieHumaine.java:7:20: La variable 'sc' devrait être privée et avoir des accesseurs. [VisibilityModifier]
+[ERROR] StrategieHumaine.java:22:9: '}' à la colonne 3 devrait être seul sur sa ligne. [RightCurly]
+[ERROR] StrategieHumaine.java:25:9: '}' à la colonne 3 devrait être sur la même ligne que la prochaine partie d'une instruction multi-bloc (celui qui contient directement plusieurs blocs : if/else-if/else, do/while ou try/catch/finally). [RightCurly]
+[ERROR] Generateur.java:6:19: La variable 'generator' devrait être privée et avoir des accesseurs. [VisibilityModifier]
+Vérification terminée.

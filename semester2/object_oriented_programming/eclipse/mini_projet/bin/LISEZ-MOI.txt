@@ -1,0 +1,39 @@
+Nom       : Meissner
+Prénom    : Léo
+Groupe TP : N
+
+
+Consigne :  Ci-dessous, répondre à la place des « ... ».
+
+
+=====[ Temps ]==================================================================
+
+Temps passé sur la V1 : 5 heures 00 minutes
+Temps passé sur la V2 : 0 heures 10 minutes
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+Bien sûr, les temps renseignés ici ne sont pas pris en compte dans la notation.
+
+
+=====[ Questions ]==============================================================
+
+Indiquer la relation UML entre Cercle et le Point centre du cercle.
+-------------------------------------------------------------------
+
+C'est une relation de composition car le point centre est un attribut de la classe cercle.
+
+
+Comment est réalisée l'exigence E18 ?
+-------------------------------------
+
+Il faut créer le cercle le cercle avec une copie du point qui a été donné en
+argument dans les constructeurs ou dans creer cercle. De plus il faut renvoyer
+une copie du centre pour getCentre et pas le centre lui même 
+
+
+
+=====[ Explications ]===========================================================
+
+(Facultatif) Donner ici les explications supplémentaires utiles à la
+compréhension du travail rendu.
+
+...

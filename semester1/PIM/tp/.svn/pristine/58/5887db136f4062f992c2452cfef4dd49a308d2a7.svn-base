@@ -1,0 +1,43 @@
+with Ada.Text_IO;          use Ada.Text_IO;
+with Ada.Integer_Text_IO;  use Ada.Integer_Text_IO;
+
+-- Auteur: 
+-- Gérer un stock de matériel informatique.
+--
+package body Stocks_Materiel is
+
+    procedure Creer (Stock : out T_Stock) is
+    begin
+        Stock.Stock_Nb := 0;
+    end Creer;
+
+
+    function Nb_Materiels (Stock: in T_Stock) return Integer is
+    begin
+        return Stock.Stock_Nb;
+    end;
+
+
+    procedure Enregistrer (
+            Stock        : in out T_Stock;
+            Numero_Serie : in     Integer;
+            Nature       : in     T_Nature;
+            Annee_Achat  : in     Integer
+                          ) is
+        Objet : T_Objet;
+    begin
+        if Stock.Stock_Nb < CAPACITE then
+            Objet.Numero_Serie := Numero_Serie;
+            Objet.Nature := Nature;
+            Objet.Annee_Achat := Annee_Achat;
+            Objet.Etat := MARCHE;
+        
+            Stock.Stock_Nb := Stock.Stock_Nb +1;
+            Stock.Stock_Tab(Stock.Stock_Nb) := Objet;
+        else
+            null;
+        end if;
+    end Enregistrer;
+
+
+end Stocks_Materiel;

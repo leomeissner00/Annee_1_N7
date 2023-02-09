@@ -1,0 +1,17 @@
+package tableur.math;
+
+import tableur.Tableur;
+import tableur.exception.FormatFormuleException;
+import tableur.exception.NoMeasurableException;
+
+public interface Formule{
+
+    static Formule toFormule(String stringFormule) throws FormatFormuleException {
+        return Lecteur.convertir(stringFormule);
+    }
+
+    double evaluer(Tableur tab) throws NoMeasurableException;
+
+    String toString();
+
+}

@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__scenario_stock.o
+[PROJECT FILES]
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/tp06.gpr
+20211020105756 3a57649364d2bc427e0c28a4dc6818c5
+[BOUND OBJECT FILES]
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/stocks_materiel.o
+/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/scenario_stock.o
+[GENERATED SOURCE FILES]
+b__scenario_stock.ads
+b__scenario_stock.adb
+b__scenario_stock.ali
+[RESULTING OPTIONS]
+-L/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/
+-L/home/lmeissne/Annee_1/Prog_Imperative/tp/tp06/
+-L/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl

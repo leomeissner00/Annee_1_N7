@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 86" line=" 180" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decomp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 74" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 427" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/compresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 10" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/lca_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 131" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decomp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 86" line=" 96" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decomp.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 150" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decomp.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 58" line=" 208" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decomp.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

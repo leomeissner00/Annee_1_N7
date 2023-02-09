@@ -1,0 +1,14 @@
+14c14,15
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+36c37
+< Impossible ! Nombre invalide : 4 (> 3)
+---
+> Impossible ! Nombre invalide : 4 (> 1)
+51c52,53
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)

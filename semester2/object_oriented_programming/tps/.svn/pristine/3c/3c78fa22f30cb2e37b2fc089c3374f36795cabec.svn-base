@@ -1,0 +1,13 @@
+File Cercle.java: 524 tokens, 194 lines
+Total input: 1 file (1 new, 0 old), 524 tokens
+
+Cercle.java: line 53-55 [33]
+Cercle.java: line 169-171
+< 	public Cercle(Point p1, Point p2) {
+< 		assert (p1 != null  & p2 != null);
+< 		assert (p1.distance(p2) != 0);
+---
+> 	public static Cercle creerCercle(Point vcentre, Point p) {
+> 		assert (vcentre != null & p != null);
+> 		assert (vcentre.distance(p) != 0);
+

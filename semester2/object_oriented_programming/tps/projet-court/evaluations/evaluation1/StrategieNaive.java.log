@@ -1,0 +1,6 @@
+allumettes/StrategieNaive.java:6: error: cannot find symbol
+		int val = Generateur.nb_Aleatoire(jeu);
+		          ^
+  symbol:   variable Generateur
+  location: class StrategieNaive
+1 error

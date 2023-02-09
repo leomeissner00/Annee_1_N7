@@ -1,0 +1,39 @@
+package tableur.math.formule;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class FormuleMultiplication implements Formule {
+    private Formule formule1;
+    private Formule formule2;
+
+    public FormuleMultiplication(Formule f1, Formule f2) {
+        this.formule1 = f1;
+        this.formule2 = f2;
+        
+    }
+    
+    public FormuleMultiplication(double c1, double c2) {
+        this.formule1 = new FormuleConstante(c1);
+        this.formule2 = new FormuleConstante(c2);
+    }
+
+    public FormuleMultiplication(Formule f1, double c2) {
+        this.formule1 = f1;
+        this.formule2 = new FormuleConstante(c2);
+    }
+
+    public FormuleMultiplication(double c1, Formule f2) {
+        this.formule1 = new FormuleConstante(c1);
+        this.formule2 = f2;
+    }
+
+    @Override
+    public double evaluer(Tableur tableur) {
+        return this.formule1.evaluer(tableur) * this.formule2.evaluer(tableur);
+    }
+
+    public String toString() {
+        return this.formule1.toString() + "*" + this.formule2.toString();
+    }
+}

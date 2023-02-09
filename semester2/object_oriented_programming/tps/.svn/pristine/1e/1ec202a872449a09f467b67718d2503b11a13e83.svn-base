@@ -1,0 +1,23 @@
+5c5
+< Ordinateur prend 2 allumettes.
+---
+> Ordinateur prend 3 allumettes.
+7c7
+< Allumettes restantes : 10
+---
+> Allumettes restantes : 9
+10,11c10,11
+< Allumettes restantes : 7
+< Ordinateur prend 3 allumettes.
+---
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+13,16c13,15
+< Allumettes restantes : 4
+< Xavier, combien d'allumettes ? [Je triche...]
+< [Allumettes restantes : 2]
+< Xavier prend 1 allumette.
+---
+> Allumettes restantes : 5
+> Xavier, combien d'allumettes ? [Une allumette en moins, plus que 4. Chut !]
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.

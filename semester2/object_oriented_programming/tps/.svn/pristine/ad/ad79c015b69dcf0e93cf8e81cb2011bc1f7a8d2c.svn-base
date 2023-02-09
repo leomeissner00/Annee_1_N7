@@ -1,0 +1,40 @@
+File Cercle.java: 545 tokens, 196 lines
+Total input: 1 file (1 new, 0 old), 545 tokens
+
+Cercle.java: line 53-55 [28]
+Cercle.java: line 171-173
+< 	public Cercle(Point p1, Point p2) {
+< 		assert (p1 != null  & p2 != null);
+< 		assert (p1.distance(p2) != 0);
+---
+> 	public static Cercle creerCercle(Point vcentre, Point p) {
+> 		assert (vcentre != null & p != null);
+> 		assert (vcentre.distance(p) != 0);
+
+Cercle.java: line 42-53 [24]
+Cercle.java: line 61-71
+< 		this.couleur = Color.blue;
+< 		this.centre.setCouleur(Color.blue);
+< 	}
+< 
+< 	/** Construire un cercle bleu à partir de 2 point.
+< 	 *  diamétralement opposés
+< 	 * @param p1 point numéro 1
+< 	 * @param p2 point numéro 2
+< 	 * @throws AssertionError if p1 = null or p2 = null
+< 	 * 							or p1 = p2
+< 	 */
+< 	public Cercle(Point p1, Point p2) {
+---
+> 		this.couleur = Color.blue;
+> 		this.centre.setCouleur(Color.blue);
+> 	}
+> 
+> 	/** Construire un cercle à partir de 2 point.
+> 	 *  diamétralement opposés et de sa couleur
+> 	 * @param p1 point numéro 1
+> 	 * @param p2 point numéro 2
+> 	 * @param couleur Couleur du cercle
+> 	 */
+> 	public Cercle(Point p1, Point p2, Color couleur) {
+

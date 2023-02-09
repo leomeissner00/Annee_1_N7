@@ -1,0 +1,28 @@
+package tableur.action.elementaire;
+
+import tableur.Tableur;
+import tableur.action.Action;
+import tableur.composant.Position;
+import tableur.math.Formule;
+
+public class ActionCopier implements Action{
+
+    private Position anciennePos;
+    private Position nouvellePos;
+
+    private Formule nouvelleFormule;
+    private Formule ancienneFormule;
+
+	@Override
+	public void appliquer(Tableur tab) {
+		
+		
+	}
+
+	@Override
+	public void annuler(Tableur tab) {
+		
+		
+	}
+
+}

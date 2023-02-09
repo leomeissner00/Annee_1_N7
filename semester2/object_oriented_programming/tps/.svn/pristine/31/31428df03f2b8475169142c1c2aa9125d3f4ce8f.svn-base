@@ -1,0 +1,61 @@
+Date de l'évaluation : ven. 11 mars 2022 10:26:01 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 0
+
+Erreurs checkstyle (différentes/types) : 33/10	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : NON DÉFINIE (ou pas sur SVN)
+
+Procuration sur le jeu réel : Non identifiée
+
+OperationInterditeException : JAMAIS LEVÉE
+OperationInterditeException : JAMAIS RECUPÉRÉE
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:76:         } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:47:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/Jouer.java:117:              Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:32:           String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/Jouer.java:4:import java.util.Random;
+  | allumettes/Jouer.java:144:              Random generator = new Random();
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : Tests run: 25,  Failures: 1	(voir evaluations/evaluation1/RobustesseTest.log)
+    1) testerDoubleConfiantConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+	Non fait car le projet n'est pas assez avancé
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

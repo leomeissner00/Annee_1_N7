@@ -1,0 +1,126 @@
+package allumettes;
+
+public class Arbitre {
+
+    /** Joueur numéro 1. */
+    private Joueur j1;
+
+    /** Joueur numéro 2. */
+    private Joueur j2;
+
+    /**Nombre de tour de la partie. */
+    private int nbTour;
+    
+    /**Montre si l'arbitre est confiant ou non.*/
+    private boolean confiant;
+
+    /**
+     * Construit un arbitre à partir de ses joueurs, j1 et j2.
+     * @param newJ1
+     * @param newJ2
+     */
+    Arbitre(Joueur newJ1, Joueur newJ2){
+        this.j1 = newJ1;
+        this.j2 = newJ2;
+        this.nbTour = 0;
+        this.confiant = false;
+    }
+
+    /**
+     * Détermine si la partie est terminée.
+     * @param jeu
+     * @return
+     */
+    boolean finDePartie(Jeu jeu) {
+    	return (jeu.getNombreAllumettes() != 0);
+    }
+    
+    public int getNbTour() {
+    	return nbTour;
+    }
+    
+    /**Incrémente le nombre de tour de 1.
+	 * 
+	 */
+	public void inc_nbTour() {
+		this.nbTour ++;
+	}
+
+	
+    
+    /**
+     * Détermine le joueur qui doit jouer au prochain tour.
+     * @return Joueur : le prochain joueur à jouer
+     */
+    Joueur auTourDe(){
+    	if (getNbTour() % 2 == 0) {
+    		return j1;
+    	}
+    	else {
+    		return j2;
+    	}
+    }
+    
+    /**Permet de modifier l'attribut confiant de l'arbitre.
+     * 
+     * @param vconfiant : nouveau confiant de l'arbitre
+     */
+    void setConfiant(boolean vconfiant) {
+    	this.confiant = vconfiant;
+    }
+    
+    
+    
+    public void arbitrer(Jeu jeu) {
+    	boolean jouer = true;
+    	boolean a_bien_jouer = true;
+		Joueur j_en_cours;
+		Jeu jeuArbitre = jeu;
+		
+		int a_retirer;
+
+		do {
+			if (a_bien_jouer) {
+				System.out.println("Allumettes restantes : " + jeu.getNombreAllumettes());
+			}
+			j_en_cours = auTourDe();
+
+			try {
+				a_bien_jouer = true;
+		    	if (!this.confiant) {
+		    		jeu = new Procuration(jeu);
+		    	}
+				a_retirer = j_en_cours.getPrise(jeu);
+				
+				if (a_retirer == 1 | a_retirer == 0) {
+					System.out.println(j_en_cours.getNom() + " prend " + a_retirer + " allumette.");
+				}else {
+					System.out.println(j_en_cours.getNom() + " prend " + a_retirer + " allumettes.");
+				}
+				jeuArbitre.retirer(a_retirer);
+				inc_nbTour(); 
+				
+				
+			} catch(OperationInterditeException e){
+				System.out.println("Abandon de la partie car "+j_en_cours.getNom()+" triche!");
+				System.out.println();
+				break;
+			}catch (EntreeInvalideException e) {
+				a_bien_jouer = false;
+				System.out.println(e.getProbleme());
+			}catch (CoupInvalideException e) {
+				System.out.println(e.getProbleme());
+			}
+			if (a_bien_jouer) {
+				System.out.println("");
+				jouer = finDePartie(jeuArbitre);
+			}
+			
+		} while (jouer);
+		if (jeuArbitre.getNombreAllumettes() == 0) {
+			System.out.println(j_en_cours.getNom() + " perd !");
+			System.out.println(auTourDe().getNom() + " gagne !");
+		}
+    }
+    
+}

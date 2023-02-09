@@ -1,0 +1,10 @@
+package tableur.math;
+
+import tableur.composant.Position;
+import tableur.exception.NoMeasurableException;
+
+public interface Calcul {
+	
+	public double calculer(Position pos1, Position pos2) throws NoMeasurableException;
+
+}

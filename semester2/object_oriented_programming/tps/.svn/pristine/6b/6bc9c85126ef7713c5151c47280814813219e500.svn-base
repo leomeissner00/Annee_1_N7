@@ -1,0 +1,55 @@
+File allumettes/Arbitre.java: 392 tokens, 118 lines
+File allumettes/CoupInvalideException.java: 68 tokens, 39 lines
+File allumettes/Joueur.java: 138 tokens, 46 lines
+File allumettes/OperationInterditeException.java: 21 tokens, 10 lines
+File allumettes/StrategieNaive.java: 65 tokens, 18 lines
+File allumettes/StrategieRapide.java: 47 tokens, 13 lines
+File allumettes/ConfigurationException.java: 21 tokens, 16 lines
+File allumettes/Jouer.java: 513 tokens, 140 lines
+File allumettes/Jeu.java: 23 tokens, 21 lines
+File allumettes/StrategieHumaine.java: 102 tokens, 28 lines
+File allumettes/JeuAllumettes.java: 126 tokens, 43 lines
+File allumettes/StrategieExpert.java: 101 tokens, 23 lines
+File allumettes/Procuration.java: 59 tokens, 21 lines
+File allumettes/Strategie.java: 14 tokens, 5 lines
+File allumettes/StrategieTricheur.java: 90 tokens, 22 lines
+Total input: 15 files (15 new, 0 old), 1780 tokens
+
+allumettes/Jouer.java: line 116-123 [32]
+allumettes/Jouer.java: line 124-131
+< 				Strat = new StrategieHumaine();
+< 				return Strat.getPrise(jeu);
+< 			
+< 			case "rapide":
+< 				Strat = new StrategieRapide();
+< 				return Strat.getPrise(jeu);
+< 				
+< 			case "expert":
+---
+> 				Strat = new StrategieExpert();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "naif":
+> 				Strat = new StrategieNaive();
+> 				return Strat.getPrise(jeu);
+> 
+> 			case "tricheur":
+
+allumettes/StrategieRapide.java: line 1-7 [25]
+allumettes/StrategieTricheur.java: line 1-7
+< package allumettes;
+< 
+< public class StrategieRapide implements Strategie {
+< 
+< 	@Override
+< 	public int getPrise(Jeu jeu) {
+< 		if (jeu.getNombreAllumettes() < Jeu.PRISE_MAX) {
+---
+> package allumettes;
+> 
+> public class StrategieTricheur implements Strategie{
+> 
+> 	@Override
+> 	public int getPrise(Jeu jeu) {
+> 		if (jeu.getNombreAllumettes()>1) {
+

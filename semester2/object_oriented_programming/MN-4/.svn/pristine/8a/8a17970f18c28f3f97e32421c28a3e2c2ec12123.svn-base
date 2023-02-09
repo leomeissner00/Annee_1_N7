@@ -1,0 +1,22 @@
+package tableur.math.calcul;
+
+import tableur.Tableur;
+import tableur.composant.*;
+import tableur.exception.NoMeasurableException;
+
+public class CalculVariance {
+	
+	private Tableur tab;
+	
+	public CalculVariance(Tableur tableur) {
+		this.tab = tableur;
+	}
+	
+	public double calculer(Position pos1, Position pos2) throws NoMeasurableException {
+		CalculMoyenne Moy = new CalculMoyenne(this.tab);
+		double esp = Moy.calculer(pos1, pos2);
+		double esp2 = Moy.calculerMoyCarree(pos1, pos2);
+		return esp2 - esp*esp;
+	}
+
+}

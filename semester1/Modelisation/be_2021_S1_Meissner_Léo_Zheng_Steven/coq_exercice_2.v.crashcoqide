@@ -1,0 +1,32 @@
+Require Import Naturelle.
+Section Session1_2021_Logique_Exercice_2.
+
+Variable A B C : Prop.
+
+Theorem Exercice_2_Naturelle : ((A /\ B) -> C) -> ((A -> C) \/ (B -> C)).
+Proof.
+I_imp H1.
+I_ou_g.
+I_imp H2.
+E_ou C (~C).
+TE.
+I_imp HC.
+Hyp HC.
+I_imp HnC.
+E_imp (A/\B).
+Hyp H1.
+I_et.
+Hyp H2.
+
+Hyp H1. 
+I_et.
+
+Qed.
+
+Theorem Exercice_2_Coq : ((A /\ B) -> C) -> ((A -> C) \/ (B -> C)).
+Proof.
+intro
+Qed.
+
+End Session1_2021_Logique_Exercice_2.
+

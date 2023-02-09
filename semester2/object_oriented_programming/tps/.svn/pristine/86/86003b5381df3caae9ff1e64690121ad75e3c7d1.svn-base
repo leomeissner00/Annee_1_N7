@@ -1,0 +1,69 @@
+Date de l'évaluation : lun. 21 mars 2022 15:35:51 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 4
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 43/11	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/Procuration.java (ok)
+
+OperationInterditeException, levée dans : allumettes/Procuration.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:108:            }catch (EntreeInvalideException e) {
+  | allumettes/Arbitre.java:111:            }catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:44:       } catch (ConfigurationException e) {
+  | allumettes/StrategieHumaine.java:16:            }catch(CoupInvalideException e) {
+  | allumettes/StrategieHumaine.java:25:        catch(NumberFormatException e){
+  | allumettes/StrategieTricheur.java:12:               } catch (CoupInvalideException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/StrategieHumaine.java:7: static Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:28:           String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : NON
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de StrategieNaive.java : ERREUR, pas de allumettes/StrategieNaive.class	(voir evaluations/evaluation1/StrategieNaive.java.log)
+Compilation de TestRapide.java : OK.
+Compilation de StrategieExpert.java : ERREUR, pas de allumettes/StrategieExpert.class	(voir evaluations/evaluation1/StrategieExpert.java.log)
+Compilation de StrategieTricheur.java : OK.
+Test exemplePresqueSujet : ok
+Test exempleTricheurSujet : ok
+Test exempleConfiantTricheurSujet : ok
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : ok
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : ok
+
+Test RobustesseTest : OK (25 tests)	(voir evaluations/evaluation1/RobustesseTest.log)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : Tests run: 2,  Failures: 1	(voir evaluations/evaluation1/FormeTest.log)
+    1) testerC14_C15(FormeTest)
+        AssertionError: Classe Joueur : Le type de la stratégie devrait être une interface
+
+
+Compilation de TestRapide.java : OK.
+Test allumettes.TestRapide : OK (1 test)	(voir evaluations/evaluation1/allumettes.TestRapide.log)

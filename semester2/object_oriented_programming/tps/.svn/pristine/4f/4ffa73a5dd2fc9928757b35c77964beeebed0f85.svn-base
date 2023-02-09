@@ -1,0 +1,14 @@
+Allumettes restantes : 13
+Xavier, combien d'allumettes ? Xavier prend 1 allumette.
+
+Allumettes restantes : 12
+Exception in thread "main" java.lang.NoClassDefFoundError: allumettes/StrategieExpert
+	at allumettes.Jouer.choixNbRetirer(Jouer.java:139)
+	at allumettes.Joueur.getPrise(Joueur.java:38)
+	at allumettes.Arbitre.arbitrer(Arbitre.java:93)
+	at allumettes.Jouer.main(Jouer.java:42)
+Caused by: java.lang.ClassNotFoundException: allumettes.StrategieExpert
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 4 more

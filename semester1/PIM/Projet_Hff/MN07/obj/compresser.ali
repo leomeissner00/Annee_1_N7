@@ -1,0 +1,321 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_STREAMS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U compresser%b		compresser.adb		96b7e93b NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W arbre_bin_projet%s	arbre_bin_projet.adb	arbre_bin_projet.ali
+Z codage_huffmann_exception%s  codage_huffmann_exception.ads  codage_huffmann_exception.ali
+W lca_projet%s		lca_projet.adb		lca_projet.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20210520051127 4aa66568 ada.command_line%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-ststio.ads		20210520051128 d6d358e8 ada.streams.stream_io%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D arbre_bin_projet.ads	20220105194455 e43b0dc5 arbre_bin_projet%s
+D arbre_bin_projet.adb	20220112090729 ba2c61ea arbre_bin_projet%b
+D codage_huffmann_exception.ads  20220108111157 ff12cf4d codage_huffmann_exception%s
+D compresser.adb	20220112160230 a5940f2a compresser%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D lca_projet.ads	20220112090729 804cbf2d lca_projet%s
+D lca_projet.adb	20220112090729 d927f07e lca_projet%b
+D system.ads		20210520051134 a2da961d system%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210520051133 e251976f system.storage_pools.subpools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [compresser standard 10 11 none]
+G r i none [compresser standard 10 11 none] [arbre_bin_projet standard 9 9 none]
+G r i none [compresser standard 10 11 none] [lca_projet standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 24|1r6 1r32 2r6 2r32 3r6 3r34 4r6 4r24 5r6 5r32 6r6 6r33 153r29
+. 309r29 430r29
+X 4 a-comlin.ads
+36K13*Command_Line 144e21 24|5w10 5r36
+39V13*Argument_Count{natural} 24|436s12
+52V13*Argument{string} 24|437s40 437s104 439s63 466s55
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[18|46] 24|2w10 2r36
+X 9 a-stream.ads
+36K13*Streams 87e16 24|6r10 6r37 153r33 309r33 430r33
+X 10 a-ststio.ads
+39K21*Stream_IO 224e26 24|6w18 6r45 153r41 309r41 430r41
+42P9*Stream_Access(9|39R9) 24|154r29 307r45 310r29 431r14
+44P9*File_Type 24|153r51 309r51 430r51
+47n23*In_File{47E9} 24|161r28 320r28
+47n32*Out_File{47E9} 24|451r51 478r43
+68U14*Create 24|451s25 478s17
+74U14*Open 24|161s17 320s17
+80U14*Close 24|178s17 416s17
+90V13*End_Of_File{boolean} 24|166s27 335s27
+92V13*Stream{42P9} 24|164s22 323s22 452s31 479s23
+X 11 a-string.ads
+16K13*Strings 35e16 24|3r10 3r38 4w10 4r28
+X 14 a-strunb.ads
+83K21*Unbounded 765e26 24|3w18 3r46
+88R9*Unbounded_String<6|43R9> 744e15 24|17r48 21r42 25r42 29r42 29r72 35r77
+. 86r47 86r75 106r62 108r23 131r48 150r63 156r23 185r46 213r23 249r27 273r82
+. 273r115 273r194 307r77 307r155 313r23 314r24 315r33 423r22 424r16 425r21
+. 426r18 427r26
+91r4*Null_Unbounded_String{88R9} 24|315r53 330r41 344r41 359r50 377r33 395r50
+. 423r42 424r36 425r41 426r38
+93V13*Length{natural} 24|39s20 42s37 51s44 74s49 74s64 78s49 78s64 292s37
+. 292s50 297s37 297s50 325s29 327s28 340s28 347s31 349s39 351s71 352s53 352s66
+. 371s20 380s23 381s31 383s39 385s71 386s53 386s66 402s20 404s31 454s66 454s86
+. 480s58 480s78
+104V13*To_Unbounded_String{88R9} 24|72s44 76s44 115s23 120s43 165s46 281s52
+. 287s52 289s40 294s40 367s24 406s48 437s20 437s55 437s84 437s119 439s43
+. 466s35
+117V13*To_String{string} 24|65s29 91s21 94s21 161s37 320s37 369s21 374s29
+. 391s37 413s21 451s61 478s53
+152V14*"&"{88R9} 24|72s42 76s42 120s41 281s50 283s48 287s50 289s38 294s38
+. 338s38 368s30 406s46 454s105 480s97
+160V14*"&"{88R9} 24|451s85 454s48 478s77 480s40
+176V14*"&"{88R9} 24|326s38
+184V14*"&"{88R9} 24|351s85 385s85
+192V13*Element{character} 24|44s36 46s39 51s29 138s28 326s40 351s58 385s58
+208V13*Slice{string} 24|454s50 480s42
+239V14*"="{boolean} 24|437s53 437s117
+582V13*Delete{88R9} 24|74s35 78s35
+595U14*Delete 24|292s25 297s25 352s41 386s41
+X 17 a-textio.ads
+58K13*Text_IO 725e16 24|1w10 1r36
+262U14*New_Line 24|40s25 95s17 370s17 375s25 392s33 414s17 461s25
+390U14*Put 24|51s25
+463U14*Put 24|45s41 47s41 50s25 52s25 53s25 55s25 58s33 60s33 64s25 65s25
+. 66s25 90s17 91s17 92s17 93s17 94s17 369s17 374s25 391s33 413s17 460s25
+X 18 a-tiinio.ads
+80U14*Put 24|54s25[7|18] 59s33[7|18]
+X 21 arbre_bin_projet.ads
+6+14 T_Cle 24|17r39
+9k9*arbre_bin_projet 68e21 24|7w6 17r21
+11P14 T_Abr 24|25r72[16] 35r54[16] 212r36[16] 245r94[16] 247r33[16] 248r33[16]
+. 273r54[16] 275r30[16] 429r27[16]
+14U19 Initialiser 24|219s17[16] 444s25[16] 472s17[16]
+24U19 Enregistrer_feuille 24|223s17[16] 231s25[16]
+32V18 Droite{11P14[24|16]} 24|77s38[16] 295s39[16]
+35V18 Gauche{11P14[24|16]} 24|73s38[16] 290s39[16]
+38U19 Fusionner 24|260s25[16]
+41V18 La_Cle{14|88R9} 24|65s39[16] 233s48[16] 261s48[16] 264s50[16] 282s63[16]
+. 283s50[16]
+44V18 La_Donnee{integer} 24|54s29[16] 59s37[16] 194s30[16] 197s40[16]
+51V18 Est_Feuille{boolean} 24|63s20[16] 71s20[16] 280s20[16]
+X 24 compresser.adb
+10U11*compresser 10b11 486l5 486t15
+13M14 T_Octet 14r13 106r46 107r22 131r73 133r25 155r29 167r34 311r29 312r29
+. 329r33 336r34 343r33 357r33 376r25 393r33 415r17
+16K17 Arbre[21|9] 18r13 35r48 212r30 245r88 247r27 248r27 429r21
+20K17 LCA_frequence[27|8] 22r13 150r106 209r61 211r24 421r27
+24K17 LCA_arbre[27|8] 26r13 30r13 185r79 188r24 209r101 245r52 428r21
+28K17 LCA_codage[27|8] 100r21 273r157 282r25 307r118 338r40 368r32 369r31
+. 422r25
+35U19 Afficher_abr 35b19 35>33 35=61 73s25 77s25 81l13 81t25 457s25
+35p33 arbre_bin{21|11P14[16]} 54r39 59r47 63r32 65r46 71r32 73r45 77r45
+35r61 chemin{14|88R9} 39r27 42r44 44r44 46r47 51r37 51r51 72m25 72r35 73m56
+. 74m25 74r42 74r56 74r71 76m25 76r35 77m56 78m25 78r42 78r56 78r71
+42i29 i{integer} 44r51 46r54
+86U19 Afficher_codage 86b19 86>36 86>66 97l13 97t28 100r44
+86r36 Donnee{14|88R9} 91r31
+86r66 Cle{14|88R9} 94r31
+99U19 Afficher_codage[27|64] 456s25
+106V18 Octet_to_binaire{14|88R9} 106b18 106>35 125l9 125t25 168s32 337s32
+106m35 Octet{13M14} 112r18
+107m10 Bit{13M14} 113m10 114r44 118m18 119r51
+107m15 temp{13M14} 112m10 113r17 116m10 116r18 118r25 121m18 121r26
+108r10 Octet_str{14|88R9} 115m10 120m18 120r31 123r17
+109a10 Bit_str{string} 114m11 115r43 115r54 119m18 120r63 120r74
+117i14 N{integer}
+131V18 Binaire_to_octet{13M14} 131b18 131>35 144l13 144t29 328s44 342s44
+. 356s44 373s36 390s44 412s28
+131r35 Binaire{14|88R9} 138r36
+133m17 Octet{13M14} 136m17 139m33 139r42 142r24
+137i21 i{integer} 138r44 139r56
+150U19 Creation_tableau_frequence 150b19 150>46 150=81 180l21 180t47 443s25
+. 470s17
+150r46 Nom_fichier{14|88R9} 161r47
+150p81 table_frequence{27|10P14[20]} 165m29 169r41 170m45 170r77 172m45
+153p17 File{10|44P9} 161m22 161r22 164r29 166r39 178m24 178r24
+154p17 S{10|42P9} 164m17 167r48
+155m17 Octet{13M14} 167m25 168r49
+156r17 Cle{14|88R9} 168m25 169r58 170r62 170r94 172r62
+185U19 Min_frequence 185b19 185=33 185>64 203l13 203t26 254s25 257s25
+185r33 Cle{14|88R9} 193m17 194r61 198m33
+185p64 table_abr{27|10P14[24]} 193r31 194r50 195r37 196r36
+187i17 frequence{integer} 194m17 197r28
+188p17 temp{27|10P14[24]} 192m29 192r29 195m17 197r60 197r73 198r47 200m25
+. 200r45 202m23 202r23
+196i21 i{integer}
+209U19 FrequenceToArbre 209b19 209=36 209=82 239l13 239t29 445s25 473s17
+209p36 table_frequence{27|10P14[20]} 220r31 221r37 222r37 227r36
+209p82 liste_abr{27|10P14[24]} 224m29 233m37
+211p17 temp{27|10P14[20]} 218m29 218r29 222m17 229r39 230r45 232m25 232r45
+212p17 arbre_temp{21|11P14[16]} 219m29 219r29 223m37 223r37 224r45 231m45
+. 231r45 233r55 233r68
+213r17 Cle{14|88R9} 220m17 221r54 223r57 224r40 229m25 230r51 231r65
+214i17 Donnee{integer} 221m17 223r49 230m25 231r57
+227i21 i{integer}
+245U19 Arbre_Huffman 245b19 245=33 245=69 266l13 266t26 447s25 474s17
+245p33 liste_abr{27|10P14[24]} 253r30 254r47 255r46 256m35 257r48 258r46
+. 259m35 261m37 264r40
+245p69 arbre_bin{21|11P14[16]} 264m17
+247p17 arbre_1{21|11P14[16]} 255m25 260m35 260r35 261r55 261r65 264r57
+248p17 arbre_2{21|11P14[16]} 258m25 260r43
+249r17 Cle_min{14|88R9} 254m39 254r39 255r56 256r46 257m39 257r39 258r56
+. 259r46
+273U19 Parcours_infixe 273b19 273=35 273=62 273=101 273=134 273=175 291s25
+. 296s25 300l13 300t28 449s25 476s17
+273p35 arbre_bin{21|11P14[16]} 280r32 282r70 283r57 290r46 295r46
+273r62 suite_bits{14|88R9} 281m25 281r39 287m25 287r39 291m53 296m53
+273r101 code{14|88R9} 282r82 289m25 289r33 291m65 292m32 292r44 292r57 294m25
+. 294r33 296m65 297m32 297r44 297r57
+273p134 table_Huffman{27|10P14[28]} 282m48 291m71 296m71
+273r175 caractere{14|88R9} 283m25 283r38 291m86 296m86
+275p17 arbre_temp{21|11P14[16]} 290m25 291m41 291r41 295m25 296m41 296r41
+307U19 Compression_texte 307b19 307>37 307>60 307=95 307=136 418l13 418t30
+. 455s25 482s17
+307p37 SC{10|42P9} 329r47 343r47 357r47 376r39 393r47 415r31
+307r60 Nom_fichier{14|88R9} 320r47
+307p95 table_Huffman{27|10P14[28]} 338r61 368r53 369r52
+307r136 caractere{14|88R9} 325r36 326r48
+309p17 File{10|44P9} 320m22 320r22 323r29 335r39 416m24 416r24
+310p17 S{10|42P9} 323m17 336r48
+311m17 Octet{13M14} 336m25 337r49
+312m17 Octet_2{13M14} 328m33 329r51 342m33 343r51 356m33 357r51 373m25 376r43
+. 390m33 393r51 412m17 415r35
+313r17 Cle{14|88R9} 337m25 338r76 367m17 368r68 369r67
+314r17 Code{14|88R9} 326m25 326r33 327r35 328r61 330m33 338m25 338r33 340r35
+. 342r61 344m33 347r38 349r46 351r66 351r78 352m48 352r48 352r60 352r73 356r61
+. 358m33 368m17 368r25 371r27 373r53 374r39 377m25 380r30 381r38 383r46 385r66
+. 385r78 386m48 386r48 386r60 386r73 390r61 391r47 394m33 402r27 404r38 406m33
+. 406r41 412r45 413r31
+315r17 Code_prochain{14|88R9} 351m41 351r87 358r41 359m33 385m41 385r87 394r41
+. 395m33
+325i21 i{integer} 326r58
+421p9 table_frequence{27|10P14[20]} 442m37 442r37 443m68 443r68 445m42 445r42
+. 469m29 469r29 470m60 470r60 473m34 473r34
+422p9 table_Huffman{27|10P14[28]} 449m70 449r70 455m63 455r63 456r41 476m62
+. 476r62 482m55 482r55
+423r9 Suite_bits{14|88R9} 449m52 449r52 454r107 476m44 476r44 480r99
+424r9 Code{14|88R9} 449m64 449r64 476m56 476r56
+425r9 caractere{14|88R9} 449m84 449r84 454m25 454r38 454r56 454r73 454r93
+. 455m78 455r78 476m76 476r76 480m17 480r30 480r48 480r65 480r85 482m70 482r70
+426r9 chemin{14|88R9} 457m48 457r48
+427r9 Nom_du_fichier{14|88R9} 439m25 443r52 451r71 455r47 466m17 470r44 478r63
+. 482r39
+428p9 liste_abr{27|10P14[24]} 445m58 445r58 447m39 447r39 473m50 473r50 474m31
+. 474r31
+429p9 arbre_bin{21|11P14[16]} 444m37 444r37 447m50 447r50 449m41 449r41 457r38
+. 472m29 472r29 474m42 474r42 476m33 476r33
+430p9 fichier_compresse{10|44P9} 451m32 451r32 452r38 478m24 478r24 479r30
+431p9 SC{10|42P9} 452m25 455r43 479m17 482r35
+X 27 lca_projet.ads
+5+14 T_Cle 24|21r33 25r33 29r33
+6+14 T_Donnee 24|21r60 25r60 29r60
+8k9*LCA_projet 24|8w6 21r21 25r21 29r21 27|84e15
+10P14 T_LCA 24|150r120[20] 185r89[24] 188r34[24] 209r75[20] 209r111[24] 211r38[20]
+. 245r62[24] 273r168[28] 307r129[28] 421r41[20] 422r36[28] 428r31[24]
+13U19 Initialiser 24|192s17[24] 218s17[20] 442s25[20] 469s17[20]
+22V18 Taille{integer} 24|196s29[24] 227s29[20] 253s23[24]
+29U19 Enregistrer 24|165s17[20] 170s33[20] 172s33[20] 224s17[24] 233s25[24]
+. 261s25[24] 282s36[28]
+37U19 Supprimer 24|256s25[24] 259s25[24]
+43V18 Cle_Presente{boolean} 24|169s28[20]
+48V18 La_Donnee{integer} 24|170s67[20] 194s40[24] 197s50[24] 221s27[20] 230s35[20]
+. 255s36[24] 258s36[24] 264s30[24] 338s51[28] 368s43[28] 369s42[28]
+51V18 La_Cle{14|88R9} 24|193s24[24] 197s66[24] 198s40[24] 220s24[20] 229s32[20]
+54V18 La_Suivante{10P14[24|24]} 24|195s25[24] 200s33[24] 222s25[20] 232s33[20]
+58U19 Vider 24|202s17[24]
+64u19 Pour_Chaque 24|100r32[28]
+X 29 system.ads
+67M9*Address
+X 38 s-memory.ads
+53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
+X 46 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+

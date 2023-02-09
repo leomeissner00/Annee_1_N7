@@ -1,0 +1,9 @@
+Exception in thread "main" java.lang.NoClassDefFoundError: allumettes/StrategieExpert
+	at allumettes.Jouer.getStrategie(Jouer.java:109)
+	at allumettes.Joueur.<init>(Joueur.java:21)
+	at allumettes.Jouer.main(Jouer.java:33)
+Caused by: java.lang.ClassNotFoundException: allumettes.StrategieExpert
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 3 more

@@ -1,0 +1,18 @@
+1,3c1,13
+< Exception in thread "main" allumettes.ConfigurationException: Cette stratégie n'existe pas : les stratégies possibles sont humain, naif, rapide, expert, tricheur
+< 	at allumettes.Joueur.<init>(Joueur.java:20)
+< 	at allumettes.Jouer.main(Jouer.java:39)
+---
+> Allumettes restantes : 13
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 10
+> [Je triche...]
+> [Allumettes restantes : 2]
+> Tricheur prend 1 allumette.
+> 
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Tricheur gagne !

@@ -1,0 +1,87 @@
+with SDA_Exceptions;         use SDA_Exceptions;
+with Ada.Unchecked_Deallocation;
+
+package body arbre_bin_projet is
+
+	procedure Free is
+		new Ada.Unchecked_Deallocation (Object => T_Noeud, Name => T_ABR);
+
+
+	procedure Initialiser(Sda: out T_ABR) is
+	begin
+		Sda := null;
+	end Initialiser;
+
+
+	function Est_Vide (Sda : T_ABR) return Boolean is
+	begin
+		return Sda = null;
+	end Est_Vide;
+
+
+
+	procedure Enregistrer_noeud (Sda : in out T_ABR ; Cle : in T_Cle ; Donnee : in T_Donnee) is
+	begin
+
+		Sda.all.Cle := Cle;
+		Sda.all.Donnee := Donnee;
+
+	end Enregistrer;
+
+
+	procedure Vider (Sda : in out T_ABR) is
+	begin
+		if Sda = null then
+			Free(Sda);
+
+		else
+			Vider(Sda.all.Sous_Arbre_Gauche);
+			Vider(Sda.all.Sous_Arbre_Droit);
+			Free(Sda);
+
+		end if;
+	end Vider;
+	
+
+	procedure Droite(Sda : in out T_Abr)
+	begin 
+		Sda := Sda.all.Sous_Arbre_Droit;
+	end Droite;
+
+
+	procedure Gauche(Sda : in out T_Abr)
+	begin
+		Sda := Sda.all.Sous_Arbre_Gauche;
+		
+	end Gauche;
+
+
+	procedure Fusionner(Sda_g : in out T_abre, Sda_d : in)
+	begin
+		Sda_g.all.Sous_Arbre_Gauche := Sda_g
+		Sda_g.all.Sous_Arbre_Droite := Sda_d
+
+
+	function Donnee (Sda : in T_Abr) return T_Donnee;
+	begin
+	return Sda.all.Donnnee;
+
+
+	procedure Pour_Chaque (Sda : in T_ABR) is
+	begin
+		if Sda = null then
+			null;
+		else
+			begin
+				Traiter(Sda.all.Cle, Sda.all.Donnee);
+				Pour_Chaque(Sda.all.Sous_Arbre_Gauche);
+				Traiter(Sda.all.Cle, Sda.all.Donnee);
+				Pour_Chaque(Sda.all.Sous_Arbre_Droit);
+			exception
+				when others => Pour_Chaque(Sda.all.Suivant);
+			end;
+		end if;
+	end Pour_Chaque;
+
+
+end ABR;

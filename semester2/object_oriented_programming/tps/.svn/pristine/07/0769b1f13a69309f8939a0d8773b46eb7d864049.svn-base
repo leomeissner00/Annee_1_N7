@@ -1,0 +1,65 @@
+Date de l'évaluation : mar. 22 mars 2022 08:45:53 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 3
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 45/11	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/Procuration.java (ok)
+
+OperationInterditeException, levée dans : allumettes/Procuration.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:108:            }catch (EntreeInvalideException e) {
+  | allumettes/Arbitre.java:111:            }catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:44:       } catch (ConfigurationException e) {
+  | allumettes/StrategieHumaine.java:17:            }catch(CoupInvalideException e) {
+  | allumettes/StrategieHumaine.java:26:        catch(NumberFormatException e){
+  | allumettes/StrategieTricheur.java:12:               } catch (CoupInvalideException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/StrategieHumaine.java:7: static Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:28:           String[] separer = a_separer.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/Generateur.java:3:import java.util.Random;
+  | allumettes/Generateur.java:6:   static Random generator = new Random();
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de TestRapide.java : OK.
+Test exemplePresqueSujet : ok
+Test exempleTricheurSujet : ok
+Test exempleConfiantTricheurSujet : ok
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : ok
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : ok
+
+Test RobustesseTest : OK (25 tests)	(voir evaluations/evaluation1/RobustesseTest.log)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : OK (2 tests)	(voir evaluations/evaluation1/FormeTest.log)
+
+Compilation de TestRapide.java : OK.
+Test allumettes.TestRapide : OK (1 test)	(voir evaluations/evaluation1/allumettes.TestRapide.log)

@@ -1,0 +1,141 @@
+package tableur;
+
+
+import tableur.composant.*;
+import tableur.composant.cellule.CelluleFormule;
+import tableur.exception.FormatFormuleException;
+import tableur.math.Formule;
+import tableur.math.Lecteur;
+
+import java.awt.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+
+import javax.swing.*;
+import javax.swing.plaf.DimensionUIResource;
+
+public class TableurVisuel extends JFrame {
+
+    private Tableur tab;
+    private Container content;
+
+    private JMenuBar menuBar = new JMenuBar();
+
+    private TableurControleur controleur;
+    
+    JMenu menuFichier = new JMenu("Fichier");
+    JMenu menuEditer = new JMenu("Editer");
+    JMenu menuOption = new JMenu("Option");
+
+    public TableurVisuel( String name,  Tableur tab, TableurControleur controleur) {
+        super(name);
+        this.tab = tab;
+        this.content = this.getContentPane();
+        this.controleur = controleur;
+        setupJFrame();
+    }
+    
+	private void setupJFrame() {
+        this.setLocation(100, 100);
+        
+        DimensionUIResource dim = new DimensionUIResource(100, 100);
+
+        this.setMinimumSize(dim);
+        this.setVisible(true);
+        this.pack();
+        this.setSize(1920, 1080);
+
+        this.setJMenuBar(menuBar);
+        tab.itemNouveau.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK));
+        menuFichier.add(tab.itemNouveau);
+        menuFichier.add(tab.itemOuvrir);
+        tab.itemEnregistrer.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK));
+        menuFichier.add(tab.itemEnregistrer);
+        tab.itemEnregistrerSous.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, java.awt.Event.CTRL_MASK | java.awt.Event.SHIFT_MASK));
+        menuFichier.add(tab.itemEnregistrerSous);
+
+        tab.itemAnnuler.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, KeyEvent.CTRL_DOWN_MASK));
+        menuEditer.add(tab.itemAnnuler);
+        tab.itemRetablir.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z, java.awt.Event.CTRL_MASK | java.awt.Event.SHIFT_MASK));
+        menuEditer.add(tab.itemRetablir);
+        tab.itemCopier.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_DOWN_MASK));
+        menuEditer.add(tab.itemCopier);
+        tab.itemCouper.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, KeyEvent.CTRL_DOWN_MASK));
+        menuEditer.add(tab.itemCouper);
+        tab.itemColler.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V, KeyEvent.CTRL_DOWN_MASK));
+        menuEditer.add(tab.itemColler);
+        menuEditer.add(tab.itemRAZ);
+
+        menuOption.add(tab.itemApparence);
+        menuOption.add(tab.itemFormat);
+        menuOption.add(tab.itemDimension);
+
+
+        menuBar.add(menuFichier);
+        menuBar.add(menuEditer);
+        menuBar.add(menuOption);
+
+        
+        
+        this.content.setLayout(new GridLayout(tab.HEIGHT,tab.WIDTH));
+
+        for (int i = 0; i < tab.HEIGHT; i++ ) {
+            for (int j = 0; j < tab.WIDTH; j++ ) {
+                Cellule currentCell = tab.getCellule(new Position(i, j));
+                currentCell.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
+                this.content.add(currentCell);
+                currentCell.addFocusListener(new FocusListener() {
+                    
+					@Override
+					public void focusGained(FocusEvent e) {
+						Cellule cell = ((Cellule) e.getSource());
+                    	cell.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
+                        Position realPos = Position.add(cell.getPosition(), tab.getPosCursor());
+                        Cellule realCell = tab.getCellule(realPos);
+                        if (realCell.getClass() == CelluleFormule.class ) {
+                            CelluleFormule formuleCell = (CelluleFormule) realCell;
+                            formuleCell.setIsCliked(true);
+                            cell.setText(formuleCell.toString());
+                        }
+					}
+					@Override
+					public void focusLost(FocusEvent e) {
+						Cellule cell = ((Cellule) e.getSource());
+                    	cell.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
+                        Position realPos = Position.add(cell.getPosition(), tab.getPosCursor());
+                        String textEntree = cell.getText();
+                        if (textEntree.length() > 0 && textEntree.charAt(0) == '=') {
+                            Formule formule;
+                            try {
+                                formule = Lecteur.convertir(textEntree.substring(1));
+                                tab.setCellule(realPos, formule);
+                            } catch (FormatFormuleException e1) {
+                                tab.setCellule(realPos, textEntree );
+                            }
+                        } else {
+                            tab.setCellule(realPos, cell.getText());
+                        }
+                        update();
+                    }
+					});
+            }
+        }
+    }
+
+    public void update() {
+
+        Position posCursor = this.tab.getPosCursor();
+       
+        for (int i = 0; i < tab.WIDTH; i++ ) {
+            for (int j = 0; j < tab.HEIGHT; j++ ) {
+                Position realPos = new Position(posCursor.x + i, posCursor.y + j);
+                Cellule cellVisuel = (Cellule) this.content.getComponent(i*tab.WIDTH+j);
+                cellVisuel.setText(tab.getCellule(realPos).toString());
+            }
+        }
+    }
+}
+
+
+  

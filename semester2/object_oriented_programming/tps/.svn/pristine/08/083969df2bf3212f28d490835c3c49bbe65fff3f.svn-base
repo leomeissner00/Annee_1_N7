@@ -1,0 +1,118 @@
+import java.awt.Color;
+
+/** Cercle modélise un cercle géométrique dans un plan équipé d'un
+ * repère cartésien.  Un Cercle peut être affiché et translaté.
+ * Il est possible de déterminer si un point se trouve à l'intérieur 
+ * du cercle ou non.
+ *
+ * @author  Léo Meissner <leo.meissner@etu.toulouse-inp.fr>
+ */
+public class Cercle {
+	private double r;		// rayon
+	private Point centre;		// centre du cercle
+	private Color couleur;	// couleur du cercle
+
+	/** Construire un cercle à partir de son centre et de son rayon.
+	 * @param vr rayon
+	 * @param vcentre centre du cercle
+	 */
+	public Cercle(double vr, Point vcentre) {
+		this.r = vr;
+		this.centre = vcentre;
+		this.couleur = Color.blue;
+		this.centre.setCouleur(Color.blue);
+	}
+
+	/** Obtenir le rayon du cercle.
+	 * @return rayon du cercle
+	 */
+	public double getR() {
+		return this.r;
+	}
+
+	/** Obtenir le centre du cercle.
+	 * @return centre du cercle
+	 */
+	public Point getCentre() {
+		return this.centre;
+	}
+	
+	/** Obtenir le diametre du cercle.
+	 * @return diametre du cercle
+	 */
+	public double getDiametre() {
+		return 2*this.r;
+	}
+
+	/** Changer le rayon du cercle.
+	  * @param vr nouveau rayon
+	  */
+	public void setR(double vr) {
+		this.r = vr;
+	}
+
+	/** Changer le centre du cercle.
+	  * @param vcentre nouveau centre
+	  */
+	public void setCentre(Point vcentre) {
+		this.centre = vcentre;
+	}
+	
+	/** Changer le diametre du cercle.
+	  * @param vdiametre nouveau diametre
+	  */
+	public void setDiametre(double vdiametre) {
+		this.r = vdiametre/2;
+	}
+
+	public String toString() {
+		return "C" + this.r + "@" + this.centre;
+	}
+
+	/** Afficher le point. */
+	public void afficher() {
+		System.out.print(this);
+	}
+
+   /** Translater le cercle.
+	* @param dx déplacement suivant l'axe des X
+	* @param dy déplacement suivant l'axe des Y
+	*/
+	public void translater(double dx, double dy) {
+		centre.translater(dx, dy);
+	}
+	
+	/** Methode permettant de verifier si un point est interieur
+	* (au sens large) ou exterieur au cercle
+	* @param p Point 
+	*/
+	public boolean interieurCercle(Point p) {
+		return (this.centre.distance(p) <= this.r);
+	}
+	
+	/** Creer un cercle a partir de son centre et 
+	* d'un point se trouvant sur sa circonference.
+	* @param vcentre centre du cercle
+	* @param p point appartenant a la circonference du cercle
+	*/
+	public Cercle creerCercle(Point vcentre, Point p) {
+		return new Cercle(vcentre.distance(p), vcentre);
+	}
+
+//  Gestion de la couleur
+
+	/** Obtenir la couleur du cercle.
+	 * @return la couleur du cercle
+	 */
+	public Color getCouleur() {
+		return this.couleur;
+	}
+
+	/** Changer la couleur du cercle.
+	  * @param nouvelleCouleur nouvelle couleur
+	  */
+	public void setCouleur(Color nouvelleCouleur) {
+		this.couleur = nouvelleCouleur;
+	}
+
+}

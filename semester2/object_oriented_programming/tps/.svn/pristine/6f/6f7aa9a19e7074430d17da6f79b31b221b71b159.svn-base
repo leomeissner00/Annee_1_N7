@@ -1,0 +1,111 @@
+Date de l'évaluation : mar. 08 mars 2022 13:59:27 CET
+
+Nombre de similitudes (voir evaluations/evaluation1/sim_java.txt) : 0
+
+Erreurs checkstyle (différentes/types) : 29/11	(voir evaluations/evaluation1//checkstyle.log)
+
+Classe OperationInterditeException : NON DÉFINIE (ou pas sur SVN)
+
+Procuration sur le jeu réel : Non identifiée
+
+OperationInterditeException : JAMAIS LEVÉE
+OperationInterditeException : JAMAIS RECUPÉRÉE
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:77:         } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:29:       } catch (ConfigurationException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/Jouer.java:102:              Scanner sc = new Scanner(System.in);
+
+Utilisation de 'split' : ok mais un seul split devrait suffir !  Code à restructurer...
+  | allumettes/Jouer.java:27:           //Et que c'est possbile de split
+  | allumettes/Jouer.java:37:       String[] split = a_split.split("@");
+  | allumettes/Jouer.java:38:       j1 = new Joueur(split[0], split[1]);
+  | allumettes/Jouer.java:39:       j2 = new Joueur(split[2], split[3]);
+
+Utilisation de 'Random' : ok
+  | allumettes/Jouer.java:4:import java.util.Random;
+  | allumettes/Jouer.java:118:              Random generator = new Random();
+
+Utilisation de '3' : Ne pas utiliser de constante littérale hors -1, 0 ou 1 (peut-être PRISE_MAX ?)
+  |     allumettes/Jouer.java:39:       j2 = new Joueur(split[2], split[3]);
+  |     allumettes/Jouer.java:119:              return (generator.nextInt(3)+1);
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Test exemplePresqueSujet : NON CONFORME (voir evaluations/evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME (voir evaluations/evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME (voir evaluations/evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME (voir evaluations/evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : NON CONFORME (voir evaluations/evaluation1/exempleRapideRapide.diff)
+Test exempleTricheurExpert : NON CONFORME (voir evaluations/evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : Le test ne se termine pas !	(voir evaluations/evaluation1/RobustesseTest.log)
+        )
+        )
+        )
+        )
+        )
+    1) testerSansStrategieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    2) testerStrategieDoubleAtSymetrieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    3) testerSansStrategie(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    4) testerStrategieInconnueSymetrieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    5) testerStrategieDoubleAtStrategieALaFinSymetrie(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    6) testerNomNonDefini(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    7) testerStrategieInconnue(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    8) testerStrategieDoubleAtConfiant(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    9) testerStrategieDoubleAtStrategieALaFinSymetrieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    10) testerStrategieInconnueSymetrie(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    11) testerNomNonDefiniConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    12) testerStrategieDoubleAt(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    13) testerStrategieDoubleAtStrategieALaFinConfiant(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    14) testerStrategieDoubleAtStrategieALaFin(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    15) testerSansStrategieSymetrie(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    16) testerDoubleConfiantConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    17) testerSansStrategieSymetrieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    18) testerStrategieInconnueConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    19) testerNomNonDefiniSymetrieConfiant(RobustesseTest)
+        ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    20) testerStrategieDoubleAtSymetrie(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+    21) testerNomNonDefiniSymetrie(RobustesseTest)
+        org.junit.runners.model.TestTimedOutException: test timed out after 200 milliseconds
+
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+	Non fait car le projet n'est pas assez avancé
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

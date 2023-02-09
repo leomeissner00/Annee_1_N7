@@ -1,0 +1,407 @@
+with Ada.Text_IO;          use Ada.Text_IO;
+with Ada.Integer_Text_IO;  use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;  use Ada.Strings.Unbounded;
+with Ada.Strings;  use Ada.Strings;
+with Ada.Command_Line;     use Ada.Command_Line;
+with Ada.Streams.Stream_IO; use Ada.Streams.Stream_IO;
+with Codage_Huffmann_Exception;         use Codage_Huffmann_Exception;
+with arbre_bin_projet; 
+with LCA_projet;
+
+procedure compresser is 
+
+	
+	type T_Octet is mod 2 ** 8;	
+	for T_Octet'Size use 8;
+
+	package Arbre is 
+		new arbre_bin_projet (T_Cle => Unbounded_String);
+	use Arbre;
+	
+	package LCA_frequence is
+		new LCA_projet (T_Cle => Unbounded_String, T_Donnee => Integer);
+	use LCA_frequence;
+
+	package LCA_arbre is
+		new LCA_projet (T_Cle => Unbounded_String, T_Donnee => T_Abr);
+	use LCA_arbre;
+	
+	package LCA_codage is
+		new LCA_projet (T_Cle => Unbounded_String, T_Donnee => Unbounded_String);
+	use LCA_arbre;
+	
+
+	procedure Afficher (Cle : in Unbounded_String; Donnee: in Integer) is
+
+	begin
+		
+		Put("( ");
+		Put(To_String(Cle));
+		Put(" : ");
+		Put(Donnee,1);
+		Put(")");
+		New_Line;
+	end Afficher;
+
+	-- Afficher la Sda.
+	procedure Afficher is
+		new LCA_frequence.Pour_Chaque (Afficher);
+
+
+	procedure Afficher_liste_abr (Cle : in Unbounded_String; Donnee: in T_Abr) is
+							   
+	begin
+		
+		Put("( ");
+		Put(To_String(Cle));
+		Put(" : ");
+		Put(La_Donnee(Donnee),1);
+		Put(")");
+		New_Line;
+
+	end Afficher_liste_abr;
+
+	procedure Afficher_liste_abr is
+		new LCA_arbre.Pour_Chaque (Afficher_liste_abr);
+
+
+	procedure Afficher_abr (Donnee: in Integer ; Cle : in Unbounded_String) is
+							   
+	begin
+		
+		Put("( ");
+		Put(To_String(Cle));
+		Put(" : ");
+		Put(Donnee,1);
+		Put(")");
+		New_Line;
+
+	end Afficher_abr;
+
+	procedure Afficher_abr is
+		new Arbre.Pour_Chaque_bin(Afficher_abr);
+
+	procedure Afficher_codage (Donnee: in Unbounded_String ; Cle : in Unbounded_String) is
+							   
+	begin
+		
+		Put("( ");
+		Put(To_String(Cle));
+		Put(" : ");
+		Put(To_String(Donnee));
+		Put(")");
+		New_Line;
+
+	end Afficher_codage;
+
+	procedure Afficher_codage is
+		new LCA_codage.Pour_Chaque(Afficher_codage);
+
+
+
+	function Octet_to_binaire(Octet : in T_Octet) return Unbounded_String is  
+       	 Bit, temp : T_Octet;
+       	 Octet_str  : Unbounded_String;
+         Bit_str : String(1..2);
+         
+       	 begin
+       	 temp := Octet;
+       	 Bit := temp / 128;
+          Bit_str := Integer'Image(Integer(bit));
+       	 Octet_str := To_Unbounded_string(Bit_str(2..Bit_str'Last));
+       	 temp := temp * 2;
+       	 for N in 1..7 loop
+       		 Bit := temp / 128;
+       		 Bit_str := Integer'Image(Integer(bit));
+       		 Octet_str := Octet_str & To_Unbounded_string(Bit_str(2..Bit_str'Last));
+       		 temp := temp * 2;
+       	 end loop;
+       	 return(Octet_str);
+       	 
+    end Octet_to_binaire;
+
+	function Binaire_to_octet(Binaire : in Unbounded_String) return T_Octet is 
+
+		Octet : T_Octet;
+
+	begin
+		Octet := 0;
+		for i in 1..8 loop
+			if Element(Binaire,i) = '1' then 
+				Octet := Octet + 2**(8-i);
+			end if;
+		end loop;
+		return Octet;
+
+	end Binaire_to_octet;
+		
+		
+	procedure Creation_tableau_frequence(Nom_fichier : in Unbounded_String; table_frequence : in out LCA_frequence.T_LCA) is
+		
+
+		File_Name : String :=  "test1.txt";
+		File      : Ada.Streams.Stream_IO.File_Type;	
+		S         : Stream_Access;
+		Octet     : T_Octet;
+		Nouveau_arbre : Arbre.T_Abr;
+		Cle : Unbounded_String;
+	
+	begin
+		
+		
+		Open(File, In_File, To_String(Nom_fichier));
+
+
+		S := Stream(File);
+		Enregistrer(table_frequence, To_Unbounded_String("11111111"), 0);
+		while not End_Of_File(File) loop
+			Octet := T_Octet'Input(S);
+			Cle := Octet_to_binaire(Octet);
+			if Cle_Presente(table_frequence, Cle) then
+				Enregistrer(table_frequence, Cle, La_Donnee(table_frequence, Cle) + 1);
+			else
+				Enregistrer(table_frequence, Cle, 1);
+
+			end if;
+		end loop;
+
+
+		Close (File);
+
+		end Creation_tableau_frequence;
+
+
+	procedure Min_frequence(Cle : in out Unbounded_String; table_abr : in LCA_arbre.T_LCA)  is
+				
+		frequence : Integer;
+		temp : LCA_arbre.T_LCA;
+	
+		begin
+			
+		Initialiser(temp);
+		Cle := La_Cle(table_abr);
+		frequence := La_Donnee(La_Donnee(table_abr, Cle));
+		Suivant(temp,table_abr);
+		
+
+		for i in 1..Taille(table_abr)-1 loop
+
+			if frequence > La_Donnee(La_Donnee(temp, La_Cle(temp))) then 
+
+				Cle := La_Cle(temp);
+				
+
+			end if;
+
+			Suivant(temp,temp);			
+
+		end loop;
+		
+	
+		Vider(temp);
+
+	end Min_frequence;
+
+	procedure FrequenceToArbre(table_frequence : in out LCA_frequence.T_LCA; liste_abr : in out LCA_arbre.T_LCA) is 
+
+		temp : LCA_frequence.T_LCA;
+		arbre_temp : Arbre.T_Abr;
+		Cle : Unbounded_String;
+		Donnee : Integer;
+
+	begin
+
+		Initialiser(temp);
+		Initialiser(arbre_temp);
+		Cle := La_Cle(table_frequence);
+		Donnee := La_Donnee(table_frequence, Cle);
+		Suivant(temp,table_frequence);	
+		Enregistrer_feuille(arbre_temp, Donnee, Cle);
+		Enregistrer(liste_abr ,Cle, arbre_temp);
+
+
+		for i in 2..Taille(table_frequence) loop
+			
+			Cle := La_Cle(temp);
+			Donnee := La_Donnee(temp, Cle);		
+			Enregistrer_feuille(arbre_temp, Donnee, Cle);
+			Suivant(temp,temp);
+			Enregistrer(liste_abr ,La_Cle(arbre_temp), arbre_temp);
+
+
+		end loop;
+
+		--Vider(temp)
+		
+
+	end FrequenceToArbre;
+
+	procedure Arbre_Huffman(liste_abr : in out LCA_arbre.T_LCA; arbre_bin : in out Arbre.T_Abr) is 
+			
+		arbre_1 : Arbre.T_Abr;
+		arbre_2 : Arbre.T_Abr;
+		Cle_min : Unbounded_String;
+		temp : LCA_arbre.T_LCA;
+				
+	begin
+		
+		while Taille(liste_abr) >= 2 loop
+			Min_frequence(Cle_min,liste_abr);
+			arbre_1 := La_Donnee(liste_abr,Cle_min);
+			Supprimer(liste_abr, Cle_min);	
+			Min_frequence(Cle_min, liste_abr);
+			arbre_2 := La_Donnee(liste_abr,Cle_min);
+			Supprimer(liste_abr, Cle_min);
+			Fusionner(arbre_1,arbre_2);
+			Enregistrer(liste_abr, La_Cle(arbre_1), arbre_1);
+
+
+		end loop;
+
+		arbre_bin := La_Donnee(liste_abr,La_Cle(arbre_1));
+
+	end Arbre_Huffman;
+
+	procedure Parcours_infixe(arbre_bin : in out T_Abr ; suite_bits : in out Unbounded_String ; code : in out Unbounded_String ; table_Huffman : in out LCA_codage.T_LCA) is 
+		
+		arbre_temp : T_Abr;
+
+	begin
+
+		if Est_Feuille(arbre_bin) then
+			suite_bits := suite_bits & To_Unbounded_String("1");
+			LCa_codage.Enregistrer(table_Huffman, La_cle(arbre_bin), code );
+			
+		else 
+			suite_bits := suite_bits & To_Unbounded_String("0");
+			code := code & To_Unbounded_String("0");
+			arbre_temp := Gauche(arbre_bin);
+
+			Parcours_infixe(arbre_temp, suite_bits, code, table_Huffman);
+
+			Delete(code,Length(code),Length(code));
+			code := code & To_Unbounded_String("1");
+
+			arbre_temp := Droite(arbre_bin);
+			Parcours_infixe(arbre_temp, suite_bits, code, table_Huffman);
+			Delete(code,Length(code),Length(code));
+		end if;
+
+	end Parcours_infixe;
+
+
+
+	procedure Compression_texte(SC : In out Stream_Access; Nom_fichier : in Unbounded_String; table_Huffman : in out LCA_codage.T_LCA; texte_compressee : in out Unbounded_String) is
+		
+
+		File_Name : String :=  "test1.txt";
+		File      : Ada.Streams.Stream_IO.File_Type;	
+		S         : Stream_Access;
+		Octet     : T_Octet;
+		Octet_2   : T_Octet;
+		Nouveau_arbre : Arbre.T_Abr;
+		Cle : Unbounded_String;
+		Code : Unbounded_String;
+		Code_prochain : Unbounded_String := Null_Unbounded_String;
+		
+	
+	begin
+		
+		Create (File, Out_File, File_Name);
+
+
+		S := Stream (File);
+		for I in 0..128 loop
+			T_Octet'Write(S, T_Octet(I));
+		end loop;
+
+
+		Close (File);
+		Open(File, In_File, To_String(Nom_fichier));
+
+
+		S := Stream(File);
+
+		while not End_Of_File(File) loop
+			Octet := T_Octet'Input(S);
+			Cle := Octet_to_binaire(Octet);
+			Code := Code & LCA_codage.La_Donnee(table_Huffman, Cle);
+			
+			if Length(Code) = 8 then 
+				
+				Octet_2 := Binaire_to_octet(Code);
+				T_Octet'Write(SC, Octet_2);
+				Code := Null_Unbounded_String;
+
+			elsif Length(Code) > 8 then
+				
+				while Length(Code) /= 8 loop
+					
+					Code_prochain := Element(Code,Length(Code)) & Code_prochain;
+					Delete(code,Length(code),Length(code));
+					
+				end loop;
+
+				Octet_2 := Binaire_to_octet(Code);
+				T_Octet'Write(SC, Octet_2);
+				Code := Code_prochain;
+				Code_prochain := Null_Unbounded_String;
+					
+			end if;
+		
+		end loop;
+		
+		
+		if Length(code) < 8 then
+
+			while Length(Code) /= 8 loop
+
+				Code := Code & To_Unbounded_String("0");
+				
+			end loop;
+
+		end if;
+
+		Put(To_String(Code));
+		New_Line;
+		Octet_2 := Binaire_to_octet(Code);
+		T_Octet'Write(SC, Octet_2);
+		Close (File);
+
+	end Compression_texte;
+
+	
+	table_frequence : LCA_frequence.T_LCA;
+	table_Huffman : LCA_codage.T_LCA;
+	Suite_bits : Unbounded_String := Null_Unbounded_String;
+	Code : Unbounded_String := Null_Unbounded_String;
+	texte_compressee : Unbounded_String := Null_Unbounded_String;
+	Nom_du_fichier : Unbounded_String;
+	liste_abr : LCA_arbre.T_LCA;
+	arbre_bin : Arbre.T_Abr;
+	arbre_test1 : Arbre.T_Abr;
+	arbre_test2 : Arbre.T_Abr;
+	fichier_compresse : Ada.Streams.Stream_IO.File_Type;
+	SC : Stream_Access; 
+		
+begin
+	Nom_du_fichier := To_Unbounded_String(Argument(1));
+
+	Initialiser(table_frequence);
+	Creation_tableau_frequence(Nom_du_fichier, table_frequence);	
+
+	Initialiser(arbre_bin);
+	FrequenceToArbre(table_frequence,liste_abr);
+	
+	Arbre_Huffman(liste_abr, arbre_bin);
+	Parcours_infixe(arbre_bin, Suite_bits, code, table_Huffman);
+
+	Create(fichier_compresse, Out_File, To_String(Nom_du_fichier&".hff"));
+	
+	SC := Stream(fichier_compresse);
+					
+	Compression_texte(SC, Nom_du_fichier, table_Huffman, texte_compressee);
+	
+	
+	
+end compresser;

@@ -1,0 +1,17 @@
+package tableur.math.formule;
+
+import tableur.Tableur;
+import tableur.math.Formule;
+
+public class FormuleConstante implements Formule {
+    private double valeur;
+    
+    public FormuleConstante(double constante) {
+        this.valeur = constante;
+    }
+
+    @Override
+    public double evaluer(Tableur tableur) {
+        return this.valeur;
+    }
+}

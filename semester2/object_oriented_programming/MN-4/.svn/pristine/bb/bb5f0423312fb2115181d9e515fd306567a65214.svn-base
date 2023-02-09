@@ -1,0 +1,81 @@
+package tableur.graph.graph2D;
+
+import java.awt.Color;
+
+import afficheur.Ecran;
+import tableur.Tableur;
+import tableur.composant.Cellule;
+import tableur.composant.Position;
+import tableur.exception.NoMeasurableException;
+
+public class graphics2Dplot /* extends JFreeChart */ {
+	
+	private Tableur tab;
+	
+	public graphics2Dplot(Tableur tableur) {
+		this.tab = tableur;
+	}
+	
+	public void afficherNuagePoint(Position absPos1, Position absPos2, Position ordPos1, Position ordPos2) throws NoMeasurableException{
+		
+		Ecran ecran = new Ecran("ExempleEcran", 400, 250, 15);
+		ecran.dessinerAxes();
+		
+		Position absActif = new Position(absPos1.x, absPos1.y);
+		Position ordActif = new Position(ordPos1.x, ordPos1.y);
+		
+		int x_arrivee = absPos2.x;
+		int y_arrivee = absPos2.y;
+		for (int i = absPos1.x; i <= x_arrivee; i++) {
+			for (int j = absPos1.y; j <= y_arrivee; j++) {
+				absActif.x = i;
+				absActif.x = j;
+				Cellule absCellactif = this.tab.getCellule(absActif);
+				Cellule ordCellactif = this.tab.getCellule(ordActif);
+				
+				double abs = absCellactif.getValeur();
+				double ord = ordCellactif.getValeur();
+				
+				ecran.dessinerPoint(abs, ord, Color.green);
+				
+				ordActif.x ++;
+				ordActif.y ++;
+			}
+		}
+	}
+	
+public void afficherFonction(Position absPos1, Position absPos2, Position ordPos1, Position ordPos2) throws NoMeasurableException{
+		
+		Ecran ecran = new Ecran("ExempleEcran", 400, 250, 15);
+		ecran.dessinerAxes();
+		
+		Position absActif = new Position(absPos1.x, absPos1.y);
+		Position ordActif = new Position(ordPos1.x, ordPos1.y);
+		
+		int x_arrivee = absPos2.x;
+		int y_arrivee = absPos2.y;
+		for (int i = absPos1.x; i <= x_arrivee; i++) {
+			for (int j = absPos1.y; j <= y_arrivee; j++) {
+				absActif.x = i;
+				absActif.x = j;
+				Cellule absCellactif = this.tab.getCellule(absActif);
+				Cellule ordCellactif = this.tab.getCellule(ordActif);
+				
+				double abs = absCellactif.getValeur();
+				double ord = ordCellactif.getValeur();
+				
+				ecran.dessinerPoint(abs, ord, Color.green);
+				double absOld = abs;
+				double ordOld = ord;
+				
+				if (i - absPos1.x != 0) {
+					ecran.dessinerLigne(abs, ord, absOld, ordOld, Color.green);
+				}
+				
+				ordActif.x ++;
+				ordActif.y ++;
+			}
+		}
+	}
+	
+}

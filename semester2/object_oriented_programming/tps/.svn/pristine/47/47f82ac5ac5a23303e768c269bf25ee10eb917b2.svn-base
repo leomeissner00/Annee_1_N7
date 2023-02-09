@@ -1,0 +1,450 @@
+SCORE: 1
+JUnit version 4.12
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "x", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@rapide@naif")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("x", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@xyz")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("yyy@rapide", "xxx@ville@naif")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("@humain", "ordi@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le nom doit être composé d'au moins 1 caractère.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("xxx@xyz", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Cette stratégie n'existe pas.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "xxx@rapide@naif", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Cette stratégie n'existe pas.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+..
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@ville@naif")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("yyy@rapide", "xxx@xyz")
+--------------------------------------------------------------------------------
+
+Erreur : Cette stratégie n'existe pas.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "@humain", "ordi@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("xxx@rapide@naif", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant")
+--------------------------------------------------------------------------------
+
+Erreur : Trop peu d'arguments : 1
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "xxx@ville@naif", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Cette stratégie n'existe pas.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("xxx@ville@naif", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("yyy@rapide", "x")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "-confiant")
+--------------------------------------------------------------------------------
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+*** Exception non récupérée : java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+--------------------------------------------------------------------------------
+
+
+E.
+================================================================================
+> java allumettes.Jouer.main()
+--------------------------------------------------------------------------------
+
+Erreur : Trop peu d'arguments : 0
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "yyy@rapide", "x")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "xxx@xyz", "yyy@rapide")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant", "ordi@rapide", "@humain")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("yyy@rapide", "xxx@rapide@naif")
+--------------------------------------------------------------------------------
+
+Erreur : Le format des joueurs n'est pas le bon.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("-confiant")
+--------------------------------------------------------------------------------
+
+Erreur : Trop peu d'arguments : 1
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+.
+================================================================================
+> java allumettes.Jouer.main("ordi@rapide", "@humain")
+--------------------------------------------------------------------------------
+
+Erreur : Le nom doit être composé d'au moins 1 caractère.
+
+Usage :
+	java allumettes.Jouer joueur1 joueur2
+		joueur est de la forme nom@stratégie
+		strategie = naif | rapide | expert | humain | tricheur
+
+	Exemple :
+		java allumettes.Jouer Xavier@humain Ordinateur@naif
+
+--------------------------------------------------------------------------------
+
+
+
+
+There was 1 failure:
+1) testerDoubleConfiantConfiant(RobustesseTest)
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at allumettes.Jouer.verifierConfiant(Jouer.java:71)
+	at allumettes.Jouer.main(Jouer.java:26)
+	at RobustesseTest.runJouer(RobustesseTest.java:97)
+	at RobustesseTest.testerDoubleConfiantConfiant(RobustesseTest.java:136)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+FAILURES!!!
+Tests run: 25,  Failures: 1
+

@@ -1,0 +1,29 @@
+5,14c5,21
+< Exception in thread "main" java.lang.NoClassDefFoundError: allumettes/StrategieExpert
+< 	at allumettes.Jouer.choixNbRetirer(Jouer.java:139)
+< 	at allumettes.Joueur.getPrise(Joueur.java:38)
+< 	at allumettes.Arbitre.arbitrer(Arbitre.java:93)
+< 	at allumettes.Jouer.main(Jouer.java:42)
+< Caused by: java.lang.ClassNotFoundException: allumettes.StrategieExpert
+< 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+< 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+< 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+< 	... 4 more
+---
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 9
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+> 
+> Allumettes restantes : 5
+> Xavier, combien d'allumettes ? [Une allumette en moins, plus que 4. Chut !]
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Xavier gagne !

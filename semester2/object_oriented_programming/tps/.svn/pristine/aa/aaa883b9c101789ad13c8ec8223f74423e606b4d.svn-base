@@ -1,0 +1,845 @@
+6c6,7
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend 5 allumette.
+> Impossible ! Nombre invalide : 5 (> 3)
+9c10,11
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+> Impossible ! Nombre invalide : 0 (< 1)
+12c14,15
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+15c18
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+17,768c20,21
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+< 
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 10
+> Ordinateur prend 1 allumette.
+770,771c23,24
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 9
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+773,774c26,27
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 6
+> Ordinateur prend 1 allumette.
+776,777c29,30
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 5
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+779,780c32,33
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 4
+> Ordinateur prend 3 allumette.
+782,783c35,37
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 4 allumette.
+> Impossible ! Nombre invalide : 4 (> 1)
+785,786c39,41
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 3 allumette.
+> Impossible ! Nombre invalide : 3 (> 1)
+788,789c43,45
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 2 allumette.
+> Impossible ! Nombre invalide : 2 (> 1)
+791,792c47,49
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 0 allumette.
+> Impossible ! Nombre invalide : 0 (< 1)
+794,795c51,53
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend -1 allumette.
+> Impossible ! Nombre invalide : -1 (< 1)
+797,798c55,56
+< Allumettes restantes : 13
+< Xavier, combien d'allumette ? Vous devez donner un entier.
+---
+> Allumettes restantes : 1
+> Xavier, combien d'allumette ? Xavier prend 1 allumette.
+800c58,59
+< Allumettes restantes : 13
+---
+> Xavier perd !
+> Ordinateur gagne !

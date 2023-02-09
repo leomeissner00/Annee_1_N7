@@ -1,0 +1,7 @@
+14,16c14,15
+< Xavier, combien d'allumettes ? [Je triche...]
+< [Allumettes restantes : 2]
+< Xavier prend 1 allumette.
+---
+> Xavier, combien d'allumettes ? [Une allumette en moins, plus que 4. Chut !]
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.

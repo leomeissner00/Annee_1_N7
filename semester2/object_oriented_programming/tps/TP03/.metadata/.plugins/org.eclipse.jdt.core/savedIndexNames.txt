@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/lmeissne/Annee_1/S2/tob/tps/TP03/.metadata/.plugins/org.eclipse.jdt.core
+3243698958.index
+1505446793.index
+2078267704.index
+2108588069.index

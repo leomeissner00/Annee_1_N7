@@ -1,0 +1,65 @@
+network:
+  name: Projet
+  version: 0.1
+  hosts:
+    - Equipement_Utilisateur
+      mode : netns
+      init : ./scripts/Equipement_Utilisateur
+ 
+    - R1
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/R1/etc:/
+ 
+    - R2
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/R2/etc:/
+ 
+    - FAI_Acces
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/FAI_Acces/etc:/
+ 
+    - Serveur_DNS
+      mode : docker
+      image : dns_n7:latest
+      files : ./files/Serveur_DNS/etc:/
+ 
+    - Serveur_Web
+      mode : docker
+      image : apache_n7:latest
+      files : ./files/Serveur_Web/var:/
+ 
+    - Serveur_FTP
+      mode : docker
+      image : ftp_n7:latest
+      files : ./files/Serveur_FTP/etc:/
+ 
+    - BOX
+      mode : docker
+      image : dhcp_n7:latest
+      files : ./files/BOX/etc:/
+ 
+    - FAI_Services
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/FAI_Services/etc:/
+ 
+ 
+ 
+ 
+  links :
+    - Equipement_Utilisateur:eth0!BOX:eth0
+    - BOX:eth4!FAI_Acces:eth0
+ 
+  bridges:
+    - Switch0
+      interfaces: R1:eth0!R2:eth0!FAI_Acces:eth1!
+    - Switch1
+      interfaces: FAI_Services:eth0!R1:eth1!R2:eth1!
+    - Switch2
+      interfaces: Serveur_DNS:eth0!Serveur_Web:eth0!Serveur_FTP:eth0!FAI_Services:eth1!
+ 
+  consoles :
+    - all

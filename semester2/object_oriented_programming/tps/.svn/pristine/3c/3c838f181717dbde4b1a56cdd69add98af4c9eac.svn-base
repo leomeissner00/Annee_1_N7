@@ -1,0 +1,46 @@
+package allumettes;
+
+public class Joueur {
+
+    /**Nom du joueur.
+     * Nom est un String
+     */
+    private String nom;
+
+    /**Stratégie du joueur.
+     * Type est un String
+     */
+    private String type;
+
+    Joueur (String vnom, String vtype) throws ConfigurationException{
+    	if (vnom.length()==0){
+    		throw new ConfigurationException("Le nom doit être composé d'au moins 1 caractère.");
+    	}
+        this.nom = vnom;
+        if (!Jouer.Strategieaenvlever.checkStrategie(vtype)) {
+        	throw new ConfigurationException("Cette stratégie n'existe pas.");
+        }
+        this.type = vtype; 
+    }
+
+    /**Renvoie le nom du joueur.
+     * @return String : le nom du joueur
+     */
+    public String getNom(){
+        String temp = this.nom;
+        return temp;
+    }
+
+    /**Recupere le nombre d'allumettes que le joueur veut prendre.
+     * @param Jeu jeu : le jeu dans lequelles les allumettes sont prises.
+     * @throws : À COMPLETER
+     * @return int : le nombre d'allumettes que le joueur veut récupérer.
+     */
+    int getPrise(Jeu jeu) throws CoupInvalideException, EntreeInvalideException{
+        int val = Jouer.Strategieaenvlever.choixNbRetirer(this.nom, this.type, jeu);
+        if (val== -1) {
+        	throw new EntreeInvalideException(val, "Vous devez donner un entier.");
+        }
+        return val;
+    }
+}

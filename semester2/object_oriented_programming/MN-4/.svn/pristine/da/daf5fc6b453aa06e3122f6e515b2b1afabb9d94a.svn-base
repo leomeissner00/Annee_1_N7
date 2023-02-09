@@ -1,0 +1,111 @@
+package tableur;
+
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.Serializable;
+
+import javax.swing.JFileChooser;
+import javax.swing.JMenuItem;
+import javax.swing.filechooser.FileSystemView;
+
+import tableur.composant.Cellule;
+import tableur.math.Formule;
+import tableur.math.Lecteur;
+
+public class TableurControleur implements ActionListener, Serializable {
+
+    public Tableur tableur;
+	
+    public TableurControleur(Tableur tableur) {
+        this.tableur = tableur;
+
+		(tableur.itemNouveau).addActionListener(this);
+		(tableur.itemOuvrir).addActionListener(this);
+		(tableur.itemEnregistrer).addActionListener(this);
+		(tableur.itemEnregistrerSous).addActionListener(this);
+
+		(tableur.itemAnnuler).addActionListener(this);
+		(tableur.itemRetablir).addActionListener(this);
+		(tableur.itemCopier).addActionListener(this);
+		(tableur.itemCouper).addActionListener(this);
+		(tableur.itemColler).addActionListener(this);
+		(tableur.itemRAZ).addActionListener(this);
+
+		(tableur.itemApparence).addActionListener(this);
+		(tableur.itemFormat).addActionListener(this);
+		(tableur.itemDimension).addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().getClass() == JMenuItem.class) {
+            if (e.getSource() == tableur.itemNouveau ) {
+            	TableurSwing newTab = new TableurSwing();
+            }
+            if (e.getSource() == tableur.itemRAZ ) {
+            	this.tableur.reset();
+            } 
+            if (e.getSource() == tableur.itemOuvrir ) {
+            	TableurSauvegarde noob = new TableurSauvegarde("Test");
+            	JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+            	j.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            	int res = j.showSaveDialog(null);
+            	if(res == JFileChooser.APPROVE_OPTION) {
+            		File fs = j.getSelectedFile();
+            		
+            		this.tableur = noob.Ouvrir(fs.getAbsolutePath());
+            		
+            	} else {System.out.print("Annulage d'ouverture de fichier tableur.");}
+            	
+            }
+
+            if (e.getSource() == tableur.itemEnregistrerSous ) {
+            	TableurSauvegarde noob = new TableurSauvegarde("Test");
+            	JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+            	j.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            	int res = j.showSaveDialog(null);
+            	if(res == JFileChooser.APPROVE_OPTION) {
+            		File fs = j.getSelectedFile();
+            		
+            		noob.Enregistrer(tableur, fs.getAbsolutePath());
+            		
+            	} else {System.out.print("Annulage d'enregistrement de fichier tableur.");}
+                
+            } 
+            
+
+        }
+       
+        if (e.getSource().getClass() == Cellule.class) {
+            Cellule cell = ((Cellule) e.getSource());
+            
+            String textEntree = cell.getText();
+            if (textEntree.length() > 0 && textEntree.charAt(0) == '=') {
+                Formule formule = Lecteur.convertir(textEntree.substring(1));
+				this.tableur.setCellule(cell.getPosition(), formule);
+            } else {
+				this.tableur.setCellule(cell.getPosition(), cell.getText());
+			}
+        }
+
+        if ( /*ActionEvent.CTRL_MASK  && */ (e.getSource().getClass() == Cellule.class)) {
+            
+        }
+        //FIXME Recuperer les valeurs grace a la pos
+        //System.out.print(tab.getValeur(new Position(1, 1)));
+    }
+    
+    
+
+
+	private void print(String text) {
+		System.out.print(text);
+	}
+
+	private void print(int value) {
+		System.out.print(Integer.toString(value));
+	}
+
+}

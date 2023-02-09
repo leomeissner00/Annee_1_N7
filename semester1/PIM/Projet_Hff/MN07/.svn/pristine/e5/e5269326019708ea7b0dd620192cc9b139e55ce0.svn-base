@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_file>
+    <file_marker column=" 65" line=" 262" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/lca_projet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/lca_projet.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 253" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decompresser.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 17" line=" 177" >
+      <vfs_project>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/projet.gpr</vfs_project>
+      <vfs_file>/home/lmeissne/Annee_1/PIM/Projet_Hff/MN07/src/decompresser.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

@@ -1,0 +1,97 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U lca_projet%b		lca_projet.adb		65d12c7b NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
+W codage_huffmann_exception%s  codage_huffmann_exception.ads  codage_huffmann_exception.ali
+
+U lca_projet%s		lca_projet.ads		804cbf2d BN EE NE OO PK GE
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D codage_huffmann_exception.ads  20220108111157 ff12cf4d codage_huffmann_exception%s
+D lca_projet.ads	20220112090729 804cbf2d lca_projet%s
+D lca_projet.adb	20220112090729 d927f07e lca_projet%b
+D system.ads		20210520051134 a2da961d system%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+G a e
+G c Z s b [lca_projet standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 6|3r6 8r21
+X 3 a-uncdea.ads
+17+9 Object 6|8r49
+18P9 Name(17+9) 6|8r70
+20u15*Unchecked_Deallocation 6|3w10 8r25
+X 4 codage_huffmann_exception.ads
+2K9*Codage_Huffmann_Exception 7e30 6|2w6 2r45
+5X9*Cle_Absente_Exception 6|70r31 83r31 106r31
+X 5 lca_projet.ads
+5+14 T_Cle 29r62 37r60 43r58 48r55 51r50 63r50 79r23 6|37r62 54r58 67r55
+. 80r50 93r60
+6+14 T_Donnee 29r82 48r69 63r68 78r26 6|37r82 67r69
+8k9*LCA_projet 5z14 6z14 72E14 84l5 84e15 6|5b14 148l5 148t15
+10P14*T_LCA 13r40 18r34 22r35 29r45 37r43 43r41 48r38 51r35 54r40 54r54 58r39
+. 64r41 74c14 80r27 6|8r78 11r40 18r34 24r35 37r45 54r41 67r38 80r35 93r43
+. 94r24 111r39 124r41 138r40 138r54
+13U19*Initialiser 13<31 6|11b19 15l13 15t24
+13p31 Sda{10P14} 14r35 6|11b31 13m17
+18V18*Est_Vide{boolean} 14s25 18>28 24s51 59s25 6|18b18 21t12
+18p28 Sda{10P14} 6|18b28 20r24
+22V18*Taille{integer} 22>26 23r25 24r30 31s75 31s90 32s69 32s84 38s26 38s41
+. 6|24b18 31s32 34l13 34t19
+22p26 Sda{10P14} 24r61 6|24b26 27r20 31r39
+29U19*Enregistrer 29=32 29>53 29>70 6|37b19 47s25 51l13 51t24
+29p32 Sda{10P14} 30r39 30r65 31r57 31r83 31r98 32r52 32r77 32r92 6|37b32
+. 40r20 41m25 43r23 44r25 47r37
+29*53 Cle{5+14} 30r44 30r70 31r62 32r57 6|37b53 41r55 43r37 47r54
+29*70 Donnee{6+14} 30r77 6|37b70 41r70 44r43 47r59
+37U19*Supprimer 37=30 37>51 6|93b19 103s33 108l13 108t22
+37p30 Sda{10P14} 38r34 38r49 39r39 6|93b30 97r20 98r28 99r41 100m33 100r40
+. 103r43
+37*51 Cle{5+14} 39r44 6|93b51 98r42 103r59
+43V18*Cle_Presente{boolean} 30s25 31s43 32s38 39s25 43>32 43>49 6|54b18 62s32
+. 64t12
+43p32 Sda{10P14} 6|54b32 56r20 58r23 62r45
+43*49 Cle{5+14} 6|54b49 58r37 62r62
+48V18*La_Donnee{6+14} 30s54 48>29 48>46 6|67b18 76s32 78l13 78t22
+48p29 Sda{10P14} 6|67b29 69r20 72r23 73r32 76r42
+48*46 Cle{5+14} 6|67b46 72r37 76r59
+51V18*La_Cle{5+14} 51>26 6|80b18 89l13 89t19
+51p26 Sda{10P14} 6|80b26 82r20 86r32
+54V18*La_Suivante{10P14} 54>31 6|138b18 145l13 145t24
+54p31 Sda{10P14} 6|138b31 143r24
+58U19*Vider 58=26 6|111b19 117s25 121l13 121t18
+58p26 Sda{10P14} 59r35 6|111b26 113r20 114m30 117r31 118m30
+63U32 Traiter 63>41 63>57 6|130s33
+63*41 Cle{5+14}
+63*57 Donnee{6+14}
+64u19*Pour_Chaque 64>32 6|124b19 131s33 133s48 136l13 136t24
+64p32 Sda{10P14} 6|124b32 126r20 130r41 130r54 131r45 133r60
+72R14 T_Cellule 74r30 76c14 82e27 6|8r59 41r36
+78*17 Donnee{6+14} 6|41m60 44m33 73r40 130r62
+79*17 Cle{5+14} 6|41m48 43r31 58r31 72r31 86r40 98r36 130r49
+80p17 Suivant{10P14} 6|31r47 41m79 47m45 62r53 76r50 100r48 103m51 117m39
+. 131r53 133r68 143r32
+X 6 lca_projet.adb
+7U19 Free[3|20] 101s33 114s25 118s25
+94p17 temp{5|10P14} 99m33 101m38 101r38
+

@@ -1,0 +1,36 @@
+./allumettes/Joueur.java:3: error: cannot find symbol
+import allumettes.Jouer.Strategie;
+                       ^
+  symbol:   class Strategie
+  location: class Jouer
+allumettes/Jouer.java:113: error: cannot find symbol
+			Strategie Strat;
+			^
+  symbol:   class Strategie
+  location: class Strategieaenvlever
+allumettes/Jouer.java:126: error: cannot find symbol
+				Strat = new StratRapide();
+				            ^
+  symbol:   class StratRapide
+  location: class Strategieaenvlever
+allumettes/Jouer.java:130: error: cannot find symbol
+				Strat = new StratExpert();
+				            ^
+  symbol:   class StratExpert
+  location: class Strategieaenvlever
+allumettes/Jouer.java:134: error: cannot find symbol
+				Strat = new StratNaive();
+				            ^
+  symbol:   class StratNaive
+  location: class Strategieaenvlever
+./allumettes/Joueur.java:22: error: cannot find symbol
+        if (!Strategie.checkStrategie(vtype)) {
+             ^
+  symbol:   variable Strategie
+  location: class Joueur
+./allumettes/Joueur.java:42: error: cannot find symbol
+        int val = Strategie.choixNbRetirer(this.nom, this.type, jeu);
+                  ^
+  symbol:   variable Strategie
+  location: class Joueur
+7 errors

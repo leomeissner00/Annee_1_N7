@@ -1,0 +1,19 @@
+On s'attendrait à avoir quelque part "Déterminer si l'option -b est mise", qui renvoie un booléen en out, et à ce que ce booléen soit utilisé dans la condition Si l'option -b est utilisée.
+
+"Comment compresser un texte donné" : il manque l'idée que c'est un fichier texte. Idem pour "Décompresser le texte".
+
+"Faire le parcours infixe de..." et "Parcourir de manière infixe..." : à homogénéiser. ------------------
+
+"Mettre le caractère spécial à la fin" : à raffiner. ----------------------------------
+
+"Compléter avec des zéros pour avoir uniquement des octets" : à raffiner. ----------------------
+
+"Aller voir fils gauche/droit de arbre_fils" : à raffiner ou réécrire différemment, on ne comprend pas ce que fait cette action. --------------------
+
+"Jusqu’à Apparition du caractère spécial" : à détailler, comment concrètement détectez-vous le caractère spécial ? --------------------------
+
+"Remettre le caractère spécial à sa position initiale" : idem, à raffiner. ----------------------------
+
+Je ne mets pas tout, mais à plusieurs endroits, ce n'est pas raffiné jusqu'à une action élémentaire.
+
+Bon travail dans l'ensemble.

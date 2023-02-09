@@ -1,0 +1,122 @@
+package tableur;
+
+import java.util.*;
+
+import tableur.action.Action;
+import tableur.composant.*;
+import tableur.composant.cellule.CelluleFormule;
+import tableur.exception.NoFormuleException;
+import tableur.exception.NoMeasurableException;
+import tableur.math.Formule;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.io.Serializable;
+
+public class Tableur extends Observable implements Serializable{
+    
+    public final int WIDTH = 10;
+    public final int HEIGHT = 30;
+
+    private TableurVisuel visuel;
+    private TableurControleur controleur;
+    private Historique historique;
+
+    public Map<Position, Cellule> cells;
+
+    (tableur.itemNouveau).addActionListener(controleur);
+    (tableur.itemOuvrir).addActionListener(controleur);
+    (tableur.itemEnregistrer).addActionListener(controleur);
+    (tableur.itemEnregistrerSous).addActionListener(controleur);
+
+	(tableur.itemAnnuler).addActionListener(controleur);
+    (tableur.itemRetablir).addActionListener(controleur);
+    (tableur.itemCopier).addActionListener(controleur);
+    (tableur.itemCouper).addActionListener(controleur);
+    (tableur.itemColler).addActionListener(controleur);
+    (tableur.itemRAZ).addActionListener(controleur);
+
+    (tableur.itemApparence).addActionListener(controleur);
+    (tableur.itemFormat).addActionListener(controleur);
+    (tableur.itemDimension).addActionListener(controleur);
+
+
+    JMenuItem itemNouveau = new JMenuItem("Nouveau");
+    JMenuItem itemOuvrir = new JMenuItem("Ouvrir");
+    JMenuItem itemEnregistrer = new JMenuItem("Enregistrer");
+    JMenuItem itemEnregistrerSous = new JMenuItem("Enregistrer Sous");
+
+    JMenuItem itemAnnuler = new JMenuItem("Annuler");
+    JMenuItem itemRetablir = new JMenuItem("Retablir");
+    JMenuItem itemCopier = new JMenuItem("Copier");
+    JMenuItem itemCouper = new JMenuItem("Couper");
+    JMenuItem itemColler = new JMenuItem("Coller");
+    JMenuItem itemRAZ = new JMenuItem("RAZ");
+
+    JMenuItem itemApparence = new JMenuItem("Apparence");
+    JMenuItem itemFormat = new JMenuItem("Format");
+    JMenuItem itemDimension = new JMenuItem("Dimensions");
+
+    public Tableur() { 
+        cells = new HashMap<Position, Cellule>();
+        this.historique = new Historique(this);
+        this.visuel = new TableurVisuel("Tableur", this);
+    }
+
+    private void verifierIndice(Position pos) {
+        if ( pos.x < 0 || pos.y < 0) {
+            throw new IndexOutOfBoundsEif (cellactif.getClass() != CelluleFormule.class) {
+				throw new NoFormuleException();
+			}xception("La position doit etre superieur ou egal au couple (0,0)");
+        }
+    }
+
+    public Historique getHistorique() {
+        return this.historique;
+    }
+
+    public void addHistorique(Action action) {
+        this.historique.ajouterAction(action);
+    }
+
+    public void delCellule(Position pos) {
+        verifierIndice(pos);
+        cells.remove(pos);
+    }
+
+    public void setCellule(Position pos, Formule formule) {
+        verifierIndice(pos);
+        cells.put(pos, new CelluleFormule(formule));
+    }
+
+    public void setCellule(Position pos, String text) {
+        verifierIndice(pos);
+        cells.put(pos, new Cellule(text));
+    }
+
+    public double getValeur(Position pos) throws NoMeasurableException {
+        verifierIndice(pos);
+        return this.getCellule(pos).getValeur(this);
+    }
+
+    public Formule getFormule(Position pos) throws NoFormuleException {
+        verifierIndice(pos);
+        if (this.getCellule(pos).getClass() != CelluleFormule.class) {
+            return ((CelluleFormule) this.getCellule(pos)).getFormule();
+        } else {
+            throw new NoFormuleException();
+        }
+    }
+
+    public Cellule getCellule(Position pos) {
+        verifierIndice(pos);
+        Cellule cell = this.cells.get(pos);
+    	if (cell != null) {
+    		return this.cells.get(pos);
+    	} else {
+    		return new Cellule();
+    	}
+    	
+    }
+}

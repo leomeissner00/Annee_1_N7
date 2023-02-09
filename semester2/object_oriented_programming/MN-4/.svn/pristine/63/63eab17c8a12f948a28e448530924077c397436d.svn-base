@@ -1,0 +1,34 @@
+package tableur.composant.cellule;
+
+import tableur.Tableur;
+import tableur.composant.Cellule;
+import tableur.math.Formule;
+
+public class CelluleFormule extends Cellule {
+    
+    private Formule formule;
+
+
+    public CelluleFormule(Formule form) {
+        super();
+        this.formule = form;
+    }
+    
+    @Override
+    public double getValeur(Tableur tab) {
+        return this.formule.evaluer(tab);
+    }
+
+    public Formule getFormule() {
+        return this.formule;
+    }
+
+    public void setFormule(Formule formule) {
+        this.formule = formule;
+    }
+
+    public String getText() {
+        return this.formule.toString();
+    }
+
+}

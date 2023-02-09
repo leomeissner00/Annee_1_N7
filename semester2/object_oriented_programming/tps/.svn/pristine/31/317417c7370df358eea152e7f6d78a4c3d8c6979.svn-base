@@ -1,0 +1,19 @@
+11c11
+< Ordinateur prend 2 allumettes.
+---
+> Ordinateur prend 1 allumette.
+13,14c13,14
+< Allumettes restantes : 4
+< Xavier, combien d'allumettes ? [Une allumette en moins, plus que 3. Chut !]
+---
+> Allumettes restantes : 5
+> Xavier, combien d'allumettes ? [Une allumette en moins, plus que 4. Chut !]
+17,18c17,21
+< Xavier perd !
+< Ordinateur gagne !
+---
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Xavier gagne !

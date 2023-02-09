@@ -1,0 +1,39 @@
+1,3d0
+< 
+< 	à faire !
+< 
+5c2,3
+< Xavier prend 2 allumettes.
+---
+> Xavier, combien d'allumettes ? Xavier prend 2 allumettes.
+> 
+7,13c5,25
+< Exception in thread "main" java.util.NoSuchElementException
+< 	at java.base/java.util.Scanner.throwFor(Scanner.java:937)
+< 	at java.base/java.util.Scanner.next(Scanner.java:1594)
+< 	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+< 	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+< 	at allumettes.Joueur.getPrise(Joueur.java:36)
+< 	at allumettes.Jouer.main(Jouer.java:48)
+---
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 8
+> Xavier, combien d'allumettes ? Vous devez donner un entier.
+> Xavier, combien d'allumettes ? Xavier prend 5 allumettes.
+> Impossible ! Nombre invalide : 5 (> 3)
+> 
+> Allumettes restantes : 8
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+> Allumettes restantes : 5
+> Ordinateur prend 3 allumettes.
+> 
+> Allumettes restantes : 2
+> Xavier, combien d'allumettes ? Xavier prend 1 allumette.
+> 
+> Allumettes restantes : 1
+> Ordinateur prend 1 allumette.
+> 
+> Ordinateur perd !
+> Xavier gagne !

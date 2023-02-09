@@ -1,0 +1,816 @@
+2,3c2
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> R1 prend 3 allumettes.
+5,7c4,5
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 10
+> R2 prend 3 allumettes.
+9,11c7,8
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 7
+> R1 prend 3 allumettes.
+13,15c10,11
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 4
+> R2 prend 3 allumettes.
+17,799c13,14
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+< 
+< Allumettes restantes : 13
+< R1 prend 0 allumettes.
+< Impossible ! Nombre invalide : 0 (< 1)
+---
+> Allumettes restantes : 1
+> R1 prend 1 allumette.
+800a16,17
+> R1 perd !
+> R2 gagne !

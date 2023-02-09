@@ -1,0 +1,70 @@
+package allumettes;
+
+public class JeuAllumettes implements Jeu {
+
+	/** Nombre maximal d'allumettes pouvant être prises. */
+	int PRISE_MAX = 3;
+
+    /**Nombres d'allumettes encore en jeu. */
+    private int nbAllumettes;
+    private int nbTour;
+    
+    /**Construit un JeuAllumettes.
+     * 
+     */
+    JeuAllumettes(int nbInitiale){
+    	this.nbAllumettes = nbInitiale;
+    	this.nbTour = 0;
+    }
+
+	/** Obtenir le nombre d'allumettes encore en jeu.
+	 * @return nombre d'allumettes encore en jeu
+	 */
+	public int getNombreAllumettes(){
+        int temp = this.nbAllumettes;
+        return temp;
+    }
+
+	/** Obtenir le nombre de tour qui ont déjà été joués.
+	 * @return le nombre de tour
+	 */
+	public int getNbTour() {
+		return nbTour;
+	}
+
+	/** Retirer des allumettes.  Le nombre d'allumettes doit être compris
+	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+	 * en jeu.
+	 * @param nbPrises nombre d'allumettes prises.
+	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+	 */
+	public void retirer(int nbPrises) throws CoupInvalideException{
+	        if (nbPrises < 1) {
+	            throw new CoupInvalideException(nbPrises, "Impossible ! Nombre invalide : "+nbPrises+" (< 1)");
+	        }
+	
+	        if (nbPrises > 3) {
+	            throw new CoupInvalideException(nbPrises, "Impossible ! Nombre invalide : "+nbPrises+" (> 3)");
+	        }
+	
+	        if (nbPrises < 1) {
+	            throw new CoupInvalideException(nbPrises, "Vous devez donner un entier.");
+	        }
+
+        this.nbAllumettes -= nbPrises; 
+    }
+	
+	/**Incrémente le nombre de tour de 1.
+	 * 
+	 */
+	public void inc_nbTour() {
+		this.nbTour ++;
+	}
+
+	/**Décremente le nombre de tour de 1.
+	 * 
+	 */
+	public void dec_nbTour() {
+		this.nbTour --;
+	}
+}

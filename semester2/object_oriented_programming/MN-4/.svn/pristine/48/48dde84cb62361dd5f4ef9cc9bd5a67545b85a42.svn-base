@@ -1,0 +1,36 @@
+package tableur.composant;
+
+import java.awt.Desktop.Action;
+import java.util.*;
+
+public class Historique implements Iterable<Action> {
+
+	
+	private List<Action> historique;
+	private List<Action> reverseHistorique ;
+	
+	public void annuler() {
+		int last = this.historique.size();
+		Action actionAnnuler = this.historique.remove(last);
+		actionAnnuler.annuler();
+		this.reverseHistorique.add(actionAnnuler);
+	}
+	
+	public void refaire() {
+		int last = this.reverseHistorique.size();
+		Action toDo = this.reverseHistorique.remove(last);
+		toDo.appliquer();
+		this.historique.add(toDo);
+	}
+	
+	public void vider() {
+		this.historique.clear();
+		this.reverseHistorique.clear();
+	}
+	
+	@Override
+	public Iterator<Action> iterator() {
+		return this.historique.iterator();
+	}
+
+}

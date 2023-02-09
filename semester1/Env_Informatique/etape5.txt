@@ -1,0 +1,8 @@
+lmeissne@uranium:~/Annee_1/Env_Informatique/Projets_C$ ls | wc -w
+8
+lmeissne@uranium:~/Annee_1/Env_Informatique/Projets_C$ ls *  | wc -w
+80
+lmeissne@uranium:~/Annee_1/Env_Informatique/Projets_C$ ls */*  | wc -w
+181
+lmeissne@uranium:~/Annee_1/Env_Informatique/Projets_C$ ls */*/*.c  | wc -l
+763

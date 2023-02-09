@@ -1,0 +1,3 @@
+Vous pouvez trouver dans console.c et serveur.c mon travail réalisé pour le tp. La communication ne fonctionne pas.
+Ayant utilisé la majeure partie de mon temps du week-end de l'ascension pour les révisions du partiel de SEC, je ne suis pas parvenu à débugger le serveur.
+Merci pour votre compréhension.
